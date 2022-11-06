@@ -8,8 +8,12 @@ DEFINE_string(host, "127.0.0.1", "The cluster entry ip");
 DEFINE_bool(include_empty_nodes, true,
             "Whether the Rebalance operation include empty nodes?");
 
-DEFINE_string(operation, "add-node,rebalance", "choose the operation");
-
+DEFINE_string(operations, "add-node,rebalance", "choose the operation");
+DEFINE_string(weights,
+              "kvrockskvrockskvrockskvrockskvrocksnode1:1.0,"
+              "kvrockskvrockskvrockskvrockskvrocksnode2:1.0,"
+              "kvrockskvrockskvrockskvrockskvrocksnode3:1.0",
+              "the weight pairs, it should be like the following format, \'ididididididid:score,dididididididi:score,dididididi:score\'");
 DEFINE_string(new_node_host, "127.0.0.1", "new server's host");
 DEFINE_string(new_node_port, "30004", "new server's host");
 DEFINE_string(new_node_id, "kvrockskvrockskvrockskvrockskvrocksnode3",
@@ -99,6 +103,30 @@ private:
   std::vector<std::string> slot_ranges; // 8
 };
 
+std::vector<std::string> StringSplitting(const std::string &input, char delim) {
+ std::vector<std::string> results;
+ std::string line;
+ std::stringstream ss(input);
+ while (std::getline(ss, line, delim)) {
+  results.emplace_back(line);
+ }
+ return results;
+}
+
+
+std::unordered_map<std::string, float> ParseWeightPairString() {
+ std::cout << FLAGS_weights << std::endl;
+ auto pairs = StringSplitting(FLAGS_weights, ',');
+ std::unordered_map<std::string, float> result;
+ std::cout << pairs.size() << std::endl;
+ for (auto pair: pairs) {
+  auto entry = StringSplitting(pair, ':');
+  assert(entry.size() == 2);
+  result.emplace(entry[0], std::stof(entry[1]));
+ }
+ return result;
+}
+
 void CreateConnection(RedisCluster **target_link) {
  std::string target_link_posi =
      "tcp://" + FLAGS_host + ":" + std::to_string(FLAGS_port);
@@ -113,7 +141,7 @@ std::string GetNodeInfoString() {
  return reply.value();
 }
 
-void GetNodeInfoList(std::vector<NodeInfo> *infos) {
+std::vector<NodeInfo> GetNodeInfoList() {
  RedisCluster *cluster_ptr = nullptr;
  CreateConnection(&cluster_ptr);
 
@@ -123,15 +151,16 @@ void GetNodeInfoList(std::vector<NodeInfo> *infos) {
  std::stringstream ss(reply.value());
 
  std::string line;
+ std::vector<NodeInfo> infos;
  while (std::getline(ss, line, '\n')) {
-
-  infos->emplace_back(line);
+  infos.emplace_back(line);
  }
 
 // for (auto node: nodes) {
 //  if (!node.GetSlotNumberList().empty())
 //   std::cout << node.GetSlotNumberList()[1] << std::endl;
 // }
+ return infos;
 }
 
 int GetMaxVersion(const std::vector<NodeInfo> &info_list) {
@@ -143,17 +172,32 @@ int GetMaxVersion(const std::vector<NodeInfo> &info_list) {
  return max_version;
 }
 
+class MigrationOrder {
+public:
+  std::vector<int> target_slots;
+  NodeInfo source_node;
+  NodeInfo dest_node;
+
+  MigrationOrder(const NodeInfo &src, const NodeInfo &dst) : target_slots(0),
+                                                             source_node(src),
+                                                             dest_node(dst) {
+  }
+
+  std::string CalculateMigrationCmd() {
+
+  }
+};
+
 int main(int argc, char **argv) {
  google::ParseCommandLineFlags(&argc, &argv, true);
 
- std::stringstream operations(FLAGS_operation);
+ std::stringstream operations(FLAGS_operations);
  std::string current_operation;
  while (getline(operations, current_operation, ',')) {
   if (current_operation == "add-node") {
    std::string cluster_info_string = GetNodeInfoString();
 //   std::cout << cluster_info_string << std::endl;
-   std::vector<NodeInfo> node_list;
-   GetNodeInfoList(&node_list);
+   std::vector<NodeInfo> node_list = GetNodeInfoList();
    int max_version = GetMaxVersion(node_list);
    std::cout << "Current max version: " << max_version << std::endl;
 
@@ -190,13 +234,46 @@ int main(int argc, char **argv) {
     system(set_slot_cmd.c_str());
     system(set_node_id_cmd.c_str());
    }
-
+   std::cout << "new nodes added" << std::endl;
 //   redis-cli -h 127.0.0.1 -p $PORT clusterx setnodes "${cluster_nodes}" 1
 //   redis-cli -h 127.0.0.1 -p $PORT clusterx setnodeid ${node_id[$index]}
 
   } else if (current_operation == "rebalance") {
+   auto node_list = GetNodeInfoList();
+   int total_slot = 0;
+   for (auto node: node_list) {
+    total_slot += node.GetSlotNumberList().size();
+   }
+   std::cout << node_list.size() << std::endl;
 
+   float total_weight = 0;
+   auto weight_map = ParseWeightPairString();
+   for (auto wei: weight_map) {
+    std::cout << wei.first << ":" << wei.second << std::endl;
+    total_weight += wei.second;
+   }
+   int nodes_involved = weight_map.size();
+   std::cout << total_weight << std::endl;
+   std::unordered_map<std::string, int> slot_number_map;
+   int allocated_slots = 0;
+   for (auto wei: weight_map) {
+    int slot_num = total_slot * wei.second / total_weight;
+    allocated_slots += slot_num;
+    slot_number_map.emplace(wei.first, slot_num);
+   }
+
+   assert(slot_number_map.size() == weight_map.size());
+
+   if (allocated_slots < total_slot) {
+    slot_number_map.begin()->second += (total_slot - allocated_slots);
+   }
+   for (auto slot_entry: slot_number_map) {
+    std::cout << slot_entry.first << " slots in node: " << slot_entry.second
+              << std::endl;
+   }
   }
+
+
  }
 
  return 0;
