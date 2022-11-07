@@ -4,6 +4,10 @@
 DEFINE_int32(port, 30001, "The cluster entry port");
 
 DEFINE_string(host, "127.0.0.1", "The cluster entry ip");
+DEFINE_double(balance_threshold, 0.02, "The balancing threshold");
+DEFINE_int64(contributer_threshold, 0,
+             "The threshold of contributor, rebalance will not be performed when the "
+             "number of contributor is lower than this value");
 
 DEFINE_bool(include_empty_nodes, true,
             "Whether the Rebalance operation include empty nodes?");
@@ -326,17 +330,29 @@ int main(int argc, char **argv) {
    std::vector<std::pair<NodeInfo, int>> contributor_list; // how many nodes will contribute there slots
    std::vector<std::pair<NodeInfo, int>> acceptor_list; // how many nodes will accept other slots
    // calculate how many slots should be migrated from each node
+
+   int unbalanced_nodes = 0;
+
    for (auto node: node_list) {
     int contributed_slots =
         static_cast<int>(node.GetSlotNumberList().size()) -
         new_topo[node.GetNodeId()];
-    if (contributed_slots > 0) {
+    if (contributed_slots > 0 && contributed_slots > FLAGS_balance_threshold *
+                                                     node.GetSlotNumberList().size()) {
      contributor_list.emplace_back(node, contributed_slots);
      num_moved_out_slots += contributed_slots;
-    } else if (contributed_slots < 0) {
+     unbalanced_nodes++;
+    } else if (contributed_slots < 0 &&
+               -contributed_slots > FLAGS_balance_threshold *
+                                    node.GetSlotNumberList().size()) {
      acceptor_list.emplace_back(node, -contributed_slots);
      num_moved_in_slots -= contributed_slots;
+     unbalanced_nodes++;
     }
+   }
+
+   if (unbalanced_nodes < FLAGS_contributer_threshold) {
+    std::cout << "No enough contributor, skip the migration" << std::endl;
    }
 
    std::vector<std::vector<MigrateCmd>> cmd_lists;
