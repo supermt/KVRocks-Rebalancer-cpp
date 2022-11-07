@@ -351,8 +351,10 @@ int main(int argc, char **argv) {
     }
    }
 
-   if (unbalanced_nodes < FLAGS_contributer_threshold) {
-    std::cout << "No enough contributor, skip the migration" << std::endl;
+   if (unbalanced_nodes <= FLAGS_contributer_threshold) {
+    std::cout << "\n>>>> No enough contributor, skip the migration <<<<\n"
+              << std::endl;
+    continue;
    }
 
    std::vector<std::vector<MigrateCmd>> cmd_lists;
