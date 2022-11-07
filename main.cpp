@@ -1,7 +1,11 @@
 #include <iostream>
 #include "main.h"
+#include <unistd.h>
+
+const static std::string ERROR_ALREADY_MIGRATED = "Can't migrate slot which has been migrated";
 
 DEFINE_int32(port, 30001, "The cluster entry port");
+DEFINE_int32(max_try, 1000, "The cluster entry port");
 
 DEFINE_string(host, "127.0.0.1", "The cluster entry ip");
 DEFINE_double(balance_threshold, 0.02, "The balancing threshold");
@@ -19,7 +23,7 @@ DEFINE_string(weights,
               "kvrockskvrockskvrockskvrockskvrocksnode3:1.0",
               "the weight pairs, it should be like the following format, \'ididididididid:score,dididididididi:score,dididididi:score\'");
 DEFINE_string(new_node_host, "127.0.0.1", "new server's host");
-DEFINE_string(new_node_port, "30004", "new server's host");
+DEFINE_string(new_node_port, "30003", "new server's host");
 DEFINE_string(new_node_id, "kvrockskvrockskvrockskvrockskvrocksnode3",
               "new server's host");
 
@@ -167,6 +171,27 @@ std::vector<NodeInfo> GetNodeInfoList() {
  return infos;
 }
 
+int GetMaxVersion(RedisCluster *cluster_link) {
+ auto reply = cluster_link->redis("temp").command<OptionalString>("CLUSTER",
+                                                                  "NODES");
+
+ std::stringstream ss(reply.value());
+
+ std::string line;
+ std::vector<NodeInfo> infos;
+ while (std::getline(ss, line, '\n')) {
+  infos.emplace_back(line);
+ }
+ int max_version = 0;
+ for (auto info: infos) {
+
+  if (max_version < info.GetNewestVersion()) {
+   max_version = info.GetNewestVersion();
+  }
+ }
+ return max_version;
+}
+
 int GetMaxVersion(const std::vector<NodeInfo> &info_list) {
  int max_version = 0;
  for (auto info: info_list) {
@@ -187,7 +212,9 @@ inline std::string redis_cli_connection_head(NodeInfo &target) {
 struct MigrateCmd {
   MigrateCmd(int slot, NodeInfo &source, NodeInfo &target) : slot_(slot),
                                                              target_id_(
-                                                                 target.GetNodeId()) {
+                                                                 target.GetNodeId()),
+                                                             source_id_(
+                                                                 source.GetNodeId()) {
    redis_cli_command = redis_cli_connection_head(source);
    redis_cli_command.append(" clusterx migrate ");
    redis_cli_command.append(std::to_string(slot));
@@ -196,6 +223,7 @@ struct MigrateCmd {
 
   int slot_;
   std::string target_id_;
+  std::string source_id_;
   std::string redis_cli_command;
 };
 
@@ -297,6 +325,20 @@ int main(int argc, char **argv) {
     system(set_slot_cmd.c_str());
     system(set_node_id_cmd.c_str());
    }
+   // new nodes should also be updated
+   std::string update_cmd_head = "redis-cli";
+
+   update_cmd_head.append(" -h ").append(FLAGS_new_node_host);
+   update_cmd_head.append(" -p ").append(FLAGS_new_node_port);
+
+   std::string set_slot_in_new_server_cmd =
+       update_cmd_head + " clusterx setnodes " + "\"" + new_topology + "\" " +
+       std::to_string(max_version + 1);
+   std::string set_node_id_in_new_server_cmd =
+       update_cmd_head + " clusterx setnodeid " + FLAGS_new_node_id;
+   system(set_slot_in_new_server_cmd.c_str());
+   system(set_node_id_in_new_server_cmd.c_str());
+
    std::cout << "new nodes added" << std::endl;
 //   redis-cli -h 127.0.0.1 -p $PORT clusterx setnodes "${cluster_nodes}" 1
 //   redis-cli -h 127.0.0.1 -p $PORT clusterx setnodeid ${node_id[$index]}
@@ -308,7 +350,6 @@ int main(int argc, char **argv) {
    for (auto node: node_list) {
     total_slot += node.GetSlotNumberList().size();
    }
-   int newest_version = GetMaxVersion(node_list);
 
    auto new_topo = GetNewTopology(total_slot);
 
@@ -373,31 +414,63 @@ int main(int argc, char **argv) {
      std::cout << "rule: " << contributor_list[j].first.GetNodeId() << " to "
                << acceptor_list[i].first.GetNodeId() << " number of slots: "
                << cmd_set.size() << std::endl;
-
      cmd_lists.push_back(cmd_set);
     }
    }
 
+   std::unordered_map<std::string, RedisCluster *> id_connection_map;
+
+   for (auto node: node_list) {
+    auto temp = node.GetIPandPort();
+    id_connection_map.emplace(node.GetNodeId(), new RedisCluster(
+        "tcp://" + temp.first + ":" + temp.second));
+   }
    for (const auto &cmd_list_for_each_node: cmd_lists) {
     for (const auto &cmd_args: cmd_list_for_each_node) {
      std::string migrate_cmd = cmd_args.redis_cli_command;
-//     std::cout << migrate_cmd << std::endl;
-     system(migrate_cmd.c_str());
+     bool success = false;
+     int try_times = 0;
+     try {
+      auto reply = id_connection_map[cmd_args.source_id_]->command<OptionalString>(
+          "clusterx", "migrate",
+          cmd_args.slot_,
+          cmd_args.target_id_);
+      if (reply.value() != "OK") {
+       std::cout << reply.value() << std::endl;
+       try_times++;
+      } else {
+       success = true;
+      }
+     } catch (const Error &e) {
+      success = false;
+      auto error_info = e.what();
+      if (ERROR_ALREADY_MIGRATED == error_info) {
+       std::cout << "Slot has been migrated, skip to next" << std::endl;
+       success = true;
+      }
+      usleep(50l * 1000l); // sleep for 50 milliseconds, and retry
+      if (try_times > FLAGS_max_try) {
+       std::cerr << "Warning! a very long duration try for migration"
+                 << std::endl;
+      }
+     }
+
+     int current_version = GetMaxVersion(cluster);
+     current_version++;
      for (auto node: node_list) {
       std::string version_update_cmd = redis_cli_connection_head(node);
       version_update_cmd.append(" clusterx setslot ");
       version_update_cmd.append(std::to_string(cmd_args.slot_))
           .append(" NODE ").append(cmd_args.target_id_)
-          .append(" ").append(std::to_string(newest_version));
+          .append(" ").append(std::to_string(current_version)).append(
+              " > nul");
 //      std::cout << version_update_cmd << std::endl;
       system(version_update_cmd.c_str());
      }
-     newest_version++;
-    }
-
-   }
+    } // finish one migrate operation
+   }// finish all migration jobs.
+   // update the results into the clusters.
   }
-
 
  }
 
