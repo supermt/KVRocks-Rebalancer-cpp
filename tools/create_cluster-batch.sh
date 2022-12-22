@@ -41,7 +41,7 @@ if [ "$1" == "start" ]; then
     echo "Starting $PORT"
     mkdir node_${PORT}
     conf_file="node_${PORT}.conf"
-    cp ./default.conf ${conf_file}
+    cp ./batch.conf ${conf_file}
     sed -i.bak "s|pidfile.*|pidfile  node_${PORT}.pid|g" ${conf_file} && rm ${conf_file}.bak
     sed -i.bak "s|port.*|port ${PORT}|g" ${conf_file} && rm ${conf_file}.bak
     sed -i.bak "s|dir.*|dir "node_${PORT}"|g" ${conf_file} && rm ${conf_file}.bak
