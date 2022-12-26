@@ -18,7 +18,7 @@
 # under the License.
 
 # Settings
-BIN_PATH="/home/supermt/git/incubator-kvrocks/cmake-build-debug"
+BIN_PATH="/home/local/ASUAD/jinghua2/work/kvrocks-rocks7/build/"
 HOST=0.0.0.0
 PORT=30000
 START_NODES=2
