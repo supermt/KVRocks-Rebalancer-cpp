@@ -18,9 +18,10 @@
 # under the License.
 
 # Settings
-BIN_PATH="/home/supermt/git/incubator-kvrocks/cmake-build-debug"
+BIN_PATH="/home/local/ASUAD/jinghua2/work/kvrocks-rocks7/build/"
 HOST=0.0.0.0
-PORT=30000
+START_PORT=40000
+PORT=$START_PORT
 START_NODES=2
 EMPTY_NODES=1
 
@@ -53,7 +54,7 @@ fi
 
 if [ "$1" == "create" ]; then
   index=0
-  PORT=30000
+  PORT=$START_PORT
   cluster_nodes=""
   while [ $((index < START_NODES)) != "0" ]; do
     slotindex=$index
@@ -67,27 +68,13 @@ if [ "$1" == "create" ]; then
   echo ${cluster_nodes}
   sleep 5
   index=0
-  PORT=30000
+  PORT=$START_PORT
   while [ $((PORT < ENDPORT)) != "0" ]; do
     PORT=$((PORT + 1))
     redis-cli -h 127.0.0.1 -p $PORT clusterx setnodes "${cluster_nodes}" 1
     redis-cli -h 127.0.0.1 -p $PORT clusterx setnodeid ${node_id[$index]}
     echo "server ${node_id[$index]} configured"
     index=$((index + 1))
-  done
-  exit 0
-fi
-
-if [ "$1" == "migrate" ]; then
-  SLOTS=5460
-  MIGRATE_ID=0
-  while [ $((MIGRATE < SLOTS)) != "0" ]; do
-    MIGRATE_ID=$((MIGRATE_ID + 1))
-    echo "Migrate $MIGRATE_ID"
-    VERSION_NUM=$((MIGRATE_ID + 1))
-    redis-cli -h 127.0.0.1 -p 30001 clusterx migrate $MIGRATE_ID kvrockskvrockskvrockskvrockskvrocksnode3
-    redis-cli -h 127.0.0.1 -p 30001 clusterx setslot $MIGRATE_ID NODE kvrockskvrockskvrockskvrockskvrocksnode3 $VERSION_NUM
-    redis-cli -h 127.0.0.1 -p 30002 clusterx setslot $MIGRATE_ID NODE kvrockskvrockskvrockskvrockskvrocksnode3 $VERSION_NUM
   done
   exit 0
 fi
