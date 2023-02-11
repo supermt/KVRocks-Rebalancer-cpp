@@ -1,10 +1,11 @@
 #include <iostream>
 #include "main.h"
 #include <unistd.h>
+#include <time.h>
 
 const static std::string ERROR_ALREADY_MIGRATED = "Can't migrate slot which has been migrated";
 
-DEFINE_int32(port, 30001, "The cluster entry port");
+DEFINE_int32(port, 40001, "The cluster entry port");
 DEFINE_int32(max_try, 1000, "The cluster entry port");
 
 DEFINE_string(host, "127.0.0.1", "The cluster entry ip");
@@ -23,7 +24,7 @@ DEFINE_string(weights,
               "kvrockskvrockskvrockskvrockskvrocksnode3:1.0",
               "the weight pairs, it should be like the following format, \'ididididididid:score,dididididididi:score,dididididi:score\'");
 DEFINE_string(new_node_host, "127.0.0.1", "new server's host");
-DEFINE_string(new_node_port, "30003", "new server's host");
+DEFINE_string(new_node_port, "40003", "new server's host");
 DEFINE_string(new_node_id, "kvrockskvrockskvrockskvrockskvrocksnode3",
               "new server's host");
 
@@ -284,6 +285,10 @@ int main(int argc, char **argv) {
  CreateConnection(&cluster);
  std::stringstream operations(FLAGS_operations);
  std::string current_operation;
+
+ time_t start,end;
+ start = time(NULL);
+
  while (getline(operations, current_operation, ',')) {
   if (current_operation == "add-node") {
    std::string cluster_info_string = GetNodeInfoString();
@@ -473,6 +478,7 @@ int main(int argc, char **argv) {
   }
 
  }
-
+ end = time(NULL);
+ std::cout <<"time taken (sec):" << difftime(end,start);
  return 0;
 }
