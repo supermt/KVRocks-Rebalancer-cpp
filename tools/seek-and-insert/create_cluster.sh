@@ -18,7 +18,7 @@
 # under the License.
 
 # Settings
-BIN_PATH="/home/local/ASUAD/jinghua2/work/kvrocks-rocks7/build/"
+BIN_PATH="/home/local/ASUAD/jinghua2/work/incubator-kvrocks/build/"
 HOST=0.0.0.0
 START_PORT=40000
 PORT=40000
@@ -29,6 +29,7 @@ EMPTY_NODES=1
 ENDPORT=$((PORT + START_NODES))
 TOTALPORT=$((ENDPORT + EMPTY_NODES))
 
+#slots_range=("0-16383")
 slots_range=("0-8191" "8192-16383")
 node_id=("kvrockskvrockskvrockskvrockskvrocksnode1"
   "kvrockskvrockskvrockskvrockskvrocksnode2")
