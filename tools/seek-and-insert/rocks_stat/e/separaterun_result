@@ -1,3 +1,4 @@
+../ycsb/workloade
 Current max version: 1
 OK
 OK
@@ -24,4 +25,17 @@ kvrockskvrockskvrockskvrockskvrocksnode2 slots in node: 5461
 kvrockskvrockskvrockskvrockskvrocksnode3 slots in node: 5461
 rule: kvrockskvrockskvrockskvrockskvrocksnode2 to kvrockskvrockskvrockskvrockskvrocksnode3 number of slots: 2731
 rule: kvrockskvrockskvrockskvrockskvrocksnode1 to kvrockskvrockskvrockskvrockskvrocksnode3 number of slots: 2730
-time taken (sec):441
+time taken (sec):425filed length is: 100
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+2023-03-09 05:52:16 0 sec: 0 operations;
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

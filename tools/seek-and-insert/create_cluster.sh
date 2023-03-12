@@ -87,6 +87,8 @@ if [ "$1" == "stop" ]; then
     echo "Stopping $PORT"
     redis-cli -h 127.0.0.1 -p $PORT shutdown
   done
+
+  sleep 2
   rm -r ./node_*
   rm ./nohup*
   #   hadoop fs -rm -r -skipTrash /user/supermt
