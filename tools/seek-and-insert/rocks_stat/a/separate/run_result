@@ -1,0 +1,51 @@
+../ycsb/workloada
+Current max version: 1
+OK
+OK
+OK
+OK
+OK
+OK
+new nodes added
+weight map parsed: 
+node: kvrockskvrockskvrockskvrockskvrocksnode3, weight: 1
+node: kvrockskvrockskvrockskvrockskvrocksnode2, weight: 1
+node: kvrockskvrockskvrockskvrockskvrocksnode1, weight: 1
+
+>>>> current slot mapping is as follow <<<<
+
+kvrockskvrockskvrockskvrockskvrocksnode3 slots in node: 0
+kvrockskvrockskvrockskvrockskvrocksnode2 slots in node: 8192
+kvrockskvrockskvrockskvrockskvrocksnode1 slots in node: 8192
+
+>>>> target slot mapping is as follow <<<<
+
+kvrockskvrockskvrockskvrockskvrocksnode1 slots in node: 5462
+kvrockskvrockskvrockskvrockskvrocksnode2 slots in node: 5461
+kvrockskvrockskvrockskvrockskvrocksnode3 slots in node: 5461
+rule: kvrockskvrockskvrockskvrockskvrocksnode2 to kvrockskvrockskvrockskvrockskvrocksnode3 number of slots: 2731
+rule: kvrockskvrockskvrockskvrockskvrocksnode1 to kvrockskvrockskvrockskvrockskvrocksnode3 number of slots: 2730
+time taken (sec):260filed length is: 10000
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+2023-03-12 22:02:16 0 sec: 0 operations;
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-12 22:02:19 2 sec: 100000 operations; [READ: Count=49919 Max=3627.64 Min=27.36 Avg=103.47] [UPDATE: Count=50081 Max=6893.90 Min=56.50 Avg=128.28]
+Run runtime(sec): 2.85914
+Run operations(ops): 95161
+Run throughput(ops/sec): 33283.1
