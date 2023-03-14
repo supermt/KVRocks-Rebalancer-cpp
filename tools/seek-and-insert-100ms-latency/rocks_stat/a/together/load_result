@@ -1,0 +1,112 @@
+filed length is: 10000
+2023-03-13 20:37:46 0 sec: Initializing, create redis cluster link at tcp://127.0.0.1:40001
+0 operations;
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-13 20:37:56 10 sec: 223346 operations; [INSERT: Count=223346 Max=1272781.19 Min=40.13 Avg=210.06]
+2023-03-13 20:38:06 20 sec: 394794 operations; [INSERT: Count=394794 Max=1639240.96 Min=40.13 Avg=245.01]
+2023-03-13 20:38:16 30 sec: 574872 operations; [INSERT: Count=574872 Max=1639240.96 Min=40.13 Avg=243.77]
+2023-03-13 20:38:26 40 sec: 750455 operations; [INSERT: Count=750455 Max=1639240.96 Min=40.13 Avg=250.06]
+2023-03-13 20:38:36 50 sec: 923094 operations; [INSERT: Count=923094 Max=1639240.96 Min=40.13 Avg=255.09]
+2023-03-13 20:38:46 60 sec: 1088123 operations; [INSERT: Count=1088123 Max=1639240.96 Min=40.13 Avg=259.56]
+2023-03-13 20:38:56 70 sec: 1283844 operations; [INSERT: Count=1283844 Max=1639240.96 Min=40.13 Avg=255.66]
+2023-03-13 20:39:06 80 sec: 1436822 operations; [INSERT: Count=1436822 Max=1639240.96 Min=40.13 Avg=260.67]
+2023-03-13 20:39:16 90 sec: 1604746 operations; [INSERT: Count=1604746 Max=1639240.96 Min=40.13 Avg=264.76]
+2023-03-13 20:39:26 100 sec: 1755674 operations; [INSERT: Count=1755674 Max=1639240.96 Min=40.13 Avg=269.70]
+2023-03-13 20:39:36 110 sec: 1935832 operations; [INSERT: Count=1935832 Max=1639240.96 Min=40.13 Avg=268.23]
+2023-03-13 20:39:46 120 sec: 2097706 operations; [INSERT: Count=2097706 Max=1639240.96 Min=40.13 Avg=270.14]
+2023-03-13 20:39:56 130 sec: 2249565 operations; [INSERT: Count=2249565 Max=1639240.96 Min=40.13 Avg=271.71]
+2023-03-13 20:40:06 140 sec: 2427755 operations; [INSERT: Count=2427755 Max=1639240.96 Min=40.13 Avg=272.11]
+2023-03-13 20:40:16 150 sec: 2565425 operations; [INSERT: Count=2565425 Max=1639240.96 Min=40.13 Avg=276.27]
+2023-03-13 20:40:26 160 sec: 2735165 operations; [INSERT: Count=2735165 Max=1639240.96 Min=40.13 Avg=275.70]
+2023-03-13 20:40:36 170 sec: 2903004 operations; [INSERT: Count=2903004 Max=1639240.96 Min=40.13 Avg=275.94]
+2023-03-13 20:40:46 180 sec: 2955715 operations; [INSERT: Count=2955715 Max=1639240.96 Min=40.13 Avg=289.47]
+2023-03-13 20:40:56 190 sec: 3036962 operations; [INSERT: Count=3036962 Max=1639240.96 Min=40.13 Avg=298.92]
+2023-03-13 20:41:06 200 sec: 3184397 operations; [INSERT: Count=3184397 Max=1639240.96 Min=40.13 Avg=298.57]
+2023-03-13 20:41:16 210 sec: 3326570 operations; [INSERT: Count=3326570 Max=1639240.96 Min=40.13 Avg=301.64]
+2023-03-13 20:41:26 220 sec: 3418253 operations; [INSERT: Count=3418253 Max=1639240.96 Min=40.13 Avg=308.40]
+2023-03-13 20:41:36 230 sec: 3572026 operations; [INSERT: Count=3572026 Max=1639240.96 Min=40.13 Avg=307.98]
+2023-03-13 20:41:46 240 sec: 3651386 operations; [INSERT: Count=3651386 Max=1639240.96 Min=40.13 Avg=316.01]
+2023-03-13 20:41:56 250 sec: 3676179 operations; [INSERT: Count=3676179 Max=1639240.96 Min=40.13 Avg=329.34]
+2023-03-13 20:42:06 260 sec: 3710196 operations; [INSERT: Count=3710196 Max=1639240.96 Min=40.13 Avg=341.57]
+2023-03-13 20:42:16 270 sec: 3844106 operations; [INSERT: Count=3844106 Max=1639240.96 Min=40.13 Avg=342.35]
+2023-03-13 20:42:26 280 sec: 4003039 operations; [INSERT: Count=4003039 Max=1639240.96 Min=40.13 Avg=339.94]
+2023-03-13 20:42:36 290 sec: 4160335 operations; [INSERT: Count=4160335 Max=1639240.96 Min=40.13 Avg=339.06]
+2023-03-13 20:42:46 300 sec: 4309108 operations; [INSERT: Count=4309108 Max=1639240.96 Min=40.13 Avg=338.46]
+2023-03-13 20:42:56 310 sec: 4438120 operations; [INSERT: Count=4438120 Max=1715797.65 Min=40.13 Avg=339.70]
+2023-03-13 20:43:06 320 sec: 4584128 operations; [INSERT: Count=4584128 Max=1715797.65 Min=40.13 Avg=338.74]
+2023-03-13 20:43:16 330 sec: 4715931 operations; [INSERT: Count=4715931 Max=1715797.65 Min=40.13 Avg=339.45]
+2023-03-13 20:43:26 340 sec: 4864863 operations; [INSERT: Count=4864863 Max=1715797.65 Min=40.13 Avg=338.53]
+2023-03-13 20:43:36 350 sec: 4917909 operations; [INSERT: Count=4917909 Max=1715797.65 Min=40.13 Avg=346.61]
+2023-03-13 20:43:46 360 sec: 4949199 operations; [INSERT: Count=4949199 Max=1715797.65 Min=40.13 Avg=355.78]
+2023-03-13 20:43:56 370 sec: 5028122 operations; [INSERT: Count=5028122 Max=1715797.65 Min=40.13 Avg=359.17]
+2023-03-13 20:44:06 380 sec: 5174364 operations; [INSERT: Count=5174364 Max=1715797.65 Min=40.13 Avg=359.93]
+2023-03-13 20:44:16 390 sec: 5316968 operations; [INSERT: Count=5316968 Max=1715797.65 Min=40.13 Avg=359.39]
+2023-03-13 20:44:26 400 sec: 5483802 operations; [INSERT: Count=5483802 Max=1715797.65 Min=40.13 Avg=357.06]
+2023-03-13 20:44:36 410 sec: 5628353 operations; [INSERT: Count=5628353 Max=1715797.65 Min=40.13 Avg=356.39]
+2023-03-13 20:44:46 420 sec: 5734755 operations; [INSERT: Count=5734755 Max=1715797.65 Min=40.13 Avg=358.87]
+2023-03-13 20:44:56 430 sec: 5836779 operations; [INSERT: Count=5836779 Max=1715797.65 Min=40.13 Avg=361.27]
+2023-03-13 20:45:06 440 sec: 5922904 operations; [INSERT: Count=5922904 Max=1715797.65 Min=40.13 Avg=364.71]
+2023-03-13 20:45:16 450 sec: 5980097 operations; [INSERT: Count=5980097 Max=1715797.65 Min=40.13 Avg=370.19]
+2023-03-13 20:45:26 460 sec: 6010065 operations; [INSERT: Count=6010065 Max=1715797.65 Min=40.13 Avg=377.72]
+2023-03-13 20:45:36 470 sec: 6118081 operations; [INSERT: Count=6118081 Max=1715797.65 Min=40.13 Avg=378.18]
+2023-03-13 20:45:46 480 sec: 6266002 operations; [INSERT: Count=6266002 Max=1718396.97 Min=40.13 Avg=378.20]
+2023-03-13 20:45:56 490 sec: 6430933 operations; [INSERT: Count=6430933 Max=1718396.97 Min=40.13 Avg=375.73]
+2023-03-13 20:46:06 500 sec: 6550152 operations; [INSERT: Count=6550152 Max=1718396.97 Min=40.13 Avg=376.60]
+2023-03-13 20:46:16 510 sec: 6607900 operations; [INSERT: Count=6607900 Max=1718396.97 Min=40.13 Avg=381.49]
+2023-03-13 20:46:26 520 sec: 6641547 operations; [INSERT: Count=6641547 Max=1718396.97 Min=40.13 Avg=388.06]
+2023-03-13 20:46:36 530 sec: 6679602 operations; [INSERT: Count=6679602 Max=1718396.97 Min=40.13 Avg=394.20]
+2023-03-13 20:46:46 540 sec: 6749548 operations; [INSERT: Count=6749548 Max=1718396.97 Min=40.13 Avg=398.02]
+2023-03-13 20:46:56 550 sec: 6933462 operations; [INSERT: Count=6933462 Max=1718396.97 Min=40.13 Avg=394.22]
+2023-03-13 20:47:06 560 sec: 7049191 operations; [INSERT: Count=7049191 Max=1718396.97 Min=40.13 Avg=394.71]
+2023-03-13 20:47:16 570 sec: 7170381 operations; [INSERT: Count=7170381 Max=1718396.97 Min=40.13 Avg=394.32]
+2023-03-13 20:47:26 580 sec: 7274454 operations; [INSERT: Count=7274454 Max=1718396.97 Min=40.13 Avg=396.33]
+2023-03-13 20:47:36 590 sec: 7414227 operations; [INSERT: Count=7414227 Max=1947712.94 Min=40.13 Avg=395.38]
+2023-03-13 20:47:46 600 sec: 7554034 operations; [INSERT: Count=7554034 Max=2078363.82 Min=40.13 Avg=394.23]
+2023-03-13 20:47:56 610 sec: 7730682 operations; [INSERT: Count=7730682 Max=2078363.82 Min=40.13 Avg=391.46]
+2023-03-13 20:48:06 620 sec: 7836543 operations; [INSERT: Count=7836543 Max=2078363.82 Min=40.13 Avg=392.60]
+2023-03-13 20:48:16 630 sec: 7882145 operations; [INSERT: Count=7882145 Max=2078363.82 Min=40.13 Avg=397.26]
+2023-03-13 20:48:26 640 sec: 7910496 operations; [INSERT: Count=7910496 Max=2078363.82 Min=40.13 Avg=402.97]
+2023-03-13 20:48:36 650 sec: 7945321 operations; [INSERT: Count=7945321 Max=2078363.82 Min=40.13 Avg=408.21]
+2023-03-13 20:48:46 660 sec: 8003107 operations; [INSERT: Count=8003107 Max=2078363.82 Min=40.13 Avg=411.93]
+2023-03-13 20:48:56 670 sec: 8129196 operations; [INSERT: Count=8129196 Max=2078363.82 Min=40.13 Avg=411.75]
+2023-03-13 20:49:06 680 sec: 8272430 operations; [INSERT: Count=8272430 Max=2078363.82 Min=40.13 Avg=409.62]
+2023-03-13 20:49:16 690 sec: 8434416 operations; [INSERT: Count=8434416 Max=2078363.82 Min=40.13 Avg=407.94]
+2023-03-13 20:49:26 700 sec: 8583375 operations; [INSERT: Count=8583375 Max=2078363.82 Min=40.13 Avg=406.64]
+2023-03-13 20:49:36 710 sec: 8660865 operations; [INSERT: Count=8660865 Max=2078363.82 Min=40.13 Avg=408.95]
+2023-03-13 20:49:46 720 sec: 8682843 operations; [INSERT: Count=8682843 Max=2078363.82 Min=40.13 Avg=414.49]
+2023-03-13 20:49:56 730 sec: 8696073 operations; [INSERT: Count=8696073 Max=2078363.82 Min=40.13 Avg=420.56]
+2023-03-13 20:50:06 740 sec: 8755860 operations; [INSERT: Count=8755860 Max=2078363.82 Min=40.13 Avg=423.82]
+2023-03-13 20:50:16 750 sec: 8856799 operations; [INSERT: Count=8856799 Max=2078363.82 Min=40.13 Avg=424.67]
+2023-03-13 20:50:26 760 sec: 8951372 operations; [INSERT: Count=8951372 Max=2078363.82 Min=40.13 Avg=425.91]
+2023-03-13 20:50:36 770 sec: 9037854 operations; [INSERT: Count=9037854 Max=2078363.82 Min=40.13 Avg=427.48]
+2023-03-13 20:50:46 780 sec: 9094185 operations; [INSERT: Count=9094185 Max=2078363.82 Min=40.13 Avg=430.78]
+2023-03-13 20:50:56 790 sec: 9132291 operations; [INSERT: Count=9132291 Max=2078363.82 Min=40.13 Avg=435.09]
+2023-03-13 20:51:06 800 sec: 9180339 operations; [INSERT: Count=9180339 Max=2078363.82 Min=40.13 Avg=438.77]
+2023-03-13 20:51:16 810 sec: 9220472 operations; [INSERT: Count=9220472 Max=2078363.82 Min=40.13 Avg=442.88]
+2023-03-13 20:51:26 820 sec: 9277830 operations; [INSERT: Count=9277830 Max=2078363.82 Min=40.13 Avg=445.90]
+2023-03-13 20:51:36 830 sec: 9335728 operations; [INSERT: Count=9335728 Max=2078363.82 Min=40.13 Avg=448.88]
+2023-03-13 20:51:46 840 sec: 9451825 operations; [INSERT: Count=9451825 Max=2078363.82 Min=40.13 Avg=448.56]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-13 20:51:56 850 sec: 9609957 operations; [INSERT: Count=9609957 Max=2078363.82 Min=40.13 Avg=445.91]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-13 20:52:06 860 sec: 9774953 operations; [INSERT: Count=9774953 Max=2078363.82 Min=40.13 Avg=440.65]
+2023-03-13 20:52:16 870 sec: 9879896 operations; [INSERT: Count=9879896 Max=2078363.82 Min=40.13 Avg=438.04]
+2023-03-13 20:52:26 880 sec: 9948622 operations; [INSERT: Count=9948622 Max=2078363.82 Min=40.13 Avg=437.34]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-13 20:52:36 890 sec: 10000000 operations; [INSERT: Count=10000000 Max=2078363.82 Min=40.13 Avg=436.91]
+Load runtime(sec): 890.007
+Load operations(ops): 10000000
+Load throughput(ops/sec): 11235.9

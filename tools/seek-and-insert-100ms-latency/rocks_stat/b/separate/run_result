@@ -1,0 +1,74 @@
+../ycsb/workloadb
+Current max version: 1
+OK
+OK
+OK
+OK
+OK
+OK
+new nodes added
+weight map parsed: 
+node: kvrockskvrockskvrockskvrockskvrocksnode3, weight: 1
+node: kvrockskvrockskvrockskvrockskvrocksnode2, weight: 1
+node: kvrockskvrockskvrockskvrockskvrocksnode1, weight: 1
+
+>>>> current slot mapping is as follow <<<<
+
+kvrockskvrockskvrockskvrockskvrocksnode3 slots in node: 0
+kvrockskvrockskvrockskvrockskvrocksnode2 slots in node: 8192
+kvrockskvrockskvrockskvrockskvrocksnode1 slots in node: 8192
+
+>>>> target slot mapping is as follow <<<<
+
+kvrockskvrockskvrockskvrockskvrocksnode1 slots in node: 5462
+kvrockskvrockskvrockskvrockskvrocksnode2 slots in node: 5461
+kvrockskvrockskvrockskvrockskvrocksnode3 slots in node: 5461
+rule: kvrockskvrockskvrockskvrockskvrocksnode2 to kvrockskvrockskvrockskvrockskvrocksnode3 number of slots: 2731
+rule: kvrockskvrockskvrockskvrockskvrocksnode1 to kvrockskvrockskvrockskvrockskvrocksnode3 number of slots: 2730
+time taken (sec):431filed length is: 100
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+2023-03-13 21:24:40 0 sec: Initializing, create redis cluster link at tcp://127.0.0.1:400010 operations;
+
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-13 21:24:50 10 sec: 545366 operations; [READ: Count=518352 Max=2025.93 Min=24.22 Avg=108.69] [UPDATE: Count=27014 Max=1002.30 Min=35.80 Avg=93.67]
+2023-03-13 21:25:00 20 sec: 1074034 operations; [READ: Count=1020322 Max=2025.93 Min=24.22 Avg=110.51] [UPDATE: Count=53712 Max=1825.82 Min=35.80 Avg=93.06]
+2023-03-13 21:25:10 30 sec: 1586677 operations; [READ: Count=1507268 Max=2025.93 Min=24.22 Avg=112.29] [UPDATE: Count=79409 Max=1825.82 Min=35.80 Avg=93.25]
+2023-03-13 21:25:20 40 sec: 2057661 operations; [READ: Count=1954588 Max=2311.46 Min=24.22 Avg=115.45] [UPDATE: Count=103073 Max=1825.82 Min=35.80 Avg=94.92]
+2023-03-13 21:25:30 50 sec: 2517199 operations; [READ: Count=2391210 Max=2439.51 Min=24.22 Avg=117.96] [UPDATE: Count=125989 Max=1825.82 Min=35.80 Avg=96.29]
+2023-03-13 21:25:40 60 sec: 2973904 operations; [READ: Count=2824960 Max=2439.51 Min=22.70 Avg=119.82] [UPDATE: Count=148944 Max=1825.82 Min=34.72 Avg=97.10]
+2023-03-13 21:25:50 70 sec: 3423283 operations; [READ: Count=3251718 Max=2514.97 Min=22.70 Avg=121.45] [UPDATE: Count=171565 Max=1825.82 Min=34.72 Avg=97.91]
+2023-03-13 21:26:00 80 sec: 3877498 operations; [READ: Count=3683166 Max=2514.97 Min=22.70 Avg=122.56] [UPDATE: Count=194332 Max=1878.38 Min=34.72 Avg=98.48]
+2023-03-13 21:26:10 90 sec: 4330597 operations; [READ: Count=4113519 Max=2514.97 Min=22.70 Avg=123.47] [UPDATE: Count=217078 Max=1878.38 Min=34.72 Avg=98.82]
+2023-03-13 21:26:20 100 sec: 4774524 operations; [READ: Count=4535322 Max=2514.97 Min=22.70 Avg=124.45] [UPDATE: Count=239202 Max=1878.38 Min=34.72 Avg=99.23]
+2023-03-13 21:26:30 110 sec: 5213204 operations; [READ: Count=4951872 Max=2514.97 Min=21.54 Avg=125.39] [UPDATE: Count=261332 Max=1878.38 Min=34.72 Avg=99.65]
+2023-03-13 21:26:40 120 sec: 5654255 operations; [READ: Count=5370674 Max=2514.97 Min=21.54 Avg=126.13] [UPDATE: Count=283581 Max=1878.38 Min=34.72 Avg=99.88]
+2023-03-13 21:26:50 130 sec: 6098766 operations; [READ: Count=5793047 Max=6028.96 Min=21.54 Avg=126.69] [UPDATE: Count=305719 Max=1878.38 Min=34.72 Avg=100.07]
+2023-03-13 21:27:00 140 sec: 6545416 operations; [READ: Count=6217240 Max=6028.96 Min=21.54 Avg=127.13] [UPDATE: Count=328176 Max=1878.38 Min=34.72 Avg=100.21]
+2023-03-13 21:27:10 150 sec: 6988657 operations; [READ: Count=6638175 Max=6028.96 Min=21.54 Avg=127.59] [UPDATE: Count=350482 Max=1878.38 Min=34.72 Avg=100.33]
+2023-03-13 21:27:20 160 sec: 7423284 operations; [READ: Count=7050966 Max=6028.96 Min=21.54 Avg=128.15] [UPDATE: Count=372318 Max=1878.38 Min=34.72 Avg=100.49]
+2023-03-13 21:27:30 170 sec: 7852205 operations; [READ: Count=7458500 Max=6028.96 Min=21.54 Avg=128.73] [UPDATE: Count=393705 Max=1878.38 Min=34.72 Avg=100.71]
+2023-03-13 21:27:40 180 sec: 8278367 operations; [READ: Count=7863371 Max=6028.96 Min=21.54 Avg=129.30] [UPDATE: Count=414996 Max=1878.38 Min=34.72 Avg=100.96]
+2023-03-13 21:27:50 190 sec: 8704202 operations; [READ: Count=8267734 Max=6028.96 Min=21.54 Avg=129.82] [UPDATE: Count=436468 Max=1878.38 Min=34.72 Avg=101.14]
+2023-03-13 21:28:00 200 sec: 9128976 operations; [READ: Count=8671193 Max=6028.96 Min=21.54 Avg=130.31] [UPDATE: Count=457783 Max=1878.38 Min=34.72 Avg=101.28]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-13 21:28:10 210 sec: 9554038 operations; [READ: Count=9074761 Max=6028.96 Min=21.54 Avg=130.75] [UPDATE: Count=479277 Max=1878.38 Min=34.72 Avg=101.42]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-13 21:28:20 220 sec: 9841351 operations; [READ: Count=9347698 Max=6028.96 Min=21.54 Avg=131.11] [UPDATE: Count=493653 Max=1878.38 Min=34.72 Avg=101.56]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-13 21:28:30 230 sec: 9973374 operations; [READ: Count=9473264 Max=6028.96 Min=21.54 Avg=131.32] [UPDATE: Count=500110 Max=1878.38 Min=34.72 Avg=101.66]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-13 21:28:34 234 sec: 10000000 operations; [READ: Count=9498561 Max=6028.96 Min=21.54 Avg=131.36] [UPDATE: Count=501439 Max=1878.38 Min=34.72 Avg=101.67]
+Run runtime(sec): 234.002
+Run operations(ops): 8634173
+Run throughput(ops/sec): 36897.9

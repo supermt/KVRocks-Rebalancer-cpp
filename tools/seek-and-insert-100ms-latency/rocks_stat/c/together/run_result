@@ -1,0 +1,100 @@
+../ycsb/workloadc
+filed length is: 100
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+2023-03-13 22:31:06 0 sec: Initializing, create redis cluster link at tcp://127.0.0.1:40001
+0 operations;
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Error when reading: Failed to send command with key: user10944154630601371562
+2023-03-13 22:31:16 10 sec: 297585 operations; [READ: Count=297585 Max=6147.04 Min=38.49 Avg=198.96]
+Error when reading: Failed to send command with key: user10529374128480978057
+Error when reading: Failed to send command with key: user11367183480607336703
+2023-03-13 22:31:26 20 sec: 599403 operations; [READ: Count=599403 Max=34318.54 Min=24.99 Avg=197.55]
+Error when reading: Failed to send command with key: user6074845680970796025
+Error when reading: Failed to send command with key: user8492004127007392176
+2023-03-13 22:31:36 30 sec: 921945 operations; [READ: Count=921945 Max=34318.54 Min=24.99 Avg=192.62]
+Error when reading: Failed to send command with key: user816688746594187559
+Error when reading: Failed to send command with key: user5187647767555431264
+Error when reading: Failed to send command with key: user8017651712904280663
+Error when reading: Failed to send command with key: user14418012812198035494
+Error when reading: Failed to send command with key: user11278082519423149500
+Error when reading: Failed to send command with key: user14362826663634456799
+Error when reading: Failed to send command with key: user7194709579247581825
+2023-03-13 22:31:46 40 sec: 1254731 operations; [READ: Count=1254731 Max=34318.54 Min=24.99 Avg=188.71]
+Error when reading: Failed to send command with key: user9434316162918681757
+2023-03-13 22:31:56 50 sec: 1590056 operations; [READ: Count=1590056 Max=34318.54 Min=24.99 Avg=186.13]
+2023-03-13 22:32:06 60 sec: 1925780 operations; [READ: Count=1925780 Max=34318.54 Min=24.99 Avg=184.41]
+Error when reading: Failed to send command with key: user9492390803832399849
+Error when reading: Failed to send command with key: user12228916976462229247
+Error when reading: Failed to send command with key: user5053461800495787348
+Error when reading: Failed to send command with key: user6766092624833577355
+Error when reading: Failed to send command with key: user6766092624833577355
+Error when reading: Failed to send command with key: user6766092624833577355
+Error when reading: Failed to send command with key: user6766092624833577355
+Error when reading: Failed to send command with key: user6766092624833577355
+Error when reading: Failed to send command with key: user12123452105514580241
+Error when reading: Failed to send command with key: user12849423715842143273
+2023-03-13 22:32:16 70 sec: 2391557 operations; [READ: Count=2391557 Max=34318.54 Min=24.99 Avg=173.13]
+2023-03-13 22:32:26 80 sec: 2874856 operations; [READ: Count=2874856 Max=34318.54 Min=24.99 Avg=164.51]
+Error when reading: Failed to send command with key: user4515213967445335313
+Error when reading: Failed to send command with key: user10610427060802791151
+2023-03-13 22:32:36 90 sec: 3359991 operations; [READ: Count=3359991 Max=34318.54 Min=24.99 Avg=158.29]
+Error when reading: Failed to send command with key: user2727900694981714404
+Error when reading: Failed to send command with key: user14731577791876171800
+2023-03-13 22:32:46 100 sec: 3852696 operations; [READ: Count=3852696 Max=34318.54 Min=24.99 Avg=153.34]
+Error when reading: Failed to send command with key: user14416160756395716342
+Error when reading: Failed to send command with key: user8616109785590085819
+Error when reading: Failed to send command with key: user11652681203059044443
+Error when reading: Failed to send command with key: user15969874021270346574
+Error when reading: Failed to send command with key: user15969874021270346574
+Error when reading: Failed to send command with key: user15969874021270346574
+Error when reading: Failed to send command with key: user18069375105041281865
+Error when reading: Failed to send command with key: user1654463036064068722
+2023-03-13 22:32:56 110 sec: 4358071 operations; [READ: Count=4358071 Max=34318.54 Min=23.32 Avg=149.07]
+Error when reading: Failed to send command with key: user4881665424979872617
+Error when reading: Failed to send command with key: user14182072560098651508
+2023-03-13 22:33:06 120 sec: 4869581 operations; [READ: Count=4869581 Max=34318.54 Min=23.32 Avg=145.51]
+Error when reading: Failed to send command with key: user8180291154510261930
+Error when reading: Failed to send command with key: user8386856451934235948
+Error when reading: Failed to send command with key: user15679883840486140306
+2023-03-13 22:33:16 130 sec: 5384815 operations; [READ: Count=5384815 Max=34318.54 Min=21.72 Avg=142.52]
+Error when reading: Failed to send command with key: user338306206358068291
+Error when reading: Failed to send command with key: user6785483851142800138
+2023-03-13 22:33:26 140 sec: 5883830 operations; [READ: Count=5883830 Max=34318.54 Min=21.72 Avg=140.44]
+Error when reading: Failed to send command with key: user11002079942818782645
+Error when reading: Failed to send command with key: user11892721868778285370
+Error when reading: Failed to send command with key: user330446250488540647
+Error when reading: Failed to send command with key: user13570369011780483580
+2023-03-13 22:33:36 150 sec: 6393970 operations; [READ: Count=6393970 Max=34318.54 Min=21.67 Avg=138.45]
+Error when reading: Failed to send command with key: user11246207229827905257
+Error when reading: Failed to send command with key: user1067664035720104030
+Error when reading: Failed to send command with key: user5121859446224941577
+Error when reading: Failed to send command with key: user2666442706425331631
+Error when reading: Failed to send command with key: user16720956817041441498
+2023-03-13 22:33:46 160 sec: 6904802 operations; [READ: Count=6904802 Max=34318.54 Min=21.67 Avg=136.75]
+2023-03-13 22:33:56 170 sec: 7412575 operations; [READ: Count=7412575 Max=34318.54 Min=21.67 Avg=135.34]
+Error when reading: Failed to send command with key: user4648213752823370171
+2023-03-13 22:34:06 180 sec: 7913309 operations; [READ: Count=7913309 Max=34318.54 Min=21.67 Avg=134.22]
+2023-03-13 22:34:16 190 sec: 8411064 operations; [READ: Count=8411064 Max=34318.54 Min=21.67 Avg=133.29]
+2023-03-13 22:34:26 200 sec: 8905709 operations; [READ: Count=8905709 Max=34318.54 Min=21.67 Avg=132.50]
+Error when reading: Failed to send command with key: user15797772067513779114
+2023-03-13 22:34:36 210 sec: 9407657 operations; [READ: Count=9407657 Max=34318.54 Min=21.67 Avg=131.69]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-13 22:34:46 220 sec: 9861340 operations; [READ: Count=9861340 Max=34318.54 Min=21.67 Avg=131.01]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-13 22:34:54 227 sec: 10000000 operations; [READ: Count=10000000 Max=34318.54 Min=21.67 Avg=130.81]
+Run runtime(sec): 227.681
+Run operations(ops): 9575067
+Run throughput(ops/sec): 42054.8
