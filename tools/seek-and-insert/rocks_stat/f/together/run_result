@@ -1,0 +1,102 @@
+../ycsb/workloadf
+filed length is: 100
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+2023-03-13 03:39:59 0 sec: 0 operations;
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Error when reading: Failed to send command with key: user15213401727528208590
+2023-03-13 03:40:09 10 sec: 314637 operations; [READ: Count=209496 Max=7368.51 Min=43.51 Avg=220.36] [UPDATE: Count=105141 Max=7148.99 Min=36.61 Avg=122.51]
+Error when reading: Failed to send command with key: user1262830056977837248
+2023-03-13 03:40:19 20 sec: 631493 operations; [READ: Count=420597 Max=7368.51 Min=27.92 Avg=220.69] [UPDATE: Count=210896 Max=7148.99 Min=32.10 Avg=119.84]
+2023-03-13 03:40:29 30 sec: 962860 operations; [READ: Count=641860 Max=7368.51 Min=25.71 Avg=217.54] [UPDATE: Count=321000 Max=7148.99 Min=32.10 Avg=116.74]
+Error when reading: Failed to send command with key: user5047336023996710110
+2023-03-13 03:40:39 40 sec: 1330417 operations; [READ: Count=886796 Max=7368.51 Min=25.71 Avg=209.89] [UPDATE: Count=443621 Max=7148.99 Min=32.10 Avg=112.39]
+2023-03-13 03:40:49 50 sec: 1695338 operations; [READ: Count=1130051 Max=7368.51 Min=25.02 Avg=205.97] [UPDATE: Count=565287 Max=7148.99 Min=31.72 Avg=109.92]
+Error when reading: Failed to send command with key: user12541496578218597632
+2023-03-13 03:40:59 60 sec: 2059498 operations; [READ: Count=1373164 Max=44356.03 Min=25.02 Avg=203.58] [UPDATE: Count=686334 Max=7148.99 Min=31.72 Avg=108.20]
+Error when reading: Failed to send command with key: user14610814077206824565
+Error when reading: Failed to send command with key: user6766092624833577355
+Failed in updatingFailed to send command with key: user6766092624833577355
+Error when reading: Failed to send command with key: user6766092624833577355
+Error when reading: Failed to send command with key: user15959722565273158179
+2023-03-13 03:41:09 70 sec: 2416503 operations; [READ: Count=1611171 Max=44356.03 Min=25.02 Avg=202.59] [UPDATE: Count=805332 Max=7148.99 Min=30.65 Avg=107.19]
+Error when reading: Failed to send command with key: user3241219953056055975
+Error when reading: Failed to send command with key: user827364706636266776
+Error when reading: Failed to send command with key: user11003142118954711376
+Error when reading: Failed to send command with key: user4216890916526647732
+Error when reading: Failed to send command with key: user6404991484858213137
+2023-03-13 03:41:19 80 sec: 2771991 operations; [READ: Count=1848278 Max=44356.03 Min=25.02 Avg=202.00] [UPDATE: Count=923713 Max=7148.99 Min=30.65 Avg=106.46]
+Error when reading: Failed to send command with key: user11107559882567277647
+Error when reading: Failed to send command with key: user5608857104529960478
+Error when reading: Failed to send command with key: user14352886956125808329
+2023-03-13 03:41:29 90 sec: 3131322 operations; [READ: Count=2087774 Max=44356.03 Min=24.51 Avg=201.28] [UPDATE: Count=1043548 Max=7148.99 Min=30.65 Avg=105.77]
+Error when reading: Failed to send command with key: user1072738700681287170
+Error when reading: Failed to send command with key: user5199235904336062815
+2023-03-13 03:41:39 100 sec: 3492187 operations; [READ: Count=2328678 Max=44356.03 Min=24.51 Avg=200.55] [UPDATE: Count=1163509 Max=7148.99 Min=30.65 Avg=105.28]
+Error when reading: Failed to send command with key: user9121605657395303995
+Error when reading: Failed to send command with key: user14486008341880332281
+Failed in updatingFailed to send command with key: user14486008341880332281
+2023-03-13 03:41:49 110 sec: 3891514 operations; [READ: Count=2595032 Max=44356.03 Min=24.51 Avg=197.71] [UPDATE: Count=1296482 Max=7148.99 Min=30.65 Avg=104.34]
+Error when reading: Failed to send command with key: user14938360439861295339
+2023-03-13 03:41:59 120 sec: 4288741 operations; [READ: Count=2859905 Max=44356.03 Min=24.51 Avg=195.48] [UPDATE: Count=1428836 Max=7148.99 Min=30.65 Avg=103.67]
+2023-03-13 03:42:09 130 sec: 4696441 operations; [READ: Count=3131606 Max=44356.03 Min=24.51 Avg=193.12] [UPDATE: Count=1564835 Max=7148.99 Min=30.29 Avg=103.02]
+2023-03-13 03:42:19 140 sec: 5094625 operations; [READ: Count=3396939 Max=44356.03 Min=24.51 Avg=191.54] [UPDATE: Count=1697686 Max=7148.99 Min=30.29 Avg=102.58]
+Error when reading: Failed to send command with key: user8228649203886806786
+Error when reading: Failed to send command with key: user3409932380271012184
+Error when reading: Failed to send command with key: user1984924854393662183
+2023-03-13 03:42:29 150 sec: 5490011 operations; [READ: Count=3660271 Max=44356.03 Min=24.51 Avg=190.32] [UPDATE: Count=1829740 Max=7148.99 Min=30.29 Avg=102.17]
+2023-03-13 03:42:39 160 sec: 5886552 operations; [READ: Count=3924695 Max=44356.03 Min=24.49 Avg=189.16] [UPDATE: Count=1961857 Max=7148.99 Min=30.29 Avg=101.93]
+Error when reading: Failed to send command with key: user11839528956760525551
+2023-03-13 03:42:49 170 sec: 6274868 operations; [READ: Count=4183487 Max=44356.03 Min=24.49 Avg=188.43] [UPDATE: Count=2091381 Max=7148.99 Min=30.29 Avg=101.82]
+2023-03-13 03:42:59 180 sec: 6653820 operations; [READ: Count=4436068 Max=44356.03 Min=24.49 Avg=188.09] [UPDATE: Count=2217752 Max=7148.99 Min=30.29 Avg=101.78]
+2023-03-13 03:43:09 190 sec: 7032121 operations; [READ: Count=4688136 Max=44356.03 Min=24.49 Avg=187.81] [UPDATE: Count=2343985 Max=7148.99 Min=30.29 Avg=101.73]
+2023-03-13 03:43:19 200 sec: 7407639 operations; [READ: Count=4938278 Max=44356.03 Min=24.49 Avg=187.65] [UPDATE: Count=2469361 Max=7148.99 Min=30.29 Avg=101.70]
+2023-03-13 03:43:29 210 sec: 7779181 operations; [READ: Count=5186406 Max=44356.03 Min=24.49 Avg=187.59] [UPDATE: Count=2592775 Max=10184.47 Min=30.29 Avg=101.73]
+2023-03-13 03:43:39 220 sec: 8156789 operations; [READ: Count=5438038 Max=44356.03 Min=24.49 Avg=187.39] [UPDATE: Count=2718751 Max=10184.47 Min=30.29 Avg=101.69]
+2023-03-13 03:43:49 230 sec: 8548921 operations; [READ: Count=5699570 Max=44356.03 Min=24.49 Avg=186.86] [UPDATE: Count=2849351 Max=10184.47 Min=30.29 Avg=101.54]
+Error when reading: Failed to send command with key: user14101210015013004645
+2023-03-13 03:43:59 240 sec: 8933851 operations; [READ: Count=5956211 Max=44356.03 Min=24.49 Avg=186.55] [UPDATE: Count=2977640 Max=10184.47 Min=30.29 Avg=101.43]
+Error when reading: Failed to send command with key: user2407516131885520256
+Error when reading: Failed to send command with key: user17519793771745273582
+2023-03-13 03:44:09 250 sec: 9314085 operations; [READ: Count=6209574 Max=44356.03 Min=24.49 Avg=186.37] [UPDATE: Count=3104511 Max=10184.47 Min=30.29 Avg=101.38]
+2023-03-13 03:44:19 260 sec: 9696605 operations; [READ: Count=6464600 Max=44356.03 Min=24.49 Avg=186.17] [UPDATE: Count=3232005 Max=10184.47 Min=30.29 Avg=101.29]
+2023-03-13 03:44:29 270 sec: 10073924 operations; [READ: Count=6716270 Max=44356.03 Min=24.49 Avg=186.08] [UPDATE: Count=3357654 Max=10184.47 Min=30.29 Avg=101.27]
+2023-03-13 03:44:39 280 sec: 10435451 operations; [READ: Count=6957369 Max=44356.03 Min=24.49 Avg=186.27] [UPDATE: Count=3478082 Max=10184.47 Min=30.29 Avg=101.42]
+2023-03-13 03:44:49 290 sec: 10795835 operations; [READ: Count=7197500 Max=44356.03 Min=24.49 Avg=186.47] [UPDATE: Count=3598335 Max=10184.47 Min=30.29 Avg=101.59]
+2023-03-13 03:44:59 300 sec: 11146757 operations; [READ: Count=7431589 Max=44356.03 Min=24.49 Avg=186.82] [UPDATE: Count=3715168 Max=10184.47 Min=30.29 Avg=101.80]
+2023-03-13 03:45:09 310 sec: 11493821 operations; [READ: Count=7662729 Max=44356.03 Min=24.49 Avg=187.22] [UPDATE: Count=3831092 Max=10184.47 Min=30.29 Avg=102.04]
+Failed in updatingTRYAGAIN Can't write to slot being migrated which is in write forbidden phase
+2023-03-13 03:45:19 320 sec: 11834271 operations; [READ: Count=7889847 Max=44356.03 Min=24.49 Avg=187.70] [UPDATE: Count=3944424 Max=10184.47 Min=30.29 Avg=102.32]
+Error when reading: Failed to send command with key: user4542394165441563735
+2023-03-13 03:45:29 330 sec: 12152220 operations; [READ: Count=8102014 Max=1079048.72 Min=24.49 Avg=188.50] [UPDATE: Count=4050206 Max=1073149.73 Min=30.29 Avg=102.78]
+Error when reading: Failed to send command with key: user3747087621454696667
+2023-03-13 03:45:39 340 sec: 12553613 operations; [READ: Count=8369735 Max=1079048.72 Min=24.49 Avg=187.87] [UPDATE: Count=4183878 Max=1073149.73 Min=30.29 Avg=102.74]
+2023-03-13 03:45:49 350 sec: 12959328 operations; [READ: Count=8640210 Max=1079048.72 Min=24.49 Avg=187.22] [UPDATE: Count=4319118 Max=1073149.73 Min=30.29 Avg=102.65]
+2023-03-13 03:45:59 360 sec: 13358028 operations; [READ: Count=8906180 Max=1079048.72 Min=24.49 Avg=186.73] [UPDATE: Count=4451848 Max=1073149.73 Min=30.29 Avg=102.60]
+2023-03-13 03:46:09 370 sec: 13753946 operations; [READ: Count=9169963 Max=1079048.72 Min=24.49 Avg=186.32] [UPDATE: Count=4583983 Max=1073149.73 Min=30.29 Avg=102.54]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-13 03:46:19 380 sec: 14011653 operations; [READ: Count=9341793 Max=1079048.72 Min=24.49 Avg=186.11] [UPDATE: Count=4669860 Max=1073149.73 Min=30.29 Avg=102.58]
+2023-03-13 03:46:29 390 sec: 14206766 operations; [READ: Count=9471825 Max=1079048.72 Min=24.49 Avg=185.93] [UPDATE: Count=4734941 Max=1073149.73 Min=30.29 Avg=102.64]
+2023-03-13 03:46:39 400 sec: 14401585 operations; [READ: Count=9601615 Max=1079048.72 Min=24.49 Avg=185.76] [UPDATE: Count=4799970 Max=1073149.73 Min=30.29 Avg=102.69]
+2023-03-13 03:46:49 410 sec: 14590353 operations; [READ: Count=9727691 Max=1079048.72 Min=24.49 Avg=185.67] [UPDATE: Count=4862662 Max=1073149.73 Min=30.29 Avg=102.78]
+2023-03-13 03:46:59 420 sec: 14777632 operations; [READ: Count=9852522 Max=1079048.72 Min=24.49 Avg=185.61] [UPDATE: Count=4925110 Max=1073149.73 Min=30.29 Avg=102.87]
+Failed in updatingTRYAGAIN Can't write to slot being migrated which is in write forbidden phase
+2023-03-13 03:47:09 430 sec: 14964048 operations; [READ: Count=9976865 Max=1079048.72 Min=24.49 Avg=185.56] [UPDATE: Count=4987183 Max=1073149.73 Min=30.29 Avg=102.97]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-13 03:47:12 432 sec: 14998744 operations; [READ: Count=10000000 Max=1079048.72 Min=24.49 Avg=185.55] [UPDATE: Count=4998744 Max=1073149.73 Min=30.29 Avg=102.98]
+Run runtime(sec): 432.253
+Run operations(ops): 9751569
+Run throughput(ops/sec): 22559.9

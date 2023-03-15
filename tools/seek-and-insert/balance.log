@@ -24,4 +24,4 @@ kvrockskvrockskvrockskvrockskvrocksnode2 slots in node: 5461
 kvrockskvrockskvrockskvrockskvrocksnode3 slots in node: 5461
 rule: kvrockskvrockskvrockskvrockskvrocksnode2 to kvrockskvrockskvrockskvrockskvrocksnode3 number of slots: 2731
 rule: kvrockskvrockskvrockskvrockskvrocksnode1 to kvrockskvrockskvrockskvrockskvrocksnode3 number of slots: 2730
-time taken (sec):268
+time taken (sec):437
