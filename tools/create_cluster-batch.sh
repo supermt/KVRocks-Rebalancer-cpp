@@ -20,6 +20,7 @@
 # Settings
 BIN_PATH="/home/local/ASUAD/jinghua2/work/kvrocks-rocks7/build/"
 HOST=0.0.0.0
+TARGET_HOST=87l
 START_PORT=40000
 PORT=$START_PORT
 START_NODES=2
@@ -66,7 +67,7 @@ if [ "$1" == "create" ]; then
   cluster_nodes=$(echo -e ${cluster_nodes:2})
   echo "this is cluster info"
   echo ${cluster_nodes}
-  sleep 5
+  sleep 2
   index=0
   PORT=$START_PORT
   while [ $((PORT < ENDPORT)) != "0" ]; do

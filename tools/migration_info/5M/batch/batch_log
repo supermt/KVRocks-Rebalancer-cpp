@@ -1,0 +1,9 @@
+I20230114 10:34:53.655884 2380920 slot_migrate.cc:1051] [Batch Migration] Time (ms): 36246105 at slot: 0
+I20230114 10:34:55.254181 2380920 slot_migrate.cc:1051] [Batch Migration] Time (ms): 1565603 at slot: 497
+I20230114 10:34:56.924789 2380920 slot_migrate.cc:1051] [Batch Migration] Time (ms): 1598064 at slot: 520
+I20230114 10:34:58.548738 2380920 slot_migrate.cc:1051] [Batch Migration] Time (ms): 1590800 at slot: 543
+I20230114 10:35:00.181753 2380920 slot_migrate.cc:1051] [Batch Migration] Time (ms): 1590577 at slot: 566
+I20230114 10:36:13.437639 2380920 slot_migrate.cc:1051] [Batch Migration] Time (ms): 73202712 at slot: 589
+I20230114 10:36:50.032764 2380920 slot_migrate.cc:1051] [Batch Migration] Time (ms): 36542268 at slot: 1584
+I20230114 10:37:24.708207 2380920 slot_migrate.cc:1051] [Batch Migration] Time (ms): 34653719 at slot: 2080
+I20230114 10:38:01.174077 2380920 slot_migrate.cc:1051] [Batch Migration] Time (ms): 36425368 at slot: 2553
