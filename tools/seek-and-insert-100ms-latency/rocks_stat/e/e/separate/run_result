@@ -1,0 +1,60 @@
+../ycsb/workloade
+Current max version: 1
+OK
+OK
+OK
+OK
+OK
+OK
+new nodes added
+weight map parsed: 
+node: kvrockskvrockskvrockskvrockskvrocksnode3, weight: 1
+node: kvrockskvrockskvrockskvrockskvrocksnode2, weight: 1
+node: kvrockskvrockskvrockskvrockskvrocksnode1, weight: 1
+
+>>>> current slot mapping is as follow <<<<
+
+kvrockskvrockskvrockskvrockskvrocksnode3 slots in node: 0
+kvrockskvrockskvrockskvrockskvrocksnode2 slots in node: 8192
+kvrockskvrockskvrockskvrockskvrocksnode1 slots in node: 8192
+
+>>>> target slot mapping is as follow <<<<
+
+kvrockskvrockskvrockskvrockskvrocksnode1 slots in node: 5462
+kvrockskvrockskvrockskvrockskvrocksnode2 slots in node: 5461
+kvrockskvrockskvrockskvrockskvrocksnode3 slots in node: 5461
+rule: kvrockskvrockskvrockskvrockskvrocksnode2 to kvrockskvrockskvrockskvrockskvrocksnode3 number of slots: 2731
+rule: kvrockskvrockskvrockskvrockskvrocksnode1 to kvrockskvrockskvrockskvrockskvrocksnode3 number of slots: 2730
+time taken (sec):437filed length is: 100
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+2023-03-14 07:17:21 0 sec: Initializing, create redis cluster link at tcp://127.0.0.1:40001
+0 operations;
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-14 07:17:31 10 sec: 10297 operations; [INSERT: Count=517 Max=1916.36 Min=187.98 Avg=319.03] [SCAN: Count=9780 Max=23146.53 Min=178.02 Avg=6073.85]
+2023-03-14 07:17:41 20 sec: 20412 operations; [INSERT: Count=1037 Max=1916.36 Min=173.74 Avg=312.92] [SCAN: Count=19375 Max=23146.53 Min=178.02 Avg=6136.08]
+2023-03-14 07:17:51 30 sec: 30866 operations; [INSERT: Count=1584 Max=1916.36 Min=173.74 Avg=307.28] [SCAN: Count=29282 Max=23146.53 Min=178.02 Avg=6091.03]
+2023-03-14 07:18:01 40 sec: 41179 operations; [INSERT: Count=2110 Max=1916.36 Min=173.74 Avg=305.94] [SCAN: Count=39069 Max=23146.53 Min=173.51 Avg=6087.28]
+2023-03-14 07:18:11 50 sec: 51573 operations; [INSERT: Count=2606 Max=1916.36 Min=173.74 Avg=303.61] [SCAN: Count=48967 Max=23146.53 Min=173.51 Avg=6071.01]
+2023-03-14 07:18:21 60 sec: 61984 operations; [INSERT: Count=3149 Max=1916.36 Min=173.74 Avg=301.93] [SCAN: Count=58835 Max=23146.53 Min=163.20 Avg=6063.64]
+2023-03-14 07:18:31 70 sec: 72249 operations; [INSERT: Count=3690 Max=1916.36 Min=173.74 Avg=301.25] [SCAN: Count=68559 Max=23146.53 Min=163.20 Avg=6070.50]
+2023-03-14 07:18:41 80 sec: 82595 operations; [INSERT: Count=4228 Max=1916.36 Min=173.74 Avg=300.48] [SCAN: Count=78367 Max=23146.53 Min=163.20 Avg=6069.82]
+2023-03-14 07:18:51 90 sec: 92825 operations; [INSERT: Count=4732 Max=1916.36 Min=173.74 Avg=301.23] [SCAN: Count=88093 Max=23146.53 Min=163.20 Avg=6074.74]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-14 07:19:01 99 sec: 100000 operations; [INSERT: Count=5080 Max=1916.36 Min=166.92 Avg=301.50] [SCAN: Count=94920 Max=23146.53 Min=163.20 Avg=6082.52]
+Run runtime(sec): 99.9316
+Run operations(ops): 100000
+Run throughput(ops/sec): 1000.68
