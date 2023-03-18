@@ -91,6 +91,7 @@ if [ "$1" == "stop" ]; then
   sleep 2
   rm -r ./node_*
   rm ./nohup*
+  rm nul
   #   hadoop fs -rm -r -skipTrash /user/supermt
   exit 0
 fi

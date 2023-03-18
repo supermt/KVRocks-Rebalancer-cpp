@@ -23,7 +23,7 @@ def create_if_not_exist(dir_path):
 
 
 
-for workload in ['a']:#,'b','c','d','e','f']:
+for workload in ['a','b','c','d','e','f']:
     DIR_workload = DIR_ROCKS_STATES + workload +"/";
     DIR_sep = DIR_workload + "separate/"
     DIR_int = DIR_workload + "together/"
