@@ -1,6 +1,4 @@
-Current max version: 4177
-OK
-OK
+Current max version: 1
 OK
 OK
 OK
@@ -12,14 +10,12 @@ node: kvrockskvrockskvrockskvrockskvrocksnode1, weight: 1
 
 >>>> current slot mapping is as follow <<<<
 
-kvrockskvrockskvrockskvrockskvrocksnode1 slots in node: 12222
-kvrockskvrockskvrockskvrockskvrocksnode2 slots in node: 4162
+kvrockskvrockskvrockskvrockskvrocksnode2 slots in node: 0
+kvrockskvrockskvrockskvrockskvrocksnode1 slots in node: 16384
 
 >>>> target slot mapping is as follow <<<<
 
 kvrockskvrockskvrockskvrockskvrocksnode1 slots in node: 8192
 kvrockskvrockskvrockskvrockskvrocksnode2 slots in node: 8192
-rule: kvrockskvrockskvrockskvrockskvrocksnode1 to kvrockskvrockskvrockskvrockskvrocksnode2 number of slots: 4030
-terminate called after throwing an instance of 'sw::redis::IoError'
-  what():  Failed to connect to Redis: Connection refused
-./migrate.sh: line 3: 1182895 Aborted                 (core dumped) ../../build/cluster-balance --port=40001 --weights="kvrockskvrockskvrockskvrockskvrocksnode1:1.0,kvrockskvrockskvrockskvrockskvrocksnode2:1.0" --new_node_port=40002 --new_node_id="kvrockskvrockskvrockskvrockskvrocksnode2"
+rule: kvrockskvrockskvrockskvrockskvrocksnode1 to kvrockskvrockskvrockskvrockskvrocksnode2 number of slots: 8192
+time taken (sec):378

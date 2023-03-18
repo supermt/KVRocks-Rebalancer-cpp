@@ -1,0 +1,52 @@
+filed length is: 100
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+2023-03-18 01:40:11 0 sec: 0 operations;
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-18 01:40:21 10 sec: 525722 operations; [INSERT: Count=525722 Max=3451.46 Min=48.54 Avg=101.17]
+2023-03-18 01:40:31 20 sec: 997199 operations; [INSERT: Count=997199 Max=3933.43 Min=48.54 Avg=107.39]
+2023-03-18 01:40:41 30 sec: 1457614 operations; [INSERT: Count=1457614 Max=3933.43 Min=48.54 Avg=110.67]
+2023-03-18 01:40:51 40 sec: 1919644 operations; [INSERT: Count=1919644 Max=4107.24 Min=46.77 Avg=112.55]
+2023-03-18 01:41:01 50 sec: 2370522 operations; [INSERT: Count=2370522 Max=4107.24 Min=46.77 Avg=113.99]
+2023-03-18 01:41:11 60 sec: 2821373 operations; [INSERT: Count=2821373 Max=4107.24 Min=46.77 Avg=114.93]
+2023-03-18 01:41:21 70 sec: 3282831 operations; [INSERT: Count=3282831 Max=4107.24 Min=46.77 Avg=115.19]
+2023-03-18 01:41:31 80 sec: 3732257 operations; [INSERT: Count=3732257 Max=4107.24 Min=46.77 Avg=115.83]
+2023-03-18 01:41:41 90 sec: 4169250 operations; [INSERT: Count=4169250 Max=4107.24 Min=46.77 Avg=116.70]
+2023-03-18 01:41:51 100 sec: 4622163 operations; [INSERT: Count=4622163 Max=4107.24 Min=46.77 Avg=117.01]
+2023-03-18 01:42:01 110 sec: 5065569 operations; [INSERT: Count=5065569 Max=4107.24 Min=46.77 Avg=117.49]
+2023-03-18 01:42:11 120 sec: 5511691 operations; [INSERT: Count=5511691 Max=4107.24 Min=46.50 Avg=117.80]
+2023-03-18 01:42:21 130 sec: 5970915 operations; [INSERT: Count=5970915 Max=4107.24 Min=46.50 Avg=117.86]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-18 01:42:31 140 sec: 6396302 operations; [INSERT: Count=6396302 Max=4107.24 Min=46.50 Avg=118.21]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-18 01:42:41 150 sec: 6661351 operations; [INSERT: Count=6661351 Max=4107.24 Min=46.50 Avg=119.31]
+2023-03-18 01:42:51 160 sec: 6924177 operations; [INSERT: Count=6924177 Max=4107.24 Min=46.50 Avg=120.05]
+2023-03-18 01:43:01 170 sec: 7184232 operations; [INSERT: Count=7184232 Max=4107.24 Min=46.50 Avg=120.78]
+2023-03-18 01:43:11 180 sec: 7440110 operations; [INSERT: Count=7440110 Max=4107.24 Min=46.50 Avg=121.54]
+2023-03-18 01:43:21 190 sec: 7691036 operations; [INSERT: Count=7691036 Max=4107.24 Min=46.50 Avg=122.34]
+2023-03-18 01:43:31 200 sec: 7940373 operations; [INSERT: Count=7940373 Max=4107.24 Min=46.50 Avg=123.10]
+2023-03-18 01:43:41 210 sec: 8195549 operations; [INSERT: Count=8195549 Max=4107.24 Min=46.50 Avg=123.71]
+2023-03-18 01:43:51 220 sec: 8452991 operations; [INSERT: Count=8452991 Max=4107.24 Min=46.50 Avg=124.27]
+2023-03-18 01:44:01 230 sec: 8706921 operations; [INSERT: Count=8706921 Max=4107.24 Min=46.50 Avg=124.85]
+2023-03-18 01:44:11 240 sec: 8957938 operations; [INSERT: Count=8957938 Max=4107.24 Min=46.50 Avg=125.46]
+2023-03-18 01:44:21 250 sec: 9198615 operations; [INSERT: Count=9198615 Max=4107.24 Min=46.50 Avg=126.17]
+2023-03-18 01:44:31 260 sec: 9461733 operations; [INSERT: Count=9461733 Max=4107.24 Min=46.50 Avg=126.55]
+2023-03-18 01:44:41 270 sec: 9719265 operations; [INSERT: Count=9719265 Max=4107.24 Min=46.50 Avg=126.98]
+2023-03-18 01:44:51 280 sec: 9973150 operations; [INSERT: Count=9973150 Max=4107.24 Min=46.50 Avg=127.43]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-18 01:44:52 281 sec: 10000000 operations; [INSERT: Count=10000000 Max=4107.24 Min=46.50 Avg=127.49]
+Load runtime(sec): 281.084
+Load operations(ops): 10000000
+Load throughput(ops/sec): 35576.5

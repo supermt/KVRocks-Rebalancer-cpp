@@ -56,4 +56,3 @@ for workload in ['a','b','c','d','e','f']:
         os.system("./running_while_migrating.sh " + workload + " > " +DIR_int+"run_result")
         os.system("mv load_* "+ DIR_int +"/")
         os.system("mv run_* "+ DIR_int +"/")
-

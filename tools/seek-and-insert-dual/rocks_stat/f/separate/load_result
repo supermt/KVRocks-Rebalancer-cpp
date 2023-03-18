@@ -1,0 +1,47 @@
+filed length is: 100
+2023-03-18 02:38:10 0 sec: 0 operations;
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-18 02:38:20 10 sec: 584036 operations; [INSERT: Count=584036 Max=3540.07 Min=44.62 Avg=90.18]
+2023-03-18 02:38:30 20 sec: 1176930 operations; [INSERT: Count=1176930 Max=4071.38 Min=44.62 Avg=89.37]
+2023-03-18 02:38:40 30 sec: 1763326 operations; [INSERT: Count=1763326 Max=4071.94 Min=44.62 Avg=89.51]
+2023-03-18 02:38:50 40 sec: 2339217 operations; [INSERT: Count=2339217 Max=4071.94 Min=44.62 Avg=90.02]
+2023-03-18 02:39:00 50 sec: 2908301 operations; [INSERT: Count=2908301 Max=4071.94 Min=44.62 Avg=90.68]
+2023-03-18 02:39:10 60 sec: 3486911 operations; [INSERT: Count=3486911 Max=4071.94 Min=44.62 Avg=90.79]
+2023-03-18 02:39:20 70 sec: 4060589 operations; [INSERT: Count=4060589 Max=4071.94 Min=44.62 Avg=90.99]
+2023-03-18 02:39:30 80 sec: 4644085 operations; [INSERT: Count=4644085 Max=4071.94 Min=44.62 Avg=90.89]
+2023-03-18 02:39:40 90 sec: 5219669 operations; [INSERT: Count=5219669 Max=4071.94 Min=44.62 Avg=90.99]
+2023-03-18 02:39:50 100 sec: 5788194 operations; [INSERT: Count=5788194 Max=4071.94 Min=44.62 Avg=91.18]
+2023-03-18 02:40:00 110 sec: 6360689 operations; [INSERT: Count=6360689 Max=4071.94 Min=44.62 Avg=91.29]
+2023-03-18 02:40:10 120 sec: 6923140 operations; [INSERT: Count=6923140 Max=4071.94 Min=44.62 Avg=91.51]
+2023-03-18 02:40:20 130 sec: 7427965 operations; [INSERT: Count=7427965 Max=4071.94 Min=44.62 Avg=92.53]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-18 02:40:30 140 sec: 7869705 operations; [INSERT: Count=7869705 Max=4170.34 Min=44.62 Avg=93.42]
+2023-03-18 02:40:40 150 sec: 8117247 operations; [INSERT: Count=8117247 Max=4170.34 Min=44.62 Avg=93.87]
+2023-03-18 02:40:50 160 sec: 8337036 operations; [INSERT: Count=8337036 Max=4170.34 Min=44.62 Avg=94.64]
+2023-03-18 02:41:00 170 sec: 8531287 operations; [INSERT: Count=8531287 Max=4170.34 Min=44.62 Avg=95.71]
+2023-03-18 02:41:10 180 sec: 8714651 operations; [INSERT: Count=8714651 Max=4170.34 Min=44.62 Avg=96.87]
+2023-03-18 02:41:20 190 sec: 8958783 operations; [INSERT: Count=8958783 Max=4170.34 Min=44.62 Avg=97.25]
+2023-03-18 02:41:30 200 sec: 9199949 operations; [INSERT: Count=9199949 Max=4170.34 Min=44.62 Avg=97.64]
+2023-03-18 02:41:40 210 sec: 9448733 operations; [INSERT: Count=9448733 Max=4170.34 Min=44.62 Avg=97.94]
+2023-03-18 02:41:50 220 sec: 9704444 operations; [INSERT: Count=9704444 Max=4170.34 Min=44.62 Avg=98.12]
+2023-03-18 02:42:00 230 sec: 9957446 operations; [INSERT: Count=9957446 Max=4170.34 Min=44.62 Avg=98.33]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-03-18 02:42:01 231 sec: 10000000 operations; [INSERT: Count=10000000 Max=4170.34 Min=44.62 Avg=98.35]
+Load runtime(sec): 231.726
+Load operations(ops): 10000000
+Load throughput(ops/sec): 43154.4
