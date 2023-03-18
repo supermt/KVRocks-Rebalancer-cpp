@@ -1,10 +1,8 @@
 Current max version: 1
 OK
 OK
-OK
-OK
-OK
-OK
+Could not connect to Redis at 127.0.0.1:40003: Connection refused
+Could not connect to Redis at 127.0.0.1:40003: Connection refused
 new nodes added
 weight map parsed: 
 node: kvrockskvrockskvrockskvrockskvrocksnode3, weight: 1
@@ -14,14 +12,13 @@ node: kvrockskvrockskvrockskvrockskvrocksnode1, weight: 1
 >>>> current slot mapping is as follow <<<<
 
 kvrockskvrockskvrockskvrockskvrocksnode3 slots in node: 0
-kvrockskvrockskvrockskvrockskvrocksnode2 slots in node: 8192
-kvrockskvrockskvrockskvrockskvrocksnode1 slots in node: 8192
+kvrockskvrockskvrockskvrockskvrocksnode1 slots in node: 16384
 
 >>>> target slot mapping is as follow <<<<
 
 kvrockskvrockskvrockskvrockskvrocksnode1 slots in node: 5462
 kvrockskvrockskvrockskvrockskvrocksnode2 slots in node: 5461
 kvrockskvrockskvrockskvrockskvrocksnode3 slots in node: 5461
-rule: kvrockskvrockskvrockskvrockskvrocksnode2 to kvrockskvrockskvrockskvrockskvrocksnode3 number of slots: 2731
-rule: kvrockskvrockskvrockskvrockskvrocksnode1 to kvrockskvrockskvrockskvrockskvrocksnode3 number of slots: 2730
-time taken (sec):268
+rule: kvrockskvrockskvrockskvrockskvrocksnode1 to kvrockskvrockskvrockskvrockskvrocksnode3 number of slots: 5461
+terminate called after throwing an instance of 'sw::redis::IoError'
+  what():  Failed to connect to Redis: Connection refused
