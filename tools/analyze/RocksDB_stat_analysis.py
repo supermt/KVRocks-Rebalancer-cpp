@@ -73,6 +73,7 @@ import pandas as pd
 
 if __name__ == '__main__':
     result_dir = sys.argv[1]
+    # result_dir = os.path.abspath(result_dir)
     print("reading file from " + result_dir)
     rows = []
     for workload in ["a", "b", "c", "d", "e", "f"]:
