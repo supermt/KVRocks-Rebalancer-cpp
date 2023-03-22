@@ -1,7 +1,32 @@
-import json
-import os
-import sys
+import re
 from pathlib import Path
+
+
+def extract_op_list_from_line(test_str):
+    op_regex = r"\[[A-Z]+: Count=[0-9]+ Max=[0-9]+.[0-9]* Min=[0-9]+.[0-9]* Avg=[0-9]+.[0-9]*\]"
+
+    matches = re.findall(op_regex, test_str, re.MULTILINE)
+    op_df_header = ["Op", "Max", "Min", "Avg"]
+    op_list = []
+    for match in matches:
+        row = []
+        if ":" in match:
+            match = match.replace("[", "").replace("]", "")
+            row.append(match.split(":")[0])
+            for word in match.split()[1:]:
+                row.append(float(word.split("=")[1]))
+
+        op_list.append(row)
+        # op_list.append(row)
+    # print(op_list)
+    return op_list
+
+
+kLOAD_THROUGHPUT = "load_throughput"
+kRUN_THROUGHPUT = "run_throughput"
+kOP_LATENCY = "op_latency"
+kSTATS_BEFORE = "rocks_stat_before_run"
+kSTATS_AFTER = "rocks_stat_after_run"
 
 
 def get_result_file_map(target_dir):
@@ -12,7 +37,7 @@ def get_result_file_map(target_dir):
         "rocks_stat_before_run": [],
         "rocks_stat_after_run": []
     }
-    print(target_dir)
+    # print(target_dir)
     # for dir, subdir, file in os.walk(target_dir):
     #     print(file)
     stat_list = Path(target_dir).glob('*.stat')
@@ -49,7 +74,6 @@ def get_result_file_map(target_dir):
     return file_map
 
 
-import csv
 import pandas as pd
 
 
@@ -86,7 +110,7 @@ def extract_tail_latency(dir_prefix, file_list):
         if "load_" in target_file:
             pass
         else:
-            print(target_file)
+            # print(target_file)
             result_df = pd.read_csv(target_file)
             for metrics in [99, 99.9, 99.99]:
                 for row in result_df.iloc:
@@ -99,49 +123,26 @@ def extract_tail_latency(dir_prefix, file_list):
     return op_latency_map
 
 
-if __name__ == '__main__':
-    result_dir = sys.argv[1]
-    print("reading file from " + result_dir)
-    rows = []
-    throughput_rows = []
-    for workload in ["a", "b", "c", "d", "e", "f"]:
-        for migration_type in ["separate", "together"]:
-            target_dir = result_dir + "rocks_stat/" + workload + "/" + migration_type
-            file_map = get_result_file_map(target_dir)
-            op_latency_map = extract_tail_latency(target_dir + "/", file_map["op_latency"])
-            run_throughput_file = target_dir + "/" + file_map["run_throughput"][0]
-
-            file_line = open(run_throughput_file, "r").readlines()
-
-            latency_and_count_entries = file_line[-4].split("operations;")[1].split()
-            avg_latency = {}
-            for i in range(0, len(latency_and_count_entries), 5):
-                op = latency_and_count_entries[i].replace("[", "").replace(":", "")
-                max_latency = latency_and_count_entries[i + 2].split("=")[1]
-                # print(max_latency)
-                latency = latency_and_count_entries[i + 4].split("=")[1].replace("]", "")
-                # print(latency)
-                avg_latency[op] = {}
-                avg_latency[op]["max"] = max_latency
-                avg_latency[op]["avg"] = latency
-
-            # mode, workload, op, throughput, avg, P99, P99.9, P99.99
-            row_head = [migration_type, workload, file_line[-1].split()[-1]]
-            throughput_rows.append(row_head)
-            row_head = [migration_type, workload]
-            for op in avg_latency:
-                row = []
-                row.extend(row_head)
-                row.append(op)
-                row.append(avg_latency[op]["avg"])
-                row.append(op_latency_map[op]["P99"])
-                row.append(op_latency_map[op]["P99.9"])
-                row.append(op_latency_map[op]["P99.99"])
-                row.append(avg_latency[op]["max"])
-                rows.append(row)
-
-    throughput_df = pd.DataFrame(throughput_rows, columns=["mode", "workload", "throughput"])
-    row_df = pd.DataFrame(rows, columns=
-    ["mode", "workload", "op", "avg", "P99", "P99.9", "P99.99", "max"])
-    throughput_df.to_csv(result_dir + "/throughput.csv", index=False, sep="\t")
-    row_df.to_csv(result_dir + "/op_latency.csv", index=False, sep="\t")
+def extract_data_from_result_file(load_file):
+    throughput_lines = []
+    lines = open(load_file, "r").readlines()
+    summary_lines = lines[-3:]
+    throughput = float(summary_lines[-1].split()[-1])
+    finished_op = []
+    for line in lines:
+        if "operations;" in line:
+            op_line = line.split("operations;")[0]
+            splits = op_line.split()
+            if len(splits) != 5:
+                continue
+            op = splits[-1]
+            time = splits[-3]
+            finished_op.append([int(time), int(op)])
+        # print(len(words))
+        throughput_lines.extend(extract_op_list_from_line(line))
+        # throughput_lines.append()
+    op_df = pd.DataFrame(throughput_lines, columns=["op", "count", "max", "min", "avg"])
+    data_df = pd.DataFrame(finished_op, columns=["Time Elapsed (Sec)", "Finished Ops"])
+    throughput_df = data_df.shift(periods=-1) - data_df
+    print(throughput_df)
+    return throughput, op_df, throughput_df
