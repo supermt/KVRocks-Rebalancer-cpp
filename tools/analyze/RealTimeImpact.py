@@ -17,6 +17,11 @@ if __name__ == '__main__':
         4096: "Rate-limited migration",
         "None": "Separated migration"
     }
+    line_style_map = {
+        0: 'dashed',
+        4096: 'dotted',
+        "None": "solid"
+    }
     mpl.rcParams["figure.figsize"] = (6, 2.5)
     for speed in [0, 4096, "None"]:
         for workload in ["a"]:
@@ -32,7 +37,8 @@ if __name__ == '__main__':
                 print("Plotting:", target_dir + file_map[kRUN_THROUGHPUT][0])
                 throughput, operation_details, finished_op_list = extract_data_from_result_file(
                     target_dir + "/" + file_map[kRUN_THROUGHPUT][0])
-                plt.plot(finished_op_list["Finished Ops"][:180], label=label_map[speed])
+                plt.plot(finished_op_list["Finished Ops"][:160], linestyle=line_style_map[speed],
+                         label=label_map[speed])
 
     plt.xlabel("Elapsed Time (Sec)")
     plt.ylabel("Throughput (Ops/Sec)")
