@@ -18,7 +18,7 @@
 # under the License.
 
 # Settings
-BIN_PATH="../../../incubator-kvrocks/build/"
+BIN_PATH="../../../incubator-kvrocks/cmake-build-release/"
 HOST=0.0.0.0
 START_PORT=40000
 PORT=40000

@@ -44,4 +44,4 @@ if __name__ == '__main__':
     plt.ylabel("Throughput (Ops/Sec)")
     plt.tight_layout()
     plt.legend()
-    plt.savefig(result_dir + "/Real-Time-Speed.pdf")
+    plt.savefig(result_dir + "/Real-Time-Speed.png")

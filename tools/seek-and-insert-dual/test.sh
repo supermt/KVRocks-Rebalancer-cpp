@@ -1,7 +1,9 @@
 #!/usr/bin/bash
-export WORKLOAD="../ycsb/workload$1"
-echo $WORKLOAD
+./create_cluster.sh stop
+./create_cluster.sh start
+./create_cluster.sh create
+./migrate.sh
+./batch_migrate.sh
 
-../ycsb/ycsb -run -db redis -P $WORKLOAD -P ../ycsb/cluster.prop -s -threads 6
 
 
