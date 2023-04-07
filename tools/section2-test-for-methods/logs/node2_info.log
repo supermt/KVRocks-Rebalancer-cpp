@@ -1,0 +1,26 @@
+Log file created at: 2023/03/17 09:12:33
+Running on machine: en4217754l
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20230317 09:12:33.248728 1107122 main.cc:325] kvrocks unstable (commit dfe5733)
+I20230317 09:12:33.275444 1107122 storage.cc:335] [storage] Success to load the data from disk: 10 ms
+I20230317 09:12:33.275662 1107122 worker.cc:71] [worker] Listening on: 127.0.0.1:40002
+I20230317 09:12:33.275807 1107122 worker.cc:71] [worker] Listening on: 127.0.0.1:40002
+I20230317 09:12:33.275919 1107122 worker.cc:71] [worker] Listening on: 127.0.0.1:40002
+I20230317 09:12:33.276018 1107122 worker.cc:71] [worker] Listening on: 127.0.0.1:40002
+I20230317 09:12:33.276113 1107122 worker.cc:71] [worker] Listening on: 127.0.0.1:40002
+I20230317 09:12:33.276204 1107122 worker.cc:71] [worker] Listening on: 127.0.0.1:40002
+I20230317 09:12:33.276299 1107122 worker.cc:71] [worker] Listening on: 127.0.0.1:40002
+I20230317 09:12:33.276388 1107122 worker.cc:71] [worker] Listening on: 127.0.0.1:40002
+W20230317 09:12:33.276465 1107122 server.cc:1618] [server] Increased maximum number of open files to 14224 (it's originally set to 1024)
+I20230317 09:12:33.276602 1107122 cluster.cc:607] The cluster nodes file node_40002/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230317 09:12:33.276659 1107122 worker.cc:530] [worker] Thread #139941617030912 started
+I20230317 09:12:33.276686 1107122 worker.cc:530] [worker] Thread #139941625423616 started
+I20230317 09:12:33.276727 1107122 worker.cc:530] [worker] Thread #139941700957952 started
+I20230317 09:12:33.276763 1107122 worker.cc:530] [worker] Thread #139941692565248 started
+I20230317 09:12:33.276805 1107122 worker.cc:530] [worker] Thread #139941684172544 started
+I20230317 09:12:33.276844 1107122 worker.cc:530] [worker] Thread #139941675779840 started
+I20230317 09:12:33.276881 1107122 worker.cc:530] [worker] Thread #139941667387136 started
+I20230317 09:12:33.276918 1107122 worker.cc:530] [worker] Thread #139941658994432 started
+I20230317 09:12:33.277051 1107122 server.cc:210] [server] Ready to accept connections
+I20230317 18:06:03.375113 1107368 cmd_server.cc:544] bye bye

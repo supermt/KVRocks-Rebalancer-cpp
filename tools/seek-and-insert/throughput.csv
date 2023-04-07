@@ -1,0 +1,13 @@
+mode	workload	throughput
+separate	a	25161.2
+together	a	20520.7
+separate	b	37046.9
+together	b	32823
+separate	c	41287.3
+together	c	48230.9
+separate	d	43205
+together	d	38408.6
+separate	e	968.786
+together	e	694.135
+separate	f	27633.2
+together	f	22559.9

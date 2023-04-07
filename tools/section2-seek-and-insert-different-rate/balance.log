@@ -1,0 +1,2 @@
+./migrate.sh: line 3: syntax error near unexpected token `30'
+./migrate.sh: line 3: `sleep(30)'

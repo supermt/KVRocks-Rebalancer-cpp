@@ -1,0 +1,24 @@
+filed length is: 100
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+2023-04-04 21:57:49 0 sec: 0 operations;
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-04-04 21:57:59 10 sec: 154140 operations; [INSERT: Count=154140 Max=3864.88 Min=41.85 Avg=58.94]
+2023-04-04 21:58:09 20 sec: 222477 operations; [INSERT: Count=222477 Max=1198281.31 Min=41.85 Avg=66.89]
+2023-04-04 21:58:19 30 sec: 222477 operations; [INSERT: Count=222477 Max=1198281.31 Min=41.85 Avg=66.89]
+2023-04-04 21:58:29 40 sec: 222477 operations; [INSERT: Count=222477 Max=1198281.31 Min=41.85 Avg=66.89]
+2023-04-04 21:58:39 50 sec: 332577 operations; [INSERT: Count=332577 Max=24464010.49 Min=41.85 Avg=144.20]
+2023-04-04 21:58:49 60 sec: 374080 operations; [INSERT: Count=374080 Max=24464010.49 Min=40.50 Avg=140.07]
+2023-04-04 21:58:59 70 sec: 499429 operations; [INSERT: Count=499429 Max=24464010.49 Min=40.50 Avg=133.94]
+2023-04-04 21:59:09 80 sec: 621576 operations; [INSERT: Count=621576 Max=24464010.49 Min=40.50 Avg=122.46]
+2023-04-04 21:59:19 90 sec: 670712 operations; [INSERT: Count=670712 Max=24464010.49 Min=40.50 Avg=122.09]
+2023-04-04 21:59:29 100 sec: 670712 operations; [INSERT: Count=670712 Max=24464010.49 Min=40.50 Avg=122.09]
+2023-04-04 21:59:39 110 sec: 733250 operations; [INSERT: Count=733250 Max=24464010.49 Min=40.50 Avg=143.78]
+2023-04-04 21:59:49 120 sec: 781958 operations; [INSERT: Count=781958 Max=24464010.49 Min=40.50 Avg=139.52]
+2023-04-04 21:59:59 130 sec: 893201 operations; [INSERT: Count=893201 Max=24464010.49 Min=40.50 Avg=139.29]
+2023-04-04 22:00:09 140 sec: 934258 operations; [INSERT: Count=934258 Max=24464010.49 Min=40.50 Avg=143.30]
+2023-04-04 22:00:20 150 sec: 976277 operations; [INSERT: Count=976277 Max=24464010.49 Min=40.50 Avg=147.42]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-04-04 22:00:21 151 sec: 1000000 operations; [INSERT: Count=1000000 Max=24464010.49 Min=40.50 Avg=145.33]
+Load runtime(sec): 151.587
+Load operations(ops): 1000000
+Load throughput(ops/sec): 6596.89
