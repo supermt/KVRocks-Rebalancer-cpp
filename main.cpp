@@ -6,38 +6,39 @@
 const static std::string ERROR_ALREADY_MIGRATED = "Can't migrate slot which has been migrated";
 
 DEFINE_int32(port,
-40001, "The cluster entry port");
+             40001, "The cluster entry port");
 DEFINE_int32(max_try,
-1000, "The cluster entry port");
+             1000, "The cluster entry port");
 
 DEFINE_string(host,
-"127.0.0.1", "The cluster entry ip");
+              "127.0.0.1", "The cluster entry ip");
 DEFINE_double(balance_threshold,
-0.02, "The balancing threshold");
+              0.02, "The balancing threshold");
 DEFINE_int64(contributer_threshold,
-0,
-"The threshold of contributor, rebalance will not be performed when the "
-"number of contributor is lower than this value");
+             0,
+             "The threshold of contributor, rebalance will not be performed when the "
+             "number of contributor is lower than this value");
 
 DEFINE_bool(include_empty_nodes,
-true,
-"Whether the Rebalance operation include empty nodes?");
+            true,
+            "Whether the Rebalance operation include empty nodes?");
 
 DEFINE_string(operations,
-"add-node,rebalance", "choose the operation");
+              "add-node,rebalance", "choose the operation");
 DEFINE_string(weights,
-"kvrockskvrockskvrockskvrockskvrocksnode1:1.0,"
-"kvrockskvrockskvrockskvrockskvrocksnode2:1.0,"
-"kvrockskvrockskvrockskvrockskvrocksnode3:1.0",
-"the weight pairs, it should be like the following format, \'ididididididid:score,dididididididi:score,dididididi:score\'");
+              "kvrockskvrockskvrockskvrockskvrocksnode1:1.0,"
+              "kvrockskvrockskvrockskvrockskvrocksnode2:1.0,"
+              "kvrockskvrockskvrockskvrockskvrocksnode3:1.0",
+              "the weight pairs, it should be like the following format, \'ididididididid:score,dididididididi:score,dididididi:score\'");
 DEFINE_string(new_node_host,
-"127.0.0.1", "new server's host");
+              "127.0.0.1", "new server's host");
 DEFINE_string(new_node_port,
-"40003", "new server's host");
+              "40003", "new server's host");
 DEFINE_string(new_node_id,
-"kvrockskvrockskvrockskvrockskvrocksnode3",
-"new server's host");
-
+              "kvrockskvrockskvrockskvrockskvrocksnode3",
+              "new server's host");
+DEFINE_int64(migration_method, -1,
+             "There are four migration method now, the default value is a invalid one, so make sure you specify it by yourself.");
 
 class NodeInfo {
 public:
@@ -73,16 +74,16 @@ public:
         std::sort(slots.begin(), slots.end());
     }
 
-    std::string GetNodeId() { return id; }
+    const std::string GetNodeId() const { return id; }
 
-    std::string GetMaster() { return master; }
+    const std::string GetMaster() { return master; }
 
-    std::string GetLocation() { return location; }
+    const std::string GetLocation() { return location; }
 
-    std::vector <std::string> GetSlotRangeList() { return slot_ranges; }
+    const std::vector<std::string> GetSlotRangeList() { return slot_ranges; }
 
-    std::pair <std::string, std::string> GetIPandPort() {
-        std::pair <std::string, std::string> result;
+    std::pair<std::string, std::string> GetIPandPort() {
+        std::pair<std::string, std::string> result;
         int reach_comma = 0;
         for (char c: location) {
             if (c == ':' || c == '@') {
@@ -110,7 +111,7 @@ public:
 private:
     bool is_master = false;
     std::vector<int> slots;
-    std::vector <std::string> information_list;
+    std::vector<std::string> information_list;
     std::string id; // 0
     std::string location; // 1
     std::string flags; // 2
@@ -119,11 +120,11 @@ private:
     std::string pong_recv; // 5
     std::string config_epoch; // 6
     std::string link_stat; // 7
-    std::vector <std::string> slot_ranges; // 8
+    std::vector<std::string> slot_ranges; // 8
 };
 
-std::vector <std::string> StringSplitting(const std::string &input, char delim) {
-    std::vector <std::string> results;
+std::vector<std::string> StringSplitting(const std::string &input, char delim) {
+    std::vector<std::string> results;
     std::string line;
     std::stringstream ss(input);
     while (std::getline(ss, line, delim)) {
@@ -160,7 +161,7 @@ std::string GetNodeInfoString() {
     return reply.value();
 }
 
-std::vector <NodeInfo> GetNodeInfoList() {
+std::vector<NodeInfo> GetNodeInfoList() {
     RedisCluster *cluster_ptr = nullptr;
     CreateConnection(&cluster_ptr);
 
@@ -170,7 +171,7 @@ std::vector <NodeInfo> GetNodeInfoList() {
     std::stringstream ss(reply.value());
 
     std::string line;
-    std::vector <NodeInfo> infos;
+    std::vector<NodeInfo> infos;
     while (std::getline(ss, line, '\n')) {
         infos.emplace_back(line);
     }
@@ -189,7 +190,7 @@ int GetMaxVersion(RedisCluster *cluster_link) {
     std::stringstream ss(reply.value());
 
     std::string line;
-    std::vector <NodeInfo> infos;
+    std::vector<NodeInfo> infos;
     while (std::getline(ss, line, '\n')) {
         infos.emplace_back(line);
     }
@@ -203,7 +204,7 @@ int GetMaxVersion(RedisCluster *cluster_link) {
     return max_version;
 }
 
-int GetMaxVersion(const std::vector <NodeInfo> &info_list) {
+int GetMaxVersion(const std::vector<NodeInfo> &info_list) {
     int max_version = 0;
     for (auto info: info_list) {
         auto current = info.GetNewestVersion();
@@ -252,8 +253,8 @@ public:
     }
 
 
-    std::vector <MigrateCmd> ComposeCommand() {
-        std::vector <MigrateCmd> result;
+    std::vector<MigrateCmd> ComposeCommand() {
+        std::vector<MigrateCmd> result;
         for (int i = 0; i < num_migrate_slots_; i++) {
             result.emplace_back(src_node_.GetSlotNumberList()[i], src_node_, dst_node_);
         }
@@ -289,6 +290,143 @@ std::unordered_map<std::string, int> GetNewTopology(int total_slot) {
     return slot_number_map;
 }
 
+bool
+CalculateMigrationPlan(const std::vector<NodeInfo> &node_list, const std::unordered_map<std::string, int> &new_topo,
+                       std::vector<std::pair<NodeInfo, int>> *contributor_list,
+                       std::vector<std::pair<NodeInfo, int>> *acceptor_list, int &num_moved_out_slots,
+                       int &num_moved_in_slots, int &unbalanced_nodes) {
+    std::unordered_map<std::string, int> string;
+    num_moved_out_slots = 0; // how many slots will be moved outside
+    num_moved_in_slots = 0; // how many slots will be moved into
+// calculate how many slots should be migrated from each node
+
+    unbalanced_nodes = 0;
+
+    for (auto node: node_list) {
+        int contributed_slots =
+                static_cast<int>(node.GetSlotNumberList().size()) -
+                new_topo.find(node.GetNodeId())->second;
+        if (contributed_slots > 0 && contributed_slots > FLAGS_balance_threshold *
+                                                         node.GetSlotNumberList().size()) {
+            contributor_list->emplace_back(node, contributed_slots);
+            num_moved_out_slots += contributed_slots;
+            unbalanced_nodes++;
+        } else if (contributed_slots < 0 &&
+                   -contributed_slots > FLAGS_balance_threshold *
+                                        node.GetSlotNumberList().size()) {
+            acceptor_list->emplace_back(node, -contributed_slots);
+            num_moved_in_slots -= contributed_slots;
+            unbalanced_nodes++;
+        }
+    }
+
+    if (unbalanced_nodes <= FLAGS_contributer_threshold) {
+        std::cout << "\n>>>> No enough contributor, skip the migration <<<<\n"
+                  << std::endl;
+        return false;
+    }
+    return true;
+}
+
+bool SendMigrateCmd(int64 migration_method, const std::vector<std::vector<MigrateCmd>> &cmd_lists,
+                    std::unordered_map<std::string, RedisCluster *> id_connection_map) {
+    std::cout << "Migration method:" << migration_method << std::endl;
+    assert(migration_method >= 0);
+    if (migration_method == 0) {
+        // Seek and insert
+        bool success = false;
+        for (const auto &cmd_list_for_each_node: cmd_lists) {
+            for (const auto &cmd_args: cmd_list_for_each_node) {
+                int try_times = 0;
+                try {
+                    auto reply = id_connection_map[cmd_args.source_id_]->command<OptionalString>(
+                            "clusterx", "migrate",
+                            cmd_args.slot_,
+                            cmd_args.target_id_);
+                    if (reply.value() != "OK") {
+                        std::cout << reply.value() << std::endl;
+                        try_times++;
+                    } else {
+                        success = true;
+                    }
+                } catch (const Error &e) {
+                    success = false;
+                    auto error_info = e.what();
+                    if (ERROR_ALREADY_MIGRATED == error_info) {
+                        std::cout << "Slot has been migrated, skip to next" << std::endl;
+                        success = true;
+                    }
+                    usleep(50l * 1000l); // sleep for 50 milliseconds, and retry
+                    if (try_times > FLAGS_max_try) {
+                        std::cerr << "Warning! a very long duration try for migration"
+                                  << std::endl;
+                    }
+                }
+            }
+        }
+        return success;
+    } else {
+        // batch-based method
+        bool success = false;
+        for (const auto &cmd_list_for_each_node: cmd_lists) {
+            auto cmd_args_start = cmd_list_for_each_node.front();
+            auto cmd_args_end = cmd_list_for_each_node.back();
+            int try_times = 0;
+            try {
+                auto reply = id_connection_map[cmd_args_start.source_id_]->command<OptionalString>(
+                        "clusterx", "migrate",
+                        cmd_args_start.slot_, cmd_args_end.slot_,
+                        cmd_args_start.target_id_);
+                if (reply.value() != "OK") {
+                    std::cout << reply.value() << std::endl;
+                    try_times++;
+                } else {
+                    success = true;
+                }
+            } catch (const Error &e) {
+                success = false;
+                auto error_info = e.what();
+                if (ERROR_ALREADY_MIGRATED == error_info) {
+                    std::cout << "Slot has been migrated, skip to next" << std::endl;
+                    success = true;
+                }
+                usleep(50l * 1000l); // sleep for 50 milliseconds, and retry
+                if (try_times > FLAGS_max_try) {
+                    std::cerr << "Warning! a very long duration try for migration"
+                              << std::endl;
+                }
+            }
+        }
+        return success;
+    }
+    return true;
+}
+
+std::vector<std::vector<MigrateCmd>>
+ComposeMigrationCmd(const std::vector<std::pair<NodeInfo, int>> &contributor_list,
+                    const std::vector<std::pair<NodeInfo, int>> &acceptor_list, int num_moved_out_slots,
+                    int num_moved_in_slots) {
+    auto result = std::vector<std::vector<MigrateCmd>>();
+    for (int i = 0; i < acceptor_list.size(); i++) {
+        for (int j = 0; j < contributor_list.size(); j++) {
+            int num_migrate_slots = acceptor_list[i].second *
+                                    ((float) contributor_list[j].second /
+                                     num_moved_out_slots);
+
+            MigrationOrder order(contributor_list[j].first, acceptor_list[i].first,
+                                 num_migrate_slots);
+            auto cmd_set = order.ComposeCommand();
+
+            std::cout << "rule: " << contributor_list[j].first.GetNodeId() << " to "
+                      << acceptor_list[i].first.GetNodeId() << " number of slots: "
+                      << cmd_set.size() << std::endl;
+            result.push_back(cmd_set);
+        }
+    }
+
+    return result;
+}
+
 int main(int argc, char **argv) {
     google::ParseCommandLineFlags(&argc, &argv, true);
     RedisCluster *cluster;
@@ -301,9 +439,7 @@ int main(int argc, char **argv) {
 
     while (getline(operations, current_operation, ',')) {
         if (current_operation == "add-node") {
-            std::string cluster_info_string = GetNodeInfoString();
-//   std::cout << cluster_info_string << std::endl;
-            std::vector <NodeInfo> node_list = GetNodeInfoList();
+            std::vector<NodeInfo> node_list = GetNodeInfoList();
             int max_version = GetMaxVersion(node_list);
             std::cout << "Current max version: " << max_version << std::endl;
 
@@ -380,115 +516,76 @@ int main(int argc, char **argv) {
                           << std::endl;
             }
 
-            std::unordered_map<std::string, int> string;
+            std::vector<std::pair<NodeInfo, int>> contributor_list; // how many nodes will contribute there slots
+            std::vector<std::pair<NodeInfo, int>> acceptor_list; // how many nodes will accept other slots
             int num_moved_out_slots = 0; // how many slots will be moved outside
             int num_moved_in_slots = 0; // how many slots will be moved into
-            std::vector <std::pair<NodeInfo, int>> contributor_list; // how many nodes will contribute there slots
-            std::vector <std::pair<NodeInfo, int>> acceptor_list; // how many nodes will accept other slots
-            // calculate how many slots should be migrated from each node
-
             int unbalanced_nodes = 0;
 
-            for (auto node: node_list) {
-                int contributed_slots =
-                        static_cast<int>(node.GetSlotNumberList().size()) -
-                        new_topo[node.GetNodeId()];
-                if (contributed_slots > 0 && contributed_slots > FLAGS_balance_threshold *
-                                                                 node.GetSlotNumberList().size()) {
-                    contributor_list.emplace_back(node, contributed_slots);
-                    num_moved_out_slots += contributed_slots;
-                    unbalanced_nodes++;
-                } else if (contributed_slots < 0 &&
-                           -contributed_slots > FLAGS_balance_threshold *
-                                                node.GetSlotNumberList().size()) {
-                    acceptor_list.emplace_back(node, -contributed_slots);
-                    num_moved_in_slots -= contributed_slots;
-                    unbalanced_nodes++;
+            bool need_balance = CalculateMigrationPlan(node_list, new_topo, &contributor_list, &acceptor_list,
+                                                       num_moved_out_slots,
+                                                       num_moved_in_slots, unbalanced_nodes);
+            std::cout << ">>>> Migration Plan generated <<<<" << std::endl;
+            std::vector<std::vector<MigrateCmd>> cmd_lists;
+
+            if (need_balance) {
+
+                node_list.clear();
+                node_list = GetNodeInfoList();
+                std::unordered_map<std::string, RedisCluster *> id_connection_map;
+
+                for (auto node: node_list) {
+                    auto temp = node.GetIPandPort();
+                    id_connection_map.emplace(node.GetNodeId(), new RedisCluster(
+                            "tcp://" + temp.first + ":" + temp.second));
                 }
-            }
 
-            if (unbalanced_nodes <= FLAGS_contributer_threshold) {
-                std::cout << "\n>>>> No enough contributor, skip the migration <<<<\n"
-                          << std::endl;
-                continue;
-            }
+                cmd_lists = ComposeMigrationCmd(contributor_list, acceptor_list, num_moved_in_slots,
+                                                num_moved_out_slots);
+                std::cout << ">>>> Migration Command  Set generated <<<<" << std::endl;
 
-            std::vector <std::vector<MigrateCmd>> cmd_lists;
+                bool migrate_success = SendMigrateCmd(FLAGS_migration_method, cmd_lists, id_connection_map);
+                std::cout << ">>>> Migration Command Sent <<<<" << std::endl;
 
-            // calculate how many slots will be moved to the acceptors
-            for (int i = 0; i < acceptor_list.size(); i++) {
-                for (int j = 0; j < contributor_list.size(); j++) {
-                    int num_migrate_slots = acceptor_list[i].second *
-                                            ((float) contributor_list[j].second /
-                                             num_moved_out_slots);
+                if (migrate_success) {
 
-                    MigrationOrder order(contributor_list[j].first, acceptor_list[i].first,
-                                         num_migrate_slots);
-                    auto cmd_set = order.ComposeCommand();
+                    node_list.clear();
+                    node_list = GetNodeInfoList();
 
-                    std::cout << "rule: " << contributor_list[j].first.GetNodeId() << " to "
-                              << acceptor_list[i].first.GetNodeId() << " number of slots: "
-                              << cmd_set.size() << std::endl;
-                    cmd_lists.push_back(cmd_set);
-                }
-            }
-
-            std::unordered_map < std::string, RedisCluster * > id_connection_map;
-
-            for (auto node: node_list) {
-                auto temp = node.GetIPandPort();
-                id_connection_map.emplace(node.GetNodeId(), new RedisCluster(
-                        "tcp://" + temp.first + ":" + temp.second));
-            }
-            for (const auto &cmd_list_for_each_node: cmd_lists) {
-                for (const auto &cmd_args: cmd_list_for_each_node) {
-                    std::string migrate_cmd = cmd_args.redis_cli_command;
-                    bool success = false;
-                    int try_times = 0;
-                    try {
-                        auto reply = id_connection_map[cmd_args.source_id_]->command<OptionalString>(
-                                "clusterx", "migrate",
-                                cmd_args.slot_,
-                                cmd_args.target_id_);
-                        if (reply.value() != "OK") {
-                            std::cout << reply.value() << std::endl;
-                            try_times++;
-                        } else {
-                            success = true;
-                        }
-                    } catch (const Error &e) {
-                        success = false;
-                        auto error_info = e.what();
-                        if (ERROR_ALREADY_MIGRATED == error_info) {
-                            std::cout << "Slot has been migrated, skip to next" << std::endl;
-                            success = true;
-                        }
-                        usleep(50l * 1000l); // sleep for 50 milliseconds, and retry
-                        if (try_times > FLAGS_max_try) {
-                            std::cerr << "Warning! a very long duration try for migration"
-                                      << std::endl;
-                        }
-                    }
-
+                    std::cout << ">>>> Start setting slots <<<<" << std::endl;
                     int current_version = GetMaxVersion(cluster);
                     current_version++;
-                    for (auto node: node_list) {
-                        std::string version_update_cmd = redis_cli_connection_head(node);
-                        version_update_cmd.append(" clusterx setslot ");
-                        version_update_cmd.append(std::to_string(cmd_args.slot_))
-                                .append(" NODE ").append(cmd_args.target_id_)
-                                .append(" ").append(std::to_string(current_version)).append(
-                                        " > nul");
-//      std::cout << version_update_cmd << std::endl;
-                        system(version_update_cmd.c_str());
+                    std::cout << "Max Version: " << current_version << std::endl;
+                    int slot_set = 0;
+                    for (const auto &cmd_list_for_each_node: cmd_lists) {
+                        for (const auto &cmd_args: cmd_list_for_each_node) {
+                            for (auto node: node_list) {
+                                slot_set++;
+                                if (slot_set % 1000 == 0) {
+                                    std::cout << slot_set << " slots are set" << std::endl;
+                                }
+                                current_version = GetMaxVersion(cluster);
+                                current_version++;
+                                std::string version_update_cmd = redis_cli_connection_head(node);
+                                version_update_cmd.append(" clusterx setslot ");
+                                version_update_cmd.append(std::to_string(cmd_args.slot_))
+                                        .append(" NODE ").append(cmd_args.target_id_)
+                                        .append(" ").append(std::to_string(current_version)).append(
+                                                " >> nul");
+                                system(version_update_cmd.c_str());
+                            }
+                        }
                     }
-                } // finish one migrate operation
-            }// finish all migration jobs.
-            // update the results into the clusters.
+                } else {
+                    return -1;
+                }
+
+
+            }
         }
 
     }
     end = time(NULL);
-    std::cout << "time taken (sec):" << difftime(end, start);
+    std::cout << "time taken (sec):" << difftime(end, start) << std::endl;
     return 0;
 }
