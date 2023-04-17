@@ -334,11 +334,17 @@ bool SendMigrateCmd(int64 migration_method, const std::vector<std::vector<Migrat
     assert(migration_method >= 0);
     if (migration_method == 0) {
         // Seek and insert
+        std::cout << "using single slot migrating method" << std::endl;
         bool success = false;
+        int slot_count = 0;
         for (const auto &cmd_list_for_each_node: cmd_lists) {
             for (const auto &cmd_args: cmd_list_for_each_node) {
                 int try_times = 0;
                 try {
+                    if (slot_count % 1000 == 0) {
+                        std::cout << slot_count << " slots migrated" << std::endl;
+                    }
+                    slot_count++;
                     auto reply = id_connection_map[cmd_args.source_id_]->command<OptionalString>(
                             "clusterx", "migrate",
                             cmd_args.slot_,
@@ -373,6 +379,7 @@ bool SendMigrateCmd(int64 migration_method, const std::vector<std::vector<Migrat
             auto cmd_args_end = cmd_list_for_each_node.back();
             int try_times = 0;
             try {
+                std::cout << "using multi-slot migrating method" << std::endl;
                 auto reply = id_connection_map[cmd_args_start.source_id_]->command<OptionalString>(
                         "clusterx", "migrate",
                         cmd_args_start.slot_, cmd_args_end.slot_,
@@ -399,7 +406,6 @@ bool SendMigrateCmd(int64 migration_method, const std::vector<std::vector<Migrat
         }
         return success;
     }
-    return true;
 }
 
 std::vector<std::vector<MigrateCmd>>

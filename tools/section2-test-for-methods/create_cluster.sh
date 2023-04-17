@@ -19,6 +19,7 @@
 
 # Settings
 BIN_PATH="../../../incubator-kvrocks/cmake-build-release/"
+#BIN_PATH="../../../origin-kvrocks/build/"
 HOST=0.0.0.0
 START_PORT=40000
 PORT=40000
@@ -28,7 +29,7 @@ EMPTY_NODES=1
 # Computed vars
 ENDPORT=$((PORT + START_NODES))
 TOTALPORT=$((ENDPORT + EMPTY_NODES))
-
+echo $BIN_PATH
 slots_range=("0-16383")
 #slots_range=("0-8191" "8192-16383")
 node_id=("kvrockskvrockskvrockskvrockskvrocksnode1"
@@ -87,7 +88,7 @@ if [ "$1" == "stop" ]; then
     echo "Stopping $PORT"
     redis-cli -h 127.0.0.1 -p $PORT shutdown
   done
-  sleep 3
+  sleep 1
   rm -r ./node_*
   rm ./nohup*
   rm nul
