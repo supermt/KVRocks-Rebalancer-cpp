@@ -39,7 +39,7 @@ def change_config(input_file, output_file, config_name, config_value):
 method_list = ["baseline", "parallel-baseline", "pull-non-expanded", "level"]
 
 for migration_method in [0, 1, 2, 3]:
-    for workload in ['a']:  # ,'b','c','d','e','f']:
+    for workload in ['a','i']:  # ,'b','c','d','e','f']:
         DIR_workload = DIR_ROCKS_STATES + workload + "/"
         DIR_int = DIR_workload + "together/" + method_list[migration_method] + "/"
         # print("migration method", migration_method)
@@ -64,7 +64,7 @@ for migration_method in [0, 1, 2, 3]:
                 migration_method) + " > " + DIR_int + "run_result")
             os.system("redis-cli -h 127.0.0.1 -p 40001 stats >" + DIR_int + "/after_migration.node1.stat")
             os.system("redis-cli -h 127.0.0.1 -p 40002 stats >" + DIR_int + "/after_migration.node2.stat")
-            os.system(">>>>>>>>>>>>>>>>>>>Cleaning<<<<<<<<<<<<<<<<<<<\n\n")
+            print(">>>>>>>>>>>>>>>>>>>Cleaning<<<<<<<<<<<<<<<<<<<\n\n")
 
             os.system("mv load_* " + DIR_int + "/")
             os.system("mv run_* " + DIR_int + "/")
