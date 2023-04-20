@@ -1,0 +1,5 @@
+Log file created at: 2023/04/17 18:19:51
+Running on machine: en4217754l
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W20230417 18:19:51.430759 534567 server.cc:1606] [server] Increased maximum number of open files to 14224 (it's originally set to 1024)
