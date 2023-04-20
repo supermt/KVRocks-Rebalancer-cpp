@@ -16,8 +16,7 @@ def extract_op_list_from_line(test_str):
             for word in match.split()[1:]:
                 row.append(float(word.split("=")[1]))
 
-        op_list.append(row)
-        # op_list.append(row)
+        op_list.append(row)  # op_list.append(row)
     # print(op_list)
     return op_list
 
@@ -30,13 +29,8 @@ kSTATS_AFTER = "rocks_stat_after_run"
 
 
 def get_result_file_map(target_dir):
-    file_map = {
-        "op_latency": [],
-        "load_throughput": [],
-        "run_throughput": [],
-        "rocks_stat_before_run": [],
-        "rocks_stat_after_run": []
-    }
+    file_map = {"op_latency": [], "load_throughput": [], "run_throughput": [], "rocks_stat_before_run": [],
+                "rocks_stat_after_run": [], "log_file": []}
     # print(target_dir)
     # for dir, subdir, file in os.walk(target_dir):
     #     print(file)
@@ -54,6 +48,7 @@ def get_result_file_map(target_dir):
                 file_map["rocks_stat_before_run"].append(file)
 
     load_list = Path(target_dir).glob("load*")
+    log_files = Path(target_dir).glob("node_*/*.INFO.*")
 
     for file in load_list:
         file = file.name
@@ -71,6 +66,11 @@ def get_result_file_map(target_dir):
         else:
             file_map["op_latency"].append(file)
 
+    for file in log_files:
+        p = file.resolve()
+
+        file_map["log_file"].append(str(p))
+
     return file_map
 
 
@@ -78,35 +78,14 @@ import pandas as pd
 
 
 def extract_tail_latency(dir_prefix, file_list):
-    op_latency_map = {
-        "INSERT": {
-            "P99": 0,
-            "P99.9": 0,
-            "P99.99": 0
-        }, "UPDATE": {
-            "P99": 0,
-            "P99.9": 0,
-            "P99.99": 0
-        }, "SCAN": {
-            "P99": 0,
-            "P99.9": 0,
-            "P99.99": 0
-        }, "READ": {
-            "P99": 0,
-            "P99.9": 0,
-            "P99.99": 0
-        }
-    }
+    op_latency_map = {"INSERT": {"P99": 0, "P99.9": 0, "P99.99": 0}, "UPDATE": {"P99": 0, "P99.9": 0, "P99.99": 0},
+                      "SCAN": {"P99": 0, "P99.9": 0, "P99.99": 0}, "READ": {"P99": 0, "P99.9": 0, "P99.99": 0}}
     for file in file_list:
         target_file = dir_prefix + file
         # print(target_file)
         op = file.split("_")[1]
         # print(op)
-        metrics_map = {
-            99: "P99",
-            99.9: "P99.9",
-            99.99: "P99.99"
-        }
+        metrics_map = {99: "P99", 99.9: "P99.9", 99.99: "P99.99"}
         if "load_" in target_file:
             pass
         else:
@@ -139,10 +118,9 @@ def extract_data_from_result_file(load_file):
             time = splits[-3]
             finished_op.append([int(time), int(op)])
         # print(len(words))
-        throughput_lines.extend(extract_op_list_from_line(line))
-        # throughput_lines.append()
+        throughput_lines.extend(extract_op_list_from_line(line))  # throughput_lines.append()
     op_df = pd.DataFrame(throughput_lines, columns=["op", "count", "max", "min", "avg"])
     data_df = pd.DataFrame(finished_op, columns=["Time Elapsed (Sec)", "Finished Ops"])
     throughput_df = data_df.shift(periods=-1) - data_df
-    print(throughput_df)
+    # print(throughput_df)
     return throughput, op_df, throughput_df
