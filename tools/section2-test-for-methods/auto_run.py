@@ -38,8 +38,8 @@ def change_config(input_file, output_file, config_name, config_value):
 
 method_list = ["baseline", "parallel-baseline", "pull-non-expanded", "level"]
 
-for migration_method in [0, 1, 2, 3]:
-    for workload in ['a','i']:  # ,'b','c','d','e','f']:
+for migration_method in [1]:
+    for workload in ['a']:  # ,'b','c','d','e','f']:
         DIR_workload = DIR_ROCKS_STATES + workload + "/"
         DIR_int = DIR_workload + "together/" + method_list[migration_method] + "/"
         # print("migration method", migration_method)

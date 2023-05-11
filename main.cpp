@@ -4,6 +4,7 @@
 #include <time.h>
 
 const static std::string ERROR_ALREADY_MIGRATED = "Can't migrate slot which has been migrated";
+const static std::string ERROR_MIGRATION_IN_PROGRESS = "There is already a migrating slot";
 
 DEFINE_int32(port,
              40001, "The cluster entry port");
@@ -334,40 +335,49 @@ bool SendMigrateCmd(int64 migration_method, const std::vector<std::vector<Migrat
     assert(migration_method >= 0);
     if (migration_method == 0) {
         // Seek and insert
-        std::cout << "using single slot migrating method" << std::endl;
+        std::cout << "using single slot migrating method, cmd list size:" << cmd_lists.size() << std::endl;
         bool success = false;
         int slot_count = 0;
         for (const auto &cmd_list_for_each_node: cmd_lists) {
+            std::cout << "Command list size:" << cmd_list_for_each_node.size() << std::endl;
             for (const auto &cmd_args: cmd_list_for_each_node) {
-                int try_times = 0;
-                try {
-                    if (slot_count % 1000 == 0) {
-                        std::cout << slot_count << " slots migrated" << std::endl;
-                    }
-                    slot_count++;
-                    auto reply = id_connection_map[cmd_args.source_id_]->command<OptionalString>(
-                            "clusterx", "migrate",
-                            cmd_args.slot_,
-                            cmd_args.target_id_);
-                    if (reply.value() != "OK") {
-                        std::cout << reply.value() << std::endl;
-                        try_times++;
-                    } else {
-                        success = true;
-                    }
-                } catch (const Error &e) {
-                    success = false;
-                    auto error_info = e.what();
-                    if (ERROR_ALREADY_MIGRATED == error_info) {
-                        std::cout << "Slot has been migrated, skip to next" << std::endl;
-                        success = true;
-                    }
-                    usleep(50l * 1000l); // sleep for 50 milliseconds, and retry
-                    if (try_times > FLAGS_max_try) {
-                        std::cerr << "Warning! a very long duration try for migration"
-                                  << std::endl;
+
+                success = false;
+                if (slot_count % 100 == 0) {
+                    std::cout << slot_count << " slots migrated, command slot:" << cmd_args.slot_ << std::endl;
+                }
+                while (!success) {
+                    int try_times = 0;
+                    try {
+                        auto reply = id_connection_map[cmd_args.source_id_]->command<OptionalString>(
+                                "clusterx", "migrate",
+                                cmd_args.slot_,
+                                cmd_args.target_id_);
+//                        std::cout << cmd_args.slot_ << " Reply: " << reply.value() << std::endl;
+                        if (reply.value() != "OK") {
+                            std::cout << "Reply not OK" << reply.value() << std::endl;
+                            try_times++;
+                        } else {
+                            success = true;
+                        }
+                    } catch (const Error &e) {
+                        auto error_info = e.what();
+                        if (ERROR_ALREADY_MIGRATED == error_info) {
+                            std::cout << "Slot has been migrated, skip to next" << std::endl;
+                            success = true;
+                        } else if (ERROR_MIGRATION_IN_PROGRESS == error_info) {
+                            usleep(50l); // sleep for 50 milliseconds, and retry
+                            if (try_times > FLAGS_max_try) {
+                                std::cerr << "Warning! a very long duration try for migration"
+                                          << std::endl;
+                            }
+                        } else {
+                            std::cout << "System broken" << std::endl;
+                            exit(-1);
+                        }
                     }
                 }
+                slot_count++;
             }
         }
         return success;
@@ -567,7 +577,7 @@ int main(int argc, char **argv) {
                         for (const auto &cmd_args: cmd_list_for_each_node) {
                             for (auto node: node_list) {
                                 slot_set++;
-                                if (slot_set % 1000 == 0) {
+                                if (slot_set % 100 == 0) {
                                     std::cout << slot_set << " slots are set" << std::endl;
                                 }
                                 current_version = GetMaxVersion(cluster);
@@ -576,8 +586,7 @@ int main(int argc, char **argv) {
                                 version_update_cmd.append(" clusterx setslot ");
                                 version_update_cmd.append(std::to_string(cmd_args.slot_))
                                         .append(" NODE ").append(cmd_args.target_id_)
-                                        .append(" ").append(std::to_string(current_version)).append(
-                                                " >> nul");
+                                        .append(" ").append(std::to_string(current_version)).append(" >> nul");
                                 system(version_update_cmd.c_str());
                             }
                         }

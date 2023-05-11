@@ -1,8 +1,5 @@
-import json
-import os
 import sys
 from pathlib import Path
-import matplotlib.pyplot as plt
 
 
 def get_result_file_map(target_dir):
@@ -68,7 +65,6 @@ def file_to_cache_data(dir_prefix, file_list):
     return cache_info
 
 
-import csv
 import pandas as pd
 
 if __name__ == '__main__':
@@ -76,9 +72,9 @@ if __name__ == '__main__':
     # result_dir = os.path.abspath(result_dir)
     print("reading file from " + result_dir)
     rows = []
-    for workload in ["a", "b", "c", "d", "e", "f"]:
-        for migration_type in ["separate", "together"]:
-            target_dir = result_dir + "rocks_stat/" + workload + "/" + migration_type
+    for workload in ["a"]:  # , "b", "c", "d", "e", "f"]:
+        for migration_type in ["baseline", "parallel-baseline", "pull-non-expanded", "level"]:
+            target_dir = result_dir + "/" + workload + "/together/" + migration_type
             file_map = get_result_file_map(target_dir)
             stats_before = file_map["rocks_stat_before_run"]
             cache_b = file_to_cache_data(target_dir, stats_before)
