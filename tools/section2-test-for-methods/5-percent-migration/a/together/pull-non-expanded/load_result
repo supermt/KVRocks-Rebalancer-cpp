@@ -1,0 +1,14 @@
+filed length is: 100
+2023-04-20 19:29:19 0 sec: 0 operations;
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Connected! <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-04-20 19:29:29 10 sec: 267580 operations; [INSERT: Count=267580 Max=1977.89 Min=43.09 Avg=68.24]
+2023-04-20 19:29:39 20 sec: 362305 operations; [INSERT: Count=362305 Max=177453.11 Min=43.09 Avg=72.52]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-04-20 19:29:49 29 sec: 500000 operations; [INSERT: Count=500000 Max=10431941.15 Min=43.09 Avg=112.14]
+Load runtime(sec): 29.7367
+Load operations(ops): 500000
+Load throughput(ops/sec): 16814.2

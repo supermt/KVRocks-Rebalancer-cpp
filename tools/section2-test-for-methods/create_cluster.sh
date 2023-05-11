@@ -89,6 +89,7 @@ if [ "$1" == "stop" ]; then
     redis-cli -h 127.0.0.1 -p $PORT shutdown
   done
   sleep 1
+  rm -rf /tmp/migration_sync/*
   rm -r ./node_*
   rm ./nohup*
   rm nul

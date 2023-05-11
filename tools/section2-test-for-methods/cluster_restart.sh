@@ -1,9 +1,12 @@
 ./create_cluster.sh stop
 ./create_cluster.sh start
 ./create_cluster.sh create
-#./loading.sh
-./migrate.sh 0
 
+echo "Server created"
+./loading.sh
+echo "Data loaded"
+./migrate.sh 2
+#./running_while_migrating.sh a 0
 #redis-cli -c -p 40001 clusterx migrate 2410 2518  kvrockskvrockskvrockskvrockskvrocksnode2
 #redis-cli -p 40001 clusterx setslot 2515 node kvrockskvrockskvrockskvrockskvrocksnode2 3
 #redis-cli -p 40002 clusterx setslot 2515 node kvrockskvrockskvrockskvrockskvrocksnode2 3
