@@ -11,8 +11,7 @@ if __name__ == '__main__':
     # kvrockskvrockskvrockskvrockskvrocksnode3 10.32.68.249 6666 master - 10993-16383" 1
     # get the link and topo first
     startup_nodes = [{"host": "127.0.0.1", "port": "40001"}]
-    expended_nodes = [{"host": "127.0.0.1", "port": "40002", "master": None},
-                      {"host": "127.0.0.1", "port": "40003", "master": None}]
+    expended_nodes = [{"host": "127.0.0.1", "port": "40002", "master": None}]
 
     added_nodes = []
 
@@ -82,20 +81,25 @@ if __name__ == '__main__':
     all_server.extend(startup_nodes)
     all_server.extend(added_nodes)
 
+    # all_server_list = []
+    # for server in all_server:
+    #     all_server_list.append(redis.Redis(server["host"], server["port"]))
+    #
     if len(added_nodes) > 0:
         version = get_cluster_version(rc)
+        version += 1
         for server in all_server:
             # It can only be finished in os.sys
-            version += 1
             target_command = "redis-cli -h %s -p %s CLUSTERX SETNODES %s %d" % (
                 server["host"], server["port"], new_topo, version)
+            # target_command = "CLUSTERX SETNODES %s %d" % (new_topo, version)
+            # print(target_command)
+            # reply = server.execute_command(*target_command.split())
+            # print(reply)
             os.system(target_command)
-
-        print("Finished updating topo")
         node_info = rc.cluster_nodes()
 
-        for node in node_info:
-            print(len(node["slots"]))
+        print("Finished updating topo, version number:", get_cluster_version(rc))
 
         # for each new nodes, set node id for them
         index = 0

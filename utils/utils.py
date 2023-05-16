@@ -71,14 +71,3 @@ def apply_migration_plan(migration_candidates, cluster_link, server_links, migra
                     if version % 100 == 0:
                         print("Cluster version:", version, "Setting Response:", set_slot_reply, "\t Client ID:",
                               server_link.client_id())
-
-# if __name__ == '__main__':
-# Example usage
-
-#
-# startup_nodes = [{"host": "127.0.0.1", "port": "40001"}, {"host": "127.0.0.1", "port": "40002"}]
-# rc, server_links = get_link_list_from_nodes(startup_nodes)
-# node_info = rc.cluster_nodes()
-#
-# migration_candidates = allocate_slots_for_servers(node_info)
-# success_send = apply_migration_plan(migration_candidates, int(sys.argv[1]))

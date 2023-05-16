@@ -15,7 +15,7 @@ def allocate_slots_for_servers(node_info):
             key_ranges.append((slot_num, data[slot_num]))
 
     server_assignments = load_balance(key_ranges, len(node_info))
-    print(server_assignments)
+
     rebalanced_slots = []
     for i in range(len(key_ranges)):
         slot_num = int(key_ranges[i][0])
