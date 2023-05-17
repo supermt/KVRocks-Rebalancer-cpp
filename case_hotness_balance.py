@@ -1,7 +1,7 @@
 import sys
 
 from utils.load_balance import allocate_slots_for_servers
-from utils.utils import get_link_list_from_nodes, apply_migration_plan
+from utils.utils import get_link_list_from_nodes, calculate_migration_plan, apply_migration_cmd
 
 if __name__ == '__main__':
     # Example usage
@@ -10,4 +10,6 @@ if __name__ == '__main__':
     node_info = rc.cluster_nodes()
     print("Migration method:", sys.argv[1])
     migration_candidates = allocate_slots_for_servers(node_info)
-    success_send = apply_migration_plan(migration_candidates, rc, server_links, int(sys.argv[1]))
+    migrate_cmd_list = calculate_migration_plan(migration_candidates, rc, server_links, int(sys.argv[1]))
+    # print(migrate_cmd_list)
+    apply_migration_cmd(migrate_cmd_list, rc, server_links)

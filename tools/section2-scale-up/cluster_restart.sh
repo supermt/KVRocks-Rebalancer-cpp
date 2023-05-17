@@ -3,7 +3,7 @@
 ./create_cluster.sh create
 
 echo "Server created"
-./loading.sh m
+./loading.sh a
 echo "Data loaded"
 ./migrate.sh 2
 #./running_while_migrating.sh a 0

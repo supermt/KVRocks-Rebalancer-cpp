@@ -1,12 +1,13 @@
 import redis
 from rediscluster import RedisCluster
 
+
 def detect_ranges(lst):
     ranges = []
     i = 0
     while i < len(lst):
         j = i
-        while j < len(lst) - 1 and lst[j+1] == lst[j]+1:
+        while j < len(lst) - 1 and lst[j + 1] == lst[j] + 1:
             j += 1
         if j > i:
             ranges.append((lst[i], lst[j]))
@@ -30,44 +31,89 @@ def get_link_list_from_nodes(startup_nodes):
     return rc, server_links
 
 
-def apply_migration_plan(migration_candidates, cluster_link, server_links, migration_method=0):
-    migrate_cmd_list = []
+def calculate_migration_plan(migration_candidates, cluster_link, server_links, migration_method=0):
     node_info = cluster_link.cluster_nodes()
-    if int(migration_method) >= 1:
-        slot_str_map = {x["id"]: "" for x in node_info}  # {id:"1,2,3,4",id2:"5,6,7,8"}
 
-        for candidate in migration_candidates:
-            server_id = candidate[1]
-            slot_id = candidate[0]
-            slot_str_map[server_id] += (str(slot_id) + ",")
-        for server in slot_str_map:
-            if slot_str_map[server] != "":
-                migrate_cmd_list.append("clusterx migrate " + slot_str_map[server] + " " + server)
+    # We need to find the server that contains the slot, otherwise, it will report error
+    # 1. create slot:server map
+    old_topo = {}
+    for node in node_info:
+        for slot in node["slots"]:
+            old_topo[slot] = node["id"]
+
+    # 2. filter the migration candidates
+    #    if the target server is the slot it belongs to, skip it.
+    # {src: []}
+    slots_need_move = {x["id"]: [] for x in node_info}
+
+    slot_moving_count = 0
+    for candidate in migration_candidates:
+        # candidate = (slot_id, node_id)
+        slot_id = candidate[0]
+        server_id = candidate[1]
+        src_server = old_topo[slot_id]
+        if src_server != server_id:
+            slot_moving_count += 1
+            slots_need_move[src_server].append(candidate)
+
+    # print("Filtered slots:", slots_need_move, "# of removed slots:", len(migration_candidates) - slot_moving_count)
+
+    migrate_cmd_map = {x["id"]: [] for x in node_info}
+
+    if int(migration_method) >= 1:
+        # { "server_id" : [(slot_id,server_id),(slot_id,server_id)] }
+        for src_server in slots_need_move:
+
+            slot_str_map = {x["id"]: "" for x in node_info}  # {id:"1,2,3,4",id2:"5,6,7,8"}
+
+            slots_in_this_server = slots_need_move[src_server]
+            for candidate in slots_in_this_server:
+                server_id = candidate[1]
+                slot_id = candidate[0]
+                slot_str_map[server_id] += (str(slot_id) + ",")
+            for server in slot_str_map:
+                if slot_str_map[server] != "":
+                    migrate_cmd_map[src_server].append("clusterx migrate " + slot_str_map[server] + " " + server)
     else:
-        migrate_cmd_list = ["clusterx migrate " + str(x[0]) + " " + x[1] for x in migration_candidates]
+        for src_server in slots_need_move:
+            migrate_cmd_map[src_server] = ["clusterx migrate " + str(x[0]) + " " + x[1] for x in
+                                           slots_need_move[src_server]]
+
+    return migrate_cmd_map
+
+
+def apply_migration_cmd(migrate_cmd_map, cluster_link, server_links):
+    node_info = cluster_link.cluster_nodes()
+
+    server_link_map = {x["id"]: redis.Redis(x["host"], x["port"]) for x in node_info}
 
     version = get_cluster_version(cluster_link)
-    # Send Migration Commands to cluster servers
-    success = False
+    for server_id in migrate_cmd_map:
+        for cmd in migrate_cmd_map[server_id]:
 
-    for cmd in migrate_cmd_list:
-        migrate_reply = cluster_link.execute_command(*cmd.split())
-        # migrate_reply = migrate_reply.decode("utf-8")
-        if migrate_reply != "OK":
-            print("Get unexpected results:", migrate_reply)
-            return False
-        slots = cmd.split()[2].split(",")
-        for slot in slots:
-            if slot != "":
-                version += 1
-                # CLUSTERX SETSLOT $SLOT_ID NODE $NODE_ID $VERSION
-                set_slot_cmd = "CLUSTERX SETSLOT " + slot + " NODE " + cmd.split()[-1] + " " + str(version)
-                for server_link in server_links:
-                    set_slot_reply = server_link.execute_command(set_slot_cmd)
-                    set_slot_reply = set_slot_reply.decode("utf-8")
-                    if set_slot_reply != "OK":
-                        print("Get unexpected results:", migrate_reply)
-                        return False
-                    if version % 100 == 0:
-                        print("Cluster version:", version, "Setting Response:", set_slot_reply, "\t Client ID:",
-                              server_link.client_id())
+            success = True
+            while success:
+                try:
+                    print("Success?", success)
+                    migrate_reply = server_link_map[server_id].execute_command(*cmd.split())
+                    print("Migration cmd:", cmd, " reply:", migrate_reply, "Server: ", server_id)
+                    success = False
+                except redis.exceptions.ResponseError:
+                    print("Error while executing:", cmd)
+                    exit(-1)
+
+            slots = cmd.split()[2].split(",")
+            for slot in slots:
+                if slot != "":
+                    version += 1
+                    # CLUSTERX SETSLOT $SLOT_ID NODE $NODE_ID $VERSION
+                    set_slot_cmd = "CLUSTERX SETSLOT " + slot + " NODE " + cmd.split()[-1] + " " + str(version)
+                    for server_link in server_links:
+                        set_slot_reply = server_link.execute_command(set_slot_cmd)
+                        set_slot_reply = set_slot_reply.decode("utf-8")
+                        if set_slot_reply != "OK":
+                            print("Get unexpected results:", migrate_reply)
+                            return False
+                        if version % 100 == 0:
+                            print("Cluster version:", version, "Setting Response:", set_slot_reply, "\t Client ID:",
+                                  server_link.client_id())
