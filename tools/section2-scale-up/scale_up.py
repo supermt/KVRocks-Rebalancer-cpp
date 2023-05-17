@@ -39,7 +39,7 @@ def change_config(input_file, output_file, config_name, config_value):
 method_list = ["baseline", "parallel-baseline", "pull-non-expanded", "level"]
 
 for migration_method in [0,2]:
-    for workload in ['m']:  # ,'b','c','d','e','f']:
+    for workload in ['a']:  # ,'b','c','d','e','f']:
         DIR_workload = DIR_ROCKS_STATES + workload + "/"
         DIR_int = DIR_workload + "together/" + method_list[migration_method] + "/"
         # print("migration method", migration_method)
@@ -69,7 +69,7 @@ for migration_method in [0,2]:
 
             os.system("mv load_* " + DIR_int + "/")
             os.system("mv run_* " + DIR_int + "/")
-            os.system("mv *.stat"+DIR_int +"/")
+            os.system("mv *.stat "+DIR_int +"/")
             create_if_not_exist(DIR_int + "/node_40001")
             create_if_not_exist(DIR_int + "/node_40002")
             os.system("mv node_40001/*.log.* " + DIR_int + "/node_40001/")
