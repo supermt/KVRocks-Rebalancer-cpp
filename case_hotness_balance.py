@@ -11,5 +11,5 @@ if __name__ == '__main__':
     print("Migration method:", sys.argv[1])
     migration_candidates = allocate_slots_for_servers(node_info)
     migrate_cmd_list = calculate_migration_plan(migration_candidates, rc, server_links, int(sys.argv[1]))
-    # print(migrate_cmd_list)
+    print(migrate_cmd_list)
     apply_migration_cmd(migrate_cmd_list, rc, server_links)
