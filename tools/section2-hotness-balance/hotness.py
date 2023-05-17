@@ -69,7 +69,7 @@ for migration_method in [0,2]:
 
             os.system("mv load_* " + DIR_int + "/")
             os.system("mv run_* " + DIR_int + "/")
-            os.system("mv *.stat"+DIR_int +"/")
+            os.system("mv *.stat "+DIR_int +"/")
             create_if_not_exist(DIR_int + "/node_40001")
             create_if_not_exist(DIR_int + "/node_40002")
             os.system("mv node_40001/*.log.* " + DIR_int + "/node_40001/")

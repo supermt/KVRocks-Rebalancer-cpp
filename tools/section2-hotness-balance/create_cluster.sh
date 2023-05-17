@@ -92,6 +92,7 @@ if [ "$1" == "stop" ]; then
   rm -rf /tmp/migration_sync
   rm -r ./node_*
   rm *.stat
+  rm balance.log
   rm ./nohup*
   rm nul
   #   hadoop fs -rm -r -skipTrash /user/supermt
