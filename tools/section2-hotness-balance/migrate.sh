@@ -3,14 +3,12 @@ echo "Start Migration"
 echo $1
 export PYTHONPATH=$PYTHONPATH:../../
 
-redis-cli -h 127.0.0.1 -p 40001 stats > ./before_migration.node1.stat
-redis-cli -h 127.0.0.1 -p 40002 stats > ./before_migration.node2.stat
-
+sleep 30
 #echo ">>>>>>>>>>>>>>>>>>>>>>>>>>Add Server<<<<<<<<<<<<<<<<<<<<<<<<<<<"
 #python3 ../../case_scaleup.py
 
-#sleep 10
-
+redis-cli -h 127.0.0.1 -p 40001 stats > ./before_migration.node1.stat
+redis-cli -h 127.0.0.1 -p 40002 stats > ./before_migration.node2.stat
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>Load Balance<<<<<<<<<<<<<<<<<<<<<<<<<"
 python3 ../../case_hotness_balance.py $1
 

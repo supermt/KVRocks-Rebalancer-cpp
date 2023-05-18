@@ -6,7 +6,9 @@
 echo "Server created"
 #./loading.sh m
 echo "Data loaded"
-./migrate.sh 2
+#./migrate.sh 2
+redis-cli -p 40001 clusterx migrate 4582, kvrockskvrockskvrockskvrockskvrocksnode2
+#./running_while_migrating.sh  m 2 > run_result
 echo "migrated"
 #./running_while_migrating.sh a 0
 #redis-cli -c -p 40001 clusterx migrate 2410 2518  kvrockskvrockskvrockskvrockskvrocksnode2
