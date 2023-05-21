@@ -1,5 +1,23 @@
+import subprocess
+
+import time
 import redis
 from rediscluster import RedisCluster
+
+LOG_FILE_MAP = {"kvrockskvrockskvrockskvrockskvrocksnode1": "node_40001/kvrocks.INFO",
+                "kvrockskvrockskvrockskvrockskvrocksnode2": "node_40002/kvrocks.INFO",
+                "kvrockskvrockskvrockskvrockskvrocksnode3": "node_40003/kvrocks.INFO", }
+
+
+def import_success(path, waiting_slot, lines=10, sleep_micros=10):
+    output = subprocess.check_output("tail " + path + " -n " + str(lines), shell=True)
+    return_str = output.decode("utf-8", "ignore")
+
+    # waiting_sentence = "Succeed to import slot " + str(waiting_slot)
+    waiting_sentence = "Clean resources of migrating slot " + str(waiting_slot)
+    # time.sleep(10 * 0.000001)
+    # print("waiting on:", waiting_sentence)
+    return waiting_sentence in return_str  # return False
 
 
 def detect_ranges(lst):
@@ -90,30 +108,40 @@ def apply_migration_cmd(migrate_cmd_map, cluster_link, server_links):
     version = get_cluster_version(cluster_link)
     for server_id in migrate_cmd_map:
         for cmd in migrate_cmd_map[server_id]:
-
-            success = True
-            while success:
+            success = False
+            retry = 0
+            while not success:
                 try:
-                    print("Success?", success)
                     migrate_reply = server_link_map[server_id].execute_command(*cmd.split())
-                    print("Migration cmd:", cmd, " reply:", migrate_reply, "Server: ", server_id)
-                    success = False
-                except redis.exceptions.ResponseError:
-                    print("Error while executing:", cmd)
-                    exit(-1)
+                    # print("Migration cmd:", cmd, " reply:", migrate_reply, "Server: ", server_id)
+                    success = True
+                except redis.exceptions.ResponseError as e:
+                    # print("Error while executing:", cmd)
+                    print(str(e))
+                    time.sleep(0.01)
+                    retry += 1  # exit(-1)
+            if retry > 0:
+                print("command", cmd, "retried for", retry, "times")
 
             slots = cmd.split()[2].split(",")
+            target_server = cmd.split()[3]
+            # print(target_server)
+            # for slot in slots:
+            while not import_success(LOG_FILE_MAP[server_id], slots[0]):
+                time.sleep(0.00001)
+                pass
+
             for slot in slots:
                 if slot != "":
                     version += 1
                     # CLUSTERX SETSLOT $SLOT_ID NODE $NODE_ID $VERSION
-                    set_slot_cmd = "CLUSTERX SETSLOT " + slot + " NODE " + cmd.split()[-1] + " " + str(version)
+                    set_slot_cmd = "CLUSTERX SETSLOT " + slot + " NODE " + target_server + " " + str(version)
                     for server_link in server_links:
                         set_slot_reply = server_link.execute_command(set_slot_cmd)
                         set_slot_reply = set_slot_reply.decode("utf-8")
                         if set_slot_reply != "OK":
                             print("Get unexpected results:", migrate_reply)
                             return False
-                        if version % 100 == 0:
-                            print("Cluster version:", version, "Setting Response:", set_slot_reply, "\t Client ID:",
-                                  server_link.client_id())
+                        if version % 1000 == 0:
+                            print("Cluster version:", version, "Setting Response:", set_slot_reply, "\t Server ID:",
+                                  target_server)

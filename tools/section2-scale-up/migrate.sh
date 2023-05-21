@@ -10,7 +10,7 @@ redis-cli -h 127.0.0.1 -p 40001 stats > ./before_migration.node1.stat
 redis-cli -h 127.0.0.1 -p 40002 stats > ./before_migration.node2.stat
 
 
-sleep 10
+#sleep 10
 
 echo ">>>>>>>>>>>>>>>>>>>>>>>>>>Load Balance<<<<<<<<<<<<<<<<<<<<<<<<<"
 python3 ../../case_hotness_balance.py $1

@@ -5,7 +5,7 @@
 echo "Server created"
 ./loading.sh a
 echo "Data loaded"
-./migrate.sh 2
+./migrate.sh 0
 #./running_while_migrating.sh a 0
 #redis-cli -c -p 40001 clusterx migrate 2410 2518  kvrockskvrockskvrockskvrockskvrocksnode2
 #redis-cli -p 40001 clusterx setslot 2515 node kvrockskvrockskvrockskvrockskvrocksnode2 3
