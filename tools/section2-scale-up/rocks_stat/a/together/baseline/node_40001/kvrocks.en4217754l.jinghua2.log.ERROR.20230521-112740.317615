@@ -1,0 +1,8 @@
+Log file created at: 2023/05/21 11:27:40
+Running on machine: en4217754l
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E20230521 11:27:40.632058 317861 redis_connection.cc:105] [connection] Going to remove the client: 127.0.0.1:58166, while encounter error: Connection reset by peer
+E20230521 11:27:40.818436 317856 redis_connection.cc:105] [connection] Going to remove the client: 127.0.0.1:58198, while encounter error: Connection reset by peer
+E20230521 11:34:39.220260 317862 redis_connection.cc:105] [connection] Going to remove the client: 127.0.0.1:49116, while encounter error: Connection reset by peer
+E20230521 12:11:26.872458 317863 redis_connection.cc:105] [connection] Going to remove the client: 127.0.0.1:38824, while encounter error: Connection reset by peer

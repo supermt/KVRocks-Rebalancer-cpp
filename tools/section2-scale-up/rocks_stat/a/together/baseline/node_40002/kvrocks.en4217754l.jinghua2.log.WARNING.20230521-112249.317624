@@ -1,0 +1,7 @@
+Log file created at: 2023/05/21 11:22:49
+Running on machine: en4217754l
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W20230521 11:22:49.321954 317624 server.cc:1612] [server] Increased maximum number of open files to 14224 (it's originally set to 1024)
+E20230521 11:34:39.243072 317870 redis_connection.cc:105] [connection] Going to remove the client: 127.0.0.1:52470, while encounter error: Connection reset by peer
+E20230521 12:11:26.893571 317873 redis_connection.cc:105] [connection] Going to remove the client: 127.0.0.1:42584, while encounter error: Connection reset by peer
