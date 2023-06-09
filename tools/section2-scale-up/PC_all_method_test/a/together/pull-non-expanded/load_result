@@ -1,0 +1,25 @@
+filed length is: 10
+2023-06-09 16:04:59 0 sec: 0 operations;
+Initializing, create redis cluster link at Initializing, create redis cluster link at tcp://127.0.0.1:40001tcp://127.0.0.1:40001
+
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+2023-06-09 16:05:09 10 sec: 328403 operations; [INSERT: Count=328403 Max=16666.71 Min=44.78 Avg=86.46]
+2023-06-09 16:05:19 20 sec: 577148 operations; [INSERT: Count=577148 Max=2463869.36 Min=44.78 Avg=99.10]
+2023-06-09 16:05:29 30 sec: 794758 operations; [INSERT: Count=794758 Max=3010103.05 Min=44.78 Avg=108.39]
+2023-06-09 16:05:39 40 sec: 980330 operations; [INSERT: Count=980330 Max=3583998.65 Min=44.78 Avg=117.49]
+2023-06-09 16:05:49 50 sec: 1276141 operations; [INSERT: Count=1276141 Max=3583998.65 Min=44.78 Avg=112.62]
+2023-06-09 16:05:59 60 sec: 1458582 operations; [INSERT: Count=1458582 Max=3583998.65 Min=44.78 Avg=110.05]
+2023-06-09 16:06:09 70 sec: 1732953 operations; [INSERT: Count=1732953 Max=5046506.65 Min=44.78 Avg=116.24]
+2023-06-09 16:06:19 80 sec: 1917752 operations; [INSERT: Count=1917752 Max=5046506.65 Min=44.78 Avg=120.22]
+2023-06-09 16:06:29 90 sec: 2129460 operations; [INSERT: Count=2129460 Max=5046506.65 Min=44.78 Avg=117.48]
+2023-06-09 16:06:39 100 sec: 2297996 operations; [INSERT: Count=2297996 Max=6122349.45 Min=44.78 Avg=123.93]
+2023-06-09 16:06:49 110 sec: 2408971 operations; [INSERT: Count=2408971 Max=6122349.45 Min=44.78 Avg=125.84]
+2023-06-09 16:06:59 120 sec: 2704020 operations; [INSERT: Count=2704020 Max=6122349.45 Min=44.78 Avg=128.21]
+2023-06-09 16:07:09 130 sec: 2864285 operations; [INSERT: Count=2864285 Max=6122349.45 Min=44.78 Avg=131.23]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-06-09 16:07:18 139 sec: 3000000 operations; [INSERT: Count=3000000 Max=6122349.45 Min=44.78 Avg=134.57]
+Load runtime(sec): 139.558
+Load operations(ops): 3000000
+Load throughput(ops/sec): 21496.4
