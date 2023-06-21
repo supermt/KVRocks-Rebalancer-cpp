@@ -1,0 +1,26 @@
+filed length is: 10
+2023-06-09 16:10:52 0 sec: 0 operations;
+Initializing, create redis cluster link at tcp://127.0.0.1:40001Initializing, create redis cluster link at 
+tcp://127.0.0.1:40001
+Initializing, create redis cluster link at tcp://127.0.0.1:40001
+2023-06-09 16:11:02 10 sec: 267180 operations; [INSERT: Count=267180 Max=1271145.12 Min=45.35 Avg=107.13]
+2023-06-09 16:11:12 20 sec: 465684 operations; [INSERT: Count=465684 Max=3028895.41 Min=45.35 Avg=123.64]
+2023-06-09 16:11:22 30 sec: 668696 operations; [INSERT: Count=668696 Max=3028895.41 Min=44.49 Avg=115.43]
+2023-06-09 16:11:32 40 sec: 948658 operations; [INSERT: Count=948658 Max=4088501.13 Min=44.49 Avg=121.36]
+2023-06-09 16:11:42 50 sec: 1119900 operations; [INSERT: Count=1119900 Max=4088501.13 Min=44.49 Avg=128.75]
+2023-06-09 16:11:52 60 sec: 1295553 operations; [INSERT: Count=1295553 Max=4088501.13 Min=44.49 Avg=133.78]
+2023-06-09 16:12:02 70 sec: 1483763 operations; [INSERT: Count=1483763 Max=4088501.13 Min=44.49 Avg=136.36]
+2023-06-09 16:12:12 80 sec: 1793674 operations; [INSERT: Count=1793674 Max=4088501.13 Min=44.49 Avg=128.63]
+2023-06-09 16:12:22 90 sec: 1960799 operations; [INSERT: Count=1960799 Max=4088501.13 Min=44.49 Avg=132.51]
+2023-06-09 16:12:32 100 sec: 2139977 operations; [INSERT: Count=2139977 Max=4088501.13 Min=44.49 Avg=134.98]
+2023-06-09 16:12:42 110 sec: 2320466 operations; [INSERT: Count=2320466 Max=4088501.13 Min=44.49 Avg=136.98]
+2023-06-09 16:12:52 120 sec: 2592812 operations; [INSERT: Count=2592812 Max=4088501.13 Min=44.49 Avg=132.53]
+2023-06-09 16:13:02 130 sec: 2742822 operations; [INSERT: Count=2742822 Max=4088501.13 Min=44.49 Avg=136.98]
+2023-06-09 16:13:12 140 sec: 2922670 operations; [INSERT: Count=2922670 Max=4088501.13 Min=44.49 Avg=138.49]
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>> Clean the DB, close the redis cluster <<<<<<<<<<<<<<<<<<<<<<<<<<<
+2023-06-09 16:13:18 146 sec: 3000000 operations; [INSERT: Count=3000000 Max=4088501.13 Min=44.49 Avg=141.39]
+Load runtime(sec): 146.64
+Load operations(ops): 3000000
+Load throughput(ops/sec): 20458.3
