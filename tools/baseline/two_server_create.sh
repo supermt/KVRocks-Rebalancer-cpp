@@ -20,7 +20,8 @@
 # Settings
 BIN_PATH="../../../incubator-kvrocks/build/"
 #BIN_PATH="../../../origin-kvrocks/build/"
-HOST=0.0.0.0
+HOST_LIST=(10.218.109.65 10.218.110.135)
+PORT_LIST=(40001 40001)
 START_PORT=40000
 PORT=40000
 START_NODES=2
@@ -32,7 +33,6 @@ TOTALPORT=$((ENDPORT + EMPTY_NODES))
 echo $BIN_PATH
 #slots_range=("0-16383")
 slots_range=("0-8191" "8192-16383")
-#slots_range=("0-5461" "5462-10921" "10922-16383")
 node_id=("kvrockskvrockskvrockskvrockskvrocksnode1"
   "kvrockskvrockskvrockskvrockskvrocksnode2"
   "kvrockskvrockskvrockskvrockskvrocksnode3")
@@ -68,6 +68,7 @@ if [ "$1" == "create" ]; then
     slotindex=$index
     slots=${slots_range[$slotindex]}
     echo $slots
+    HOST=${HOST_LIST[$index]}
     cluster_nodes="$cluster_nodes\n${node_id[$index]} $HOST $((PORT + $index + 1)) master - $slots"
     index=$((index + 1))
   done
@@ -77,10 +78,12 @@ if [ "$1" == "create" ]; then
   sleep 1
   index=0
   PORT=$START_PORT
+  REMOTE_HOST=${HOST_LIST[$index]}
+  REMOTE_PORT=${PORT_LIST[$index]}
   while [ $((PORT < ENDPORT)) != "0" ]; do
     PORT=$((PORT + 1))
-    redis-cli -h 127.0.0.1 -p $PORT clusterx setnodes "${cluster_nodes}" 1
-    redis-cli -h 127.0.0.1 -p $PORT clusterx setnodeid ${node_id[$index]}
+    redis-cli -h $REMOTE_HOST -p $REMOTE_PORT clusterx setnodes "${cluster_nodes}" 1
+    redis-cli -h $REMOTE_HOST -p $REMOTE_PORT clusterx setnodeid ${node_id[$index]}
     echo "server ${node_id[$index]} configured"
     index=$((index + 1))
   done
