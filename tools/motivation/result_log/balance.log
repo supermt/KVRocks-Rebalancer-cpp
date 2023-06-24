@@ -1,0 +1,21 @@
+Start Migration
+1
+>>>>>>>>>>>>>>>>>>>>>>>>>>Add Server<<<<<<<<<<<<<<<<<<<<<<<<<<<
+OK
+OK
+kvrockskvrockskvrockskvrockskvrocksnode1 0.0.0.0 40001
+Finished updating topo, version number: 2
+b'OK'
+Finished
+>>>>>>>>>>>>>>>>>>>>>>>>>>Load Balance<<<<<<<<<<<<<<<<<<<<<<<<<
+Migration method: 1
+(1, 'kvrockskvrockskvrockskvrockskvrocksnode2') (16382, 'kvrockskvrockskvrockskvrockskvrocksnode2')
+Cluster version: 1000  Server ID: kvrockskvrockskvrockskvrockskvrocksnode2
+Cluster version: 2000  Server ID: kvrockskvrockskvrockskvrockskvrocksnode2
+Cluster version: 3000  Server ID: kvrockskvrockskvrockskvrockskvrocksnode2
+Cluster version: 4000  Server ID: kvrockskvrockskvrockskvrockskvrocksnode2
+Cluster version: 5000  Server ID: kvrockskvrockskvrockskvrockskvrocksnode2
+Cluster version: 6000  Server ID: kvrockskvrockskvrockskvrockskvrocksnode2
+Cluster version: 7000  Server ID: kvrockskvrockskvrockskvrockskvrocksnode2
+Cluster version: 8000  Server ID: kvrockskvrockskvrockskvrockskvrocksnode2
+Migration Finished
