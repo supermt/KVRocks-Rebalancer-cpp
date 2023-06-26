@@ -9,7 +9,7 @@ b'OK'
 Finished
 >>>>>>>>>>>>>>>>>>>>>>>>>>Load Balance<<<<<<<<<<<<<<<<<<<<<<<<<
 Migration method: 1
-(1, 'kvrockskvrockskvrockskvrockskvrocksnode2') (16382, 'kvrockskvrockskvrockskvrockskvrocksnode2')
+(0, 'kvrockskvrockskvrockskvrockskvrocksnode2') (16383, 'kvrockskvrockskvrockskvrockskvrocksnode2')
 Cluster version: 1000  Server ID: kvrockskvrockskvrockskvrockskvrocksnode2
 Cluster version: 2000  Server ID: kvrockskvrockskvrockskvrockskvrocksnode2
 Cluster version: 3000  Server ID: kvrockskvrockskvrockskvrockskvrocksnode2
