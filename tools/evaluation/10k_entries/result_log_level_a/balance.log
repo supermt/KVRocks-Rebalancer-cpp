@@ -1,0 +1,16 @@
+Start Migration
+1
+>>>>>>>>>>>>>>>>>>>>>>>>>>Add Server<<<<<<<<<<<<<<<<<<<<<<<<<<<
+OK
+OK
+kvrockskvrockskvrockskvrockskvrocksnode1 0.0.0.0 40001
+Finished updating topo, version number: 3
+b'OK'
+Finished
+>>>>>>>>>>>>>>>>>>>>>>>>>>Load Balance<<<<<<<<<<<<<<<<<<<<<<<<<
+Migration method: 1
+(0, 'kvrockskvrockskvrockskvrockskvrocksnode2') (0, 'kvrockskvrockskvrockskvrockskvrocksnode2')
+b'Invalid cluster version\n\n'
+b'Invalid cluster version\n\n'
+02:42:08.1688118128
+Migration Finished
