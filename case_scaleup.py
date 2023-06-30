@@ -10,8 +10,13 @@ if __name__ == '__main__':
     # kvrockskvrockskvrockskvrockskvrocksnode2 10.32.68.250 6667 master - 5461-10992 \n
     # kvrockskvrockskvrockskvrockskvrocksnode3 10.32.68.249 6666 master - 10993-16383" 1
     # get the link and topo first
+    startup_nodes = [{"host": "127.0.0.1", "port": "40001"},{"host": "127.0.0.1", "port": "40002"}]
+    expended_nodes = [{"host": "127.0.0.1", "port": "40003", "master": None}]
+
     startup_nodes = [{"host": "127.0.0.1", "port": "40001"}]
     expended_nodes = [{"host": "127.0.0.1", "port": "40002", "master": None}]
+
+
 
     added_nodes = []
 
@@ -52,8 +57,8 @@ if __name__ == '__main__':
                 exists = True
         if not exists:
             added_nodes.append(expended_node)
-    print("Adding nodes:", added_nodes)
-    print("Old topo:", old_topo)
+    #print("Adding nodes:", added_nodes)
+    #print("Old topo:", old_topo)
     new_topo = old_topo
     # now, get the new topo, and create the command list for CLUSTERX SETNODEID $NODE_ID
     new_server_links = []

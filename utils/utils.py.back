@@ -158,22 +158,20 @@ def apply_migration_cmd_with_slots(migrate_cmd_map, cluster_link, server_links):
             # print(target_server)
             # for slot in slots:
             retry=0
-
-            slot_str=""
             for slot in slots:
                 if slot != "":
-                    slot_str+=(slot+",")
-            slot_str = slot_str[:-1]
-            print(slot_str[-50:])
-            # CLUSTERX SETSLOT $SLOT_ID NODE $NODE_ID $VERSION
-            version+=1
-            set_slot_cmd = "CLUSTERX SETSLOT " + slot_str + " NODE " + target_server + " " + str(version)
-            for server_id in server_link_map:
-                server_info = server_link_map[server_id]
-                system_command = "redis-cli -h %s -p %d " % (server_info[0],server_info[1])
-                system_command += set_slot_cmd
-                output = subprocess.check_output(system_command.split())
-                print(output)
+                    version += 1
+                    # CLUSTERX SETSLOT $SLOT_ID NODE $NODE_ID $VERSION
+                    set_slot_cmd = "CLUSTERX SETSLOT " + slot + " NODE " + target_server + " " + str(version)
+                    for server_id in server_link_map:
+                        server_info = server_link_map[server_id]
+                        system_command = "redis-cli -h %s -p %d " % (server_info[0],server_info[1])
+                        system_command += set_slot_cmd
+                        output = subprocess.check_output(system_command.split())
+
+                    if version % 1000 == 0:
+                        print("Cluster version:", version, " Server ID:",
+                                target_server)
 
 def broadcast_topo(migration_candidates, cluster_link):
     node_info = cluster_link.cluster_nodes()
