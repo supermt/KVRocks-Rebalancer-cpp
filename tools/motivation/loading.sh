@@ -1,1 +1,4 @@
-../../../redis/src/redis-benchmark -p 40001 -n 10000 -r 100000000 -d 1000 -q -P 1000 --cluster -t hset
+#!/usr/bin/bash
+#../../../YCSB-cpp-Redis/ycsb -load -db redis -P ../ycsb/workloadm -P ../ycsb/cluster.prop -s -threads 1
+../../../YCSB-cpp-Redis/ycsb -load -db redis -P ../ycsb/workload$1 -P ../ycsb/cluster.prop -s -threads $2
+#../../../YCSB-cpp-Redis/ycsb -run -db redis -P ../ycsb/workloadm -P ../ycsb/cluster.prop -s -threads 1

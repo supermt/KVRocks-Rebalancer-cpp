@@ -37,6 +37,7 @@ node_id=("kvrockskvrockskvrockskvrockskvrocksnode1"
   "kvrockskvrockskvrockskvrockskvrocksnode3")
 
 DB_PATH_PREFIX="/nvme/jinghuan/"
+#DB_PATH_PREFIX="./"
 
 if [ "$1" == "start" ]; then
 
