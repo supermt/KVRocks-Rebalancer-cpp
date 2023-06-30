@@ -1,0 +1,4 @@
+method	workload	migration time (sec)	throughput (ops/sec)	src_max_hit	src_avg_hit	dst_max_hit	dst_avg_hit
+seek-and-insert	a	203.6	37460.5	76.5	25.9	70.6	25.3
+comapct-and-merge	a	78.2	34686.7	76.3	35.9	69.3	25.7
+level migration	a	3.2	42078.5	76.0	26.7	53.7	28.8
