@@ -1,0 +1,94 @@
+Log file created at: 2023/06/30 05:21:37
+Running on machine: en4217754l
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20230630 05:21:37.024320 1239058 main.cc:328] kvrocks unstable (commit 4a10c89)
+I20230630 05:21:37.383991 1239058 storage.cc:322] [storage] Success to load the data from disk: 58 ms
+I20230630 05:21:37.384459 1239058 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:21:37.384479 1239058 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:21:37.384644 1239058 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:21:37.384660 1239058 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:21:37.384780 1239058 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:21:37.384794 1239058 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:21:37.384914 1239058 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:21:37.384928 1239058 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:21:37.385035 1239058 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:21:37.385048 1239058 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:21:37.385156 1239058 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:21:37.385169 1239058 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:21:37.385274 1239058 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:21:37.385288 1239058 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:21:37.385394 1239058 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:21:37.385407 1239058 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+W20230630 05:21:37.385504 1239058 server.cc:1650] [server] Increased maximum number of open files to 14224 (it's originally set to 1024)
+I20230630 05:21:37.385665 1239058 cluster.cc:643] The cluster nodes file /nvme/jinghuan/node_40002/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230630 05:21:37.385681 1239058 cluster.cc:643] The cluster nodes file /nvme/jinghuan/node_40002/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230630 05:21:37.388177 1239058 worker.cc:519] [worker] Thread #140459120752384 started
+I20230630 05:21:37.388212 1239058 worker.cc:519] [worker] Thread #140459129145088 started
+I20230630 05:21:37.388257 1239058 worker.cc:519] [worker] Thread #140459555915520 started
+I20230630 05:21:37.388303 1239058 worker.cc:519] [worker] Thread #140459547522816 started
+I20230630 05:21:37.388346 1239058 worker.cc:519] [worker] Thread #140459539130112 started
+I20230630 05:21:37.388403 1239058 worker.cc:519] [worker] Thread #140459187894016 started
+I20230630 05:21:37.388443 1239058 worker.cc:519] [worker] Thread #140459179501312 started
+I20230630 05:21:37.388486 1239058 worker.cc:519] [worker] Thread #140459171108608 started
+I20230630 05:21:37.388624 1239058 server.cc:211] [server] Ready to accept connections
+I20230630 05:24:16.971789 1239296 cluster.cc:286] MASTER MODE enabled by cluster topology setting
+I20230630 05:24:16.977707 1239295 cluster.cc:286] MASTER MODE enabled by cluster topology setting
+I20230630 05:24:17.102732 1239299 cluster.cc:387] [import] Start importing slot 1
+I20230630 05:24:52.381939 1239065 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 1239065, job_id: 3, reason: 6
+I20230630 05:24:55.603524 1239065 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000016.sst, file size: 83976687, job id: 3, reason: flush, status: OK
+I20230630 05:24:55.609918 1239065 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 1239065, job_id: 3, file: /nvme/jinghuan/node_40002/db/000016.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 724967, smallest seqno: 3
+I20230630 05:24:58.802132 1239063 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000017.sst, file size: 83976683, job id: 4, reason: compaction, status: OK
+I20230630 05:24:58.814458 1239063 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 11, output compression type: no, base input level(files): 0(1), output level(files): 0(1), input bytes: 83976687, output bytes:83976683, is_manual_compaction:no, elapsed(micro): 3192233
+I20230630 05:24:58.821986 1239063 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40002/db, sst file: /nvme/jinghuan/node_40002/db/000016.sst, status: OK
+I20230630 05:25:40.700412 1239299 cmd_cluster.cc:350] Receive Ingest command:/nvme/jinghuan/node_40001/db/000158.sst.out
+I20230630 05:25:40.700518 1239299 cmd_cluster.cc:354] Ingesting files from: local
+I20230630 05:25:40.700539 1239299 cmd_cluster.cc:368] Ingesting files: /nvme/jinghuan/node_40001/db/000158.sst.out
+I20230630 05:25:40.824036 1239066 event_listener.cc:84] [event_listener/flush_begin] column family: metadata, thread_id: 1239066, job_id: 5, reason: 3
+I20230630 05:25:41.064393 1239066 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40002/db/000021.sst, file size: 8202382, job id: 5, reason: flush, status: OK
+I20230630 05:25:41.074085 1239066 event_listener.cc:91] [event_listener/flush_completed] column family: metadata, thread_id: 1239066, job_id: 5, file: /nvme/jinghuan/node_40002/db/000021.sst, reason: 3, is_write_slowdown: no, is_write_stall: no, largest seqno: 1341287, smallest seqno: 1
+I20230630 05:25:41.096715 1239299 cluster.cc:897] Ingestion completed, Time taken(us): 396101
+I20230630 05:25:41.102469 1239300 cmd_cluster.cc:350] Receive Ingest command:/nvme/jinghuan/node_40001/db/000160.sst.out
+I20230630 05:25:41.102530 1239300 cmd_cluster.cc:354] Ingesting files from: local
+I20230630 05:25:41.102550 1239300 cmd_cluster.cc:368] Ingesting files: /nvme/jinghuan/node_40001/db/000160.sst.out
+I20230630 05:25:41.547888 1239064 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40002/db/000023.sst, file size: 8202443, job id: 6, reason: compaction, status: OK
+I20230630 05:25:41.555480 1239064 event_listener.cc:71] [event_listener/compaction_completed] column family: metadata, compaction reason: 11, output compression type: no, base input level(files): 0(1), output level(files): 0(1), input bytes: 8202382, output bytes:8202443, is_manual_compaction:no, elapsed(micro): 267924
+I20230630 05:25:41.557444 1239064 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40002/db, sst file: /nvme/jinghuan/node_40002/db/000021.sst, status: OK
+I20230630 05:25:42.627386 1239065 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 1239065, job_id: 7, reason: 3
+I20230630 05:25:45.259135 1239065 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000025.sst, file size: 71397510, job id: 7, reason: flush, status: OK
+I20230630 05:25:45.265646 1239065 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 1239065, job_id: 7, file: /nvme/jinghuan/node_40002/db/000025.sst, reason: 3, is_write_slowdown: no, is_write_stall: no, largest seqno: 1341320, smallest seqno: 724969
+I20230630 05:25:45.304134 1239300 cluster.cc:897] Ingestion completed, Time taken(us): 4201554
+I20230630 05:25:47.507828 1239299 cluster.cc:397] [import] Succeed to import slot 1
+I20230630 05:25:50.559630 1239063 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000026.sst, file size: 138622541, job id: 8, reason: compaction, status: OK
+I20230630 05:25:55.860863 1239063 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000027.sst, file size: 138682929, job id: 8, reason: compaction, status: OK
+I20230630 05:26:01.164950 1239063 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000028.sst, file size: 138682846, job id: 8, reason: compaction, status: OK
+I20230630 05:26:06.181764 1239063 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000029.sst, file size: 138682980, job id: 8, reason: compaction, status: OK
+I20230630 05:26:11.180368 1239063 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000030.sst, file size: 138682887, job id: 8, reason: compaction, status: OK
+I20230630 05:26:15.977326 1239063 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000032.sst, file size: 138702360, job id: 8, reason: compaction, status: OK
+I20230630 05:26:20.779345 1239063 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000033.sst, file size: 138728798, job id: 8, reason: compaction, status: OK
+I20230630 05:26:25.382030 1239063 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000034.sst, file size: 138728907, job id: 8, reason: compaction, status: OK
+I20230630 05:26:27.535301 1239066 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 1239066, job_id: 9, reason: 6
+I20230630 05:26:31.688544 1239066 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000037.sst, file size: 83421199, job id: 9, reason: flush, status: OK
+I20230630 05:26:31.699296 1239066 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 1239066, job_id: 9, file: /nvme/jinghuan/node_40002/db/000037.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 2061664, smallest seqno: 1341323
+I20230630 05:26:32.586808 1239063 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000035.sst, file size: 138728773, job id: 8, reason: compaction, status: OK
+I20230630 05:26:36.987520 1239063 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000038.sst, file size: 138728739, job id: 8, reason: compaction, status: OK
+I20230630 05:26:38.385587 1239063 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000039.sst, file size: 43185119, job id: 8, reason: compaction, status: OK
+I20230630 05:26:38.444155 1239063 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 1, output compression type: no, base input level(files): 0(3), output level(files): 1(11), input bytes: 1461095909, output bytes:1430156879, is_manual_compaction:no, elapsed(micro): 53081375
+I20230630 05:26:38.452492 1239063 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40002/db, sst file: /nvme/jinghuan/node_40002/db/000025.sst, status: OK
+I20230630 05:26:38.556797 1239063 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40002/db, sst file: /nvme/jinghuan/node_40002/db/000022.sst, status: OK
+I20230630 05:26:38.563774 1239063 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40002/db, sst file: /nvme/jinghuan/node_40002/db/000017.sst, status: OK
+I20230630 05:26:38.584091 1239064 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 2, output compression type: no, base input level(files): 1(1), output level(files): 2(1), input bytes: 0, output bytes:0, is_manual_compaction:no, elapsed(micro): 0
+I20230630 05:26:38.590764 1239064 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 2, output compression type: no, base input level(files): 1(1), output level(files): 2(1), input bytes: 0, output bytes:0, is_manual_compaction:no, elapsed(micro): 0
+I20230630 05:26:38.606284 1239064 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 2, output compression type: no, base input level(files): 1(1), output level(files): 2(1), input bytes: 0, output bytes:0, is_manual_compaction:no, elapsed(micro): 0
+I20230630 05:26:38.612550 1239064 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 2, output compression type: no, base input level(files): 1(1), output level(files): 2(1), input bytes: 0, output bytes:0, is_manual_compaction:no, elapsed(micro): 0
+I20230630 05:26:38.627995 1239064 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 2, output compression type: no, base input level(files): 1(1), output level(files): 2(1), input bytes: 0, output bytes:0, is_manual_compaction:no, elapsed(micro): 0
+I20230630 05:26:38.634229 1239064 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 2, output compression type: no, base input level(files): 1(1), output level(files): 2(1), input bytes: 0, output bytes:0, is_manual_compaction:no, elapsed(micro): 0
+I20230630 05:26:38.649652 1239064 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 2, output compression type: no, base input level(files): 1(1), output level(files): 2(1), input bytes: 0, output bytes:0, is_manual_compaction:no, elapsed(micro): 0
+I20230630 05:26:38.655970 1239064 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 2, output compression type: no, base input level(files): 1(1), output level(files): 2(1), input bytes: 0, output bytes:0, is_manual_compaction:no, elapsed(micro): 0
+I20230630 05:26:38.663184 1239064 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 2, output compression type: no, base input level(files): 1(1), output level(files): 2(1), input bytes: 0, output bytes:0, is_manual_compaction:no, elapsed(micro): 0
+I20230630 05:27:07.887051 1239065 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 1239065, job_id: 19, reason: 6
+I20230630 05:27:10.423718 1239065 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000042.sst, file size: 81078893, job id: 19, reason: flush, status: OK
+I20230630 05:27:10.430229 1239065 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 1239065, job_id: 19, file: /nvme/jinghuan/node_40002/db/000042.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 2761616, smallest seqno: 2061666
+I20230630 05:27:47.883322 1239066 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 1239066, job_id: 20, reason: 6
+I20230630 05:27:50.613726 1239066 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000045.sst, file size: 79630235, job id: 20, reason: flush, status: OK
+I20230630 05:27:50.626462 1239066 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 1239066, job_id: 20, file: /nvme/jinghuan/node_40002/db/000045.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 3449039, smallest seqno: 2761618

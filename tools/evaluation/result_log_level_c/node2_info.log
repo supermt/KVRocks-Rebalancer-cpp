@@ -1,0 +1,58 @@
+Log file created at: 2023/06/30 05:50:36
+Running on machine: en4217754l
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20230630 05:50:36.646533 1246411 main.cc:328] kvrocks unstable (commit 4a10c89)
+I20230630 05:50:37.041515 1246411 storage.cc:322] [storage] Success to load the data from disk: 95 ms
+I20230630 05:50:37.042333 1246411 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:50:37.042371 1246411 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:50:37.042681 1246411 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:50:37.042711 1246411 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:50:37.042954 1246411 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:50:37.042982 1246411 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:50:37.043197 1246411 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:50:37.043224 1246411 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:50:37.043435 1246411 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:50:37.043484 1246411 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:50:37.043700 1246411 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:50:37.043727 1246411 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:50:37.043931 1246411 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:50:37.043957 1246411 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:50:37.044174 1246411 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:50:37.044201 1246411 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+W20230630 05:50:37.044375 1246411 server.cc:1650] [server] Increased maximum number of open files to 14224 (it's originally set to 1024)
+I20230630 05:50:37.044677 1246411 cluster.cc:643] The cluster nodes file /nvme/jinghuan/node_40002/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230630 05:50:37.044699 1246411 cluster.cc:643] The cluster nodes file /nvme/jinghuan/node_40002/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230630 05:50:37.050887 1246411 worker.cc:519] [worker] Thread #140655347070720 started
+I20230630 05:50:37.050947 1246411 worker.cc:519] [worker] Thread #140655355463424 started
+I20230630 05:50:37.051030 1246411 worker.cc:519] [worker] Thread #140655780423424 started
+I20230630 05:50:37.051113 1246411 worker.cc:519] [worker] Thread #140655772030720 started
+I20230630 05:50:37.051190 1246411 worker.cc:519] [worker] Thread #140655763638016 started
+I20230630 05:50:37.051268 1246411 worker.cc:519] [worker] Thread #140655414212352 started
+I20230630 05:50:37.051342 1246411 worker.cc:519] [worker] Thread #140655405819648 started
+I20230630 05:50:37.051416 1246411 worker.cc:519] [worker] Thread #140655397426944 started
+I20230630 05:50:37.051702 1246411 server.cc:211] [server] Ready to accept connections
+I20230630 05:53:13.501199 1246652 cluster.cc:286] MASTER MODE enabled by cluster topology setting
+I20230630 05:53:13.505051 1246652 cluster.cc:286] MASTER MODE enabled by cluster topology setting
+I20230630 05:53:13.619505 1246654 cluster.cc:387] [import] Start importing slot 0
+I20230630 05:53:13.624632 1246651 cmd_cluster.cc:350] Receive Ingest command:/nvme/jinghuan/node_40001/db/000117.sst
+I20230630 05:53:13.624661 1246651 cmd_cluster.cc:354] Ingesting files from: local
+I20230630 05:53:13.624675 1246651 cmd_cluster.cc:368] Ingesting files: /nvme/jinghuan/node_40001/db/000117.sst
+I20230630 05:53:13.669114 1246651 cluster.cc:897] Ingestion completed, Time taken(us): 44416
+I20230630 05:53:13.674590 1246652 cmd_cluster.cc:350] Receive Ingest command:/nvme/jinghuan/node_40001/db/000105.sst
+I20230630 05:53:13.674621 1246652 cmd_cluster.cc:354] Ingesting files from: local
+I20230630 05:53:13.674628 1246652 cmd_cluster.cc:368] Ingesting files: /nvme/jinghuan/node_40001/db/000105.sst
+I20230630 05:53:13.791918 1246652 cluster.cc:897] Ingestion completed, Time taken(us): 117277
+I20230630 05:53:13.797334 1246651 cmd_cluster.cc:350] Receive Ingest command:/nvme/jinghuan/node_40001/db/000130.sst,/nvme/jinghuan/node_40001/db/000127.sst,/nvme/jinghuan/node_40001/db/000124.sst,/nvme/jinghuan/node_40001/db/000122.sst,/nvme/jinghuan/node_40001/db/000110.sst,/nvme/jinghuan/node_40001/db/000093.sst,/nvme/jinghuan/node_40001/db/000079.sst,/nvme/jinghuan/node_40001/db/000063.sst,/nvme/jinghuan/node_40001/db/000047.sst
+I20230630 05:53:13.797394 1246651 cmd_cluster.cc:354] Ingesting files from: local
+I20230630 05:53:13.797411 1246651 cmd_cluster.cc:368] Ingesting files: /nvme/jinghuan/node_40001/db/000130.sst,/nvme/jinghuan/node_40001/db/000127.sst,/nvme/jinghuan/node_40001/db/000124.sst,/nvme/jinghuan/node_40001/db/000122.sst,/nvme/jinghuan/node_40001/db/000110.sst,/nvme/jinghuan/node_40001/db/000093.sst,/nvme/jinghuan/node_40001/db/000079.sst,/nvme/jinghuan/node_40001/db/000063.sst,/nvme/jinghuan/node_40001/db/000047.sst
+I20230630 05:53:15.985074 1246651 cluster.cc:897] Ingestion completed, Time taken(us): 2187640
+I20230630 05:53:15.991497 1246652 cmd_cluster.cc:350] Receive Ingest command:/nvme/jinghuan/node_40001/db/000046.sst
+I20230630 05:53:15.991531 1246652 cmd_cluster.cc:354] Ingesting files from: local
+I20230630 05:53:15.991541 1246652 cmd_cluster.cc:368] Ingesting files: /nvme/jinghuan/node_40001/db/000046.sst
+I20230630 05:53:16.148007 1246652 cluster.cc:897] Ingestion completed, Time taken(us): 156446
+I20230630 05:53:16.153393 1246651 cmd_cluster.cc:350] Receive Ingest command:/nvme/jinghuan/node_40001/db/000033.sst
+I20230630 05:53:16.153455 1246651 cmd_cluster.cc:354] Ingesting files from: local
+I20230630 05:53:16.153474 1246651 cmd_cluster.cc:368] Ingesting files: /nvme/jinghuan/node_40001/db/000033.sst
+I20230630 05:53:16.320078 1246651 cluster.cc:897] Ingestion completed, Time taken(us): 166568
+I20230630 05:53:16.321310 1246654 cluster.cc:397] [import] Succeed to import slot 0

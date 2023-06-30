@@ -1,0 +1,53 @@
+Log file created at: 2023/06/30 05:44:47
+Running on machine: en4217754l
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20230630 05:44:47.926728 1244978 main.cc:328] kvrocks unstable (commit 4a10c89)
+I20230630 05:44:48.168341 1244978 storage.cc:322] [storage] Success to load the data from disk: 62 ms
+I20230630 05:44:48.168898 1244978 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:44:48.168923 1244978 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:44:48.169145 1244978 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:44:48.169167 1244978 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:44:48.169339 1244978 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:44:48.169358 1244978 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:44:48.169517 1244978 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:44:48.169538 1244978 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:44:48.169687 1244978 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:44:48.169704 1244978 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:44:48.169852 1244978 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:44:48.169869 1244978 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:44:48.170012 1244978 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:44:48.170032 1244978 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230630 05:44:48.170186 1244978 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230630 05:44:48.170204 1244978 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+W20230630 05:44:48.170326 1244978 server.cc:1650] [server] Increased maximum number of open files to 14224 (it's originally set to 1024)
+I20230630 05:44:48.170536 1244978 cluster.cc:643] The cluster nodes file /nvme/jinghuan/node_40002/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230630 05:44:48.170552 1244978 cluster.cc:643] The cluster nodes file /nvme/jinghuan/node_40002/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230630 05:44:48.173807 1244978 worker.cc:519] [worker] Thread #140516851160832 started
+I20230630 05:44:48.173849 1244978 worker.cc:519] [worker] Thread #140516859553536 started
+I20230630 05:44:48.173903 1244978 worker.cc:519] [worker] Thread #140517221955328 started
+I20230630 05:44:48.173962 1244978 worker.cc:519] [worker] Thread #140517213562624 started
+I20230630 05:44:48.174010 1244978 worker.cc:519] [worker] Thread #140517205169920 started
+I20230630 05:44:48.174058 1244978 worker.cc:519] [worker] Thread #140517196777216 started
+I20230630 05:44:48.174109 1244978 worker.cc:519] [worker] Thread #140517188384512 started
+I20230630 05:44:48.174157 1244978 worker.cc:519] [worker] Thread #140517179991808 started
+I20230630 05:44:48.174324 1244978 server.cc:211] [server] Ready to accept connections
+I20230630 05:47:25.110898 1245218 cluster.cc:286] MASTER MODE enabled by cluster topology setting
+I20230630 05:47:25.116524 1245218 cluster.cc:286] MASTER MODE enabled by cluster topology setting
+I20230630 05:47:25.243638 1245215 cluster.cc:387] [import] Start importing slot 0
+I20230630 05:48:24.731490 1245220 cmd_cluster.cc:350] Receive Ingest command:/nvme/jinghuan/node_40001/db/000149.sst.out
+I20230630 05:48:24.731612 1245220 cmd_cluster.cc:354] Ingesting files from: local
+I20230630 05:48:24.731635 1245220 cmd_cluster.cc:368] Ingesting files: /nvme/jinghuan/node_40001/db/000149.sst.out
+I20230630 05:48:24.843145 1244985 event_listener.cc:84] [event_listener/flush_begin] column family: metadata, thread_id: 1244985, job_id: 3, reason: 3
+I20230630 05:48:24.852592 1244985 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40002/db/000016.sst, file size: 1470, job id: 3, reason: flush, status: OK
+I20230630 05:48:24.858848 1244985 event_listener.cc:91] [event_listener/flush_completed] column family: metadata, thread_id: 1244985, job_id: 3, file: /nvme/jinghuan/node_40002/db/000016.sst, reason: 3, is_write_slowdown: no, is_write_stall: no, largest seqno: 2, smallest seqno: 1
+I20230630 05:48:24.875811 1245220 cluster.cc:897] Ingestion completed, Time taken(us): 144117
+I20230630 05:48:24.881858 1245215 cmd_cluster.cc:350] Receive Ingest command:/nvme/jinghuan/node_40001/db/000150.sst.out
+I20230630 05:48:24.881887 1245215 cmd_cluster.cc:354] Ingesting files from: local
+I20230630 05:48:24.881896 1245215 cmd_cluster.cc:368] Ingesting files: /nvme/jinghuan/node_40001/db/000150.sst.out
+I20230630 05:48:26.428328 1245215 cluster.cc:897] Ingestion completed, Time taken(us): 1546416
+I20230630 05:48:26.429875 1245215 cluster.cc:397] [import] Succeed to import slot 0
+I20230630 05:48:26.964064 1244983 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40002/db/000017.sst, file size: 57132665, job id: 4, reason: compaction, status: OK
+I20230630 05:48:26.975347 1244983 event_listener.cc:71] [event_listener/compaction_completed] column family: metadata, compaction reason: 10, output compression type: no, base input level(files): 0(2), output level(files): 1(1), input bytes: 57134137, output bytes:57132665, is_manual_compaction:no, elapsed(micro): 2088131
+I20230630 05:48:26.975548 1244983 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40002/db, sst file: /nvme/jinghuan/node_40002/db/000016.sst, status: OK
+I20230630 05:48:26.984084 1244983 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40002/db, sst file: /nvme/jinghuan/node_40002/db/000014.sst, status: OK
