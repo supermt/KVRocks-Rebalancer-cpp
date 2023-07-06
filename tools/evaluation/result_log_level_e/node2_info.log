@@ -1,0 +1,49 @@
+Log file created at: 2023/07/06 10:09:18
+Running on machine: en4217754l
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20230706 10:09:18.561092 3016618 main.cc:328] kvrocks unstable (commit 4a10c89)
+I20230706 10:09:18.966441 3016618 storage.cc:322] [storage] Success to load the data from disk: 96 ms
+I20230706 10:09:18.967526 3016618 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 10:09:18.967587 3016618 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230706 10:09:18.968010 3016618 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 10:09:18.968052 3016618 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230706 10:09:18.968364 3016618 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 10:09:18.968401 3016618 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230706 10:09:18.968696 3016618 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 10:09:18.968734 3016618 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230706 10:09:18.969025 3016618 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 10:09:18.969061 3016618 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230706 10:09:18.969341 3016618 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 10:09:18.969377 3016618 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230706 10:09:18.969650 3016618 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 10:09:18.969684 3016618 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230706 10:09:18.969969 3016618 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 10:09:18.970005 3016618 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+W20230706 10:09:18.970244 3016618 server.cc:1650] [server] Increased maximum number of open files to 14224 (it's originally set to 1024)
+I20230706 10:09:18.970647 3016618 cluster.cc:643] The cluster nodes file /nvme/jinghuan/node_40002/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230706 10:09:18.970678 3016618 cluster.cc:643] The cluster nodes file /nvme/jinghuan/node_40002/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230706 10:09:18.976447 3016618 worker.cc:519] [worker] Thread #140518713423616 started
+I20230706 10:09:18.976480 3016618 worker.cc:519] [worker] Thread #140518721816320 started
+I20230706 10:09:18.976517 3016618 worker.cc:519] [worker] Thread #140519145744128 started
+I20230706 10:09:18.976557 3016618 worker.cc:519] [worker] Thread #140519137351424 started
+I20230706 10:09:18.976599 3016618 worker.cc:519] [worker] Thread #140519128958720 started
+I20230706 10:09:18.976641 3016618 worker.cc:519] [worker] Thread #140518780565248 started
+I20230706 10:09:18.976675 3016618 worker.cc:519] [worker] Thread #140518772172544 started
+I20230706 10:09:18.976712 3016618 worker.cc:519] [worker] Thread #140518763779840 started
+I20230706 10:09:18.976830 3016618 server.cc:211] [server] Ready to accept connections
+I20230706 10:11:56.002166 3016859 cluster.cc:286] MASTER MODE enabled by cluster topology setting
+I20230706 10:11:56.006799 3016865 cluster.cc:286] MASTER MODE enabled by cluster topology setting
+I20230706 10:11:56.112241 3016865 cluster.cc:387] [import] Start importing slot 6052
+I20230706 10:11:56.112630 3016865 cluster.cc:407] [import] Failed to import slot 6052
+I20230706 10:11:56.144667 3016862 cluster.cc:923] function: Migrate level-migration
+I20230706 10:11:56.144696 3016862 slot_migrate_parallel.cc:32] [migrate] Start migrating slots, from slot: 6052 to slot: 6052. Slots are moving to 0.0.0.0:40001
+I20230706 10:11:56.144706 3016862 cluster.cc:935] [cluster migration] Finished slot migration cmds sending, start to set nodes
+I20230706 10:11:56.144733 3016857 slot_migrate.cc:165] [migrate] Migrating slot: -1, dst_ip: 0.0.0.0, dst_port: 40001, max_speed: 0, max_pipeline_size: 16
+I20230706 10:11:56.148178 3016857 slot_migrate.cc:305] [migrate] Start migrating slot 6052, connect destination fd 69
+I20230706 10:11:56.148207 3016857 slot_migrate.cc:195] [migrate] Succeed to start migrating slot 6052
+E20230706 10:11:56.148262 3016857 slot_migrate_level.cc:86] No SSTs are found
+I20230706 10:11:56.148440 3016857 slot_migrate.cc:209] Finished sending snapshot, time taken(us): 213, seek time taken(us): 0, network response time taken(us): 0
+E20230706 10:11:56.148464 3016857 slot_migrate.cc:216] [migrate] Failed to send snapshot of slot 6052. Error: No SSTs can be found.
+I20230706 10:11:56.148624 3016857 slot_migrate.cc:255] [migrate] Failed to migrate a slot6052
+I20230706 10:11:56.148646 3016857 slot_migrate.cc:438] [migrate] Clean resources of migrating slot 6052

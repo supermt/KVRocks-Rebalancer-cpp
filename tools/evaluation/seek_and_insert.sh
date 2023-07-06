@@ -4,15 +4,14 @@
 
 echo "Server created"
 nohup nethogs -a -t  > network.log & 
-./loading.sh $1 8
+./loading.sh $1 2
 
 echo "Data loaded"
 nohup ./migrate.sh 1 > balance.log & 
 nohup ./rocks_stat.sh 40001 > server_40001.log & 
 nohup ./rocks_stat.sh 40002 > server_40002.log & 
 
-#./running.sh $1 16 > qps.log
-./running.sh $1 16
+./running.sh $1 8 > qps.log
 pkill -f "nethogs"
 pkill -f "./rocks_stat.sh "
 

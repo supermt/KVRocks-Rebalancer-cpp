@@ -1,0 +1,38 @@
+Log file created at: 2023/07/06 09:22:50
+Running on machine: en4217754l
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20230706 09:22:50.908028 2965983 main.cc:328] kvrocks unstable (commit 4a10c89)
+I20230706 09:22:51.311024 2965983 storage.cc:322] [storage] Success to load the data from disk: 95 ms
+I20230706 09:22:51.311476 2965983 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 09:22:51.311506 2965983 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230706 09:22:51.311678 2965983 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 09:22:51.311692 2965983 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230706 09:22:51.311815 2965983 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 09:22:51.311829 2965983 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230706 09:22:51.311944 2965983 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 09:22:51.311957 2965983 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230706 09:22:51.312067 2965983 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 09:22:51.312080 2965983 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230706 09:22:51.312189 2965983 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 09:22:51.312202 2965983 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230706 09:22:51.312316 2965983 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 09:22:51.312330 2965983 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230706 09:22:51.312439 2965983 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230706 09:22:51.312453 2965983 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+W20230706 09:22:51.312541 2965983 server.cc:1650] [server] Increased maximum number of open files to 14224 (it's originally set to 1024)
+I20230706 09:22:51.312703 2965983 cluster.cc:643] The cluster nodes file /nvme/jinghuan/node_40002/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230706 09:22:51.312716 2965983 cluster.cc:643] The cluster nodes file /nvme/jinghuan/node_40002/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230706 09:22:51.315198 2965983 worker.cc:519] [worker] Thread #139786950010624 started
+I20230706 09:22:51.315232 2965983 worker.cc:519] [worker] Thread #139786958403328 started
+I20230706 09:22:51.315279 2965983 worker.cc:519] [worker] Thread #139787331098368 started
+I20230706 09:22:51.315322 2965983 worker.cc:519] [worker] Thread #139787322705664 started
+I20230706 09:22:51.315362 2965983 worker.cc:519] [worker] Thread #139787314312960 started
+I20230706 09:22:51.315404 2965983 worker.cc:519] [worker] Thread #139787305920256 started
+I20230706 09:22:51.315447 2965983 worker.cc:519] [worker] Thread #139787212773120 started
+I20230706 09:22:51.315510 2965983 worker.cc:519] [worker] Thread #139787204380416 started
+I20230706 09:22:51.315672 2965983 server.cc:211] [server] Ready to accept connections
+I20230706 09:25:28.036077 2966223 cluster.cc:286] MASTER MODE enabled by cluster topology setting
+I20230706 09:25:28.039997 2966227 cluster.cc:286] MASTER MODE enabled by cluster topology setting
+I20230706 09:25:28.166092 2966229 cluster.cc:387] [import] Start importing slot 6052
+I20230706 09:26:15.647526 2966229 cluster.cc:407] [import] Failed to import slot 6052

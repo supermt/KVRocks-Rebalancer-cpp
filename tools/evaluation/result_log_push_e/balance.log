@@ -1,0 +1,16 @@
+Start Migration
+1
+>>>>>>>>>>>>>>>>>>>>>>>>>>Add Server<<<<<<<<<<<<<<<<<<<<<<<<<<<
+OK
+OK
+kvrockskvrockskvrockskvrockskvrocksnode1 0.0.0.0 40001
+Finished updating topo, version number: 2
+b'OK'
+Finished
+>>>>>>>>>>>>>>>>>>>>>>>>>>Load Balance<<<<<<<<<<<<<<<<<<<<<<<<<
+Migration method: 1
+(6052, 'kvrockskvrockskvrockskvrockskvrocksnode2') (6052, 'kvrockskvrockskvrockskvrockskvrocksnode2')
+b'OK\n'
+b'OK\n'
+06:19:17.1688131157
+Migration Finished

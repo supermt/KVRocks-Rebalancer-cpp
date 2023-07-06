@@ -1,0 +1,18 @@
+Start Migration
+3
+>>>>>>>>>>>>>>>>>>>>>>>>>>Add Server<<<<<<<<<<<<<<<<<<<<<<<<<<<
+kvrOK
+kvrockskvrockskvrockskvrockskvrocksnode1 0.0.0.0 40001
+Finished updating topo, version number: 2
+b'OK'
+Finished
+>>>>>>>>>>>>>>>>>>>>>>>>>>Load Balance<<<<<<<<<<<<<<<<<<<<<<<<<
+Migration method: 1
+(6052, 'kvrockskvrockskvrockskvrockskvrocksnode1') (6052, 'kvrockskvrockskvrockskvrockskvrocksnode1')
+{'kvrockskvrockskvrockskvrockskvrocksnode2': ['clusterx migrate 6052, kvrockskvrockskvrockskvrockskvrocksnode1'], 'kvrockskvrockskvrockskvrockskvrocksnode1': []}
+b'OK\n'
+b'OK\n'
+10:11:56.1688663516
+Migration Finished
+
+Migration Finished
