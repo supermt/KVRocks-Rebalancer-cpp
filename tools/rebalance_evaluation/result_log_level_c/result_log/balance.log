@@ -1,0 +1,21 @@
+Start Migration
+3
+>>>>>>>>>>>>>>>>>>>>>>>>>>Add Server<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>Load Balance<<<<<<<<<<<<<<<<<<<<<<<<<
+Error: Server closed the connection
+Migration method: 1
+(0, 'kvrockskvrockskvrockskvrockskvrocksnode2') (7910, 'kvrockskvrockskvrockskvrockskvrocksnode2')
+{'kvrockskvrockskvrockskvrockskvrocksnode2': [], 'kvrockskvrockskvrockskvrockskvrocksnode1': ['clusterx migrate 0,566,1130,1696,2260,2826,3390,3956,4520,5086,5650,6216,6780,7346,7910, kvrockskvrockskvrockskvrockskvrocksnode2']}
+Traceback (most recent call last):
+  File "../../case_hotness_balance.py", line 17, in <module>
+    apply_migration_cmd_with_slots(migrate_cmd_list, rc, server_links)
+  File "/data/jinghuan/KVRocks-Rebalancer-cpp/utils/utils.py", line 148, in apply_migration_cmd_with_slots
+    output = subprocess.check_output(system_command.split())
+  File "/usr/lib/python3.8/subprocess.py", line 415, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['redis-cli', '-h', '0.0.0.0', '-p', '40001', 'clusterx', 'migrate', '0,566,1130,1696,2260,2826,3390,3956,4520,5086,5650,6216,6780,7346,7910,', 'kvrockskvrockskvrockskvrockskvrocksnode2']' returned non-zero exit status 1.
+Could not connect to Redis at 127.0.0.1:40001: Connection refused
+11:25:02.1688754302
+Migration Finished

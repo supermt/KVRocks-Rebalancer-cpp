@@ -1,0 +1,12 @@
+Start Migration
+1
+>>>>>>>>>>>>>>>>>>>>>>>>>>Add Server<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>Load Balance<<<<<<<<<<<<<<<<<<<<<<<<<
+Migration method: 3
+(0, 'kvrockskvrockskvrockskvrockskvrocksnode2') (7910, 'kvrockskvrockskvrockskvrockskvrocksnode2')
+{'kvrockskvrockskvrockskvrockskvrocksnode2': [], 'kvrockskvrockskvrockskvrockskvrocksnode1': ['clusterx migrate 0,566,1130,1696,2260,2826,3390,3956,4520,5086,5650,6216,6780,7346,7910, kvrockskvrockskvrockskvrockskvrocksnode2']}
+b'Invalid cluste10:52:33.1688752353
+Migration Finished
+n\n\n'
+10:52:33.1688752353
+Migration Finished

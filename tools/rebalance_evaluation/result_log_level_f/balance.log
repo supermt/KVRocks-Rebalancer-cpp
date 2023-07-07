@@ -1,0 +1,14 @@
+Start Migration
+1
+>>>>>>>>>>>>>>>>>>>>>>>>>>Add Server<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>Load Balance<<<<<<<<<<<<<<<<<<<<<<<<<
+Migration method: 1
+(0, 'kvrockskvrockskvrockskvrockskvrocksnode2') (0, 'kvrockskvrockskvrockskvrockskvrocksnode2')
+{'kvrockskvrockskvrockskvrockskvrocksnode2': [], 'kvrockskvrockskvrockskvrockskvrocksnode1': []}
+12:58:22.1688759902
+Migration Finished
+kvrockskvrocksnode2']}
+b'OK\n'
+b'OK\n'
+12:58:22.1688759902
+Migration Finished

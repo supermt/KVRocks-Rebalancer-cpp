@@ -1,0 +1,11 @@
+Start Migration
+1
+>>>>>>>>>>>>>>>>>>>>>>>>>>Add Server<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>Load Balance<<<<<<<<<<<<<<<<<<<<<<<<<
+Migration method: 1
+(1, 'kvrockskvrockskvrockskvrockskvrocksnode2') (1, 'kvrockskvrockskvrockskvrockskvrocksnode2')
+{'kvrockskvrockskvrockskvrockskvrocksnode2': [], 'kvrockskvrockskvrockskvrockskvrocksnode1': ['clusterx migrate 1, kvrockskvrockskvrockskvrockskvrocksnode2']}
+b'OK\n'
+b'OK\n'
+09:23:59.1688747039
+Migration Finished

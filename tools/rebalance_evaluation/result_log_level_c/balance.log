@@ -1,0 +1,16 @@
+Start Migration
+1
+>>>>>>>>>>>>>>>>>>>>>>>>>>Add Server<<<<<<<<<<<<<<<<<<<<<<<<<<<
+>>>>>>>>>>>>>>>>>>>>>>>>>>Load Balance<<<<<<<<<<<<<<<<<<<<<<<<<
+Migration method: 1
+Traceback (most recent call last):
+  File "../../case_hotness_balance.py", line 14, in <module>
+    print(migration_candidates[0],migration_candidates[-1])
+IndexError: list index out of range
+12:31:16.1688758276
+Migration Finished
+,2826,3390,3956,4520,5086,5650,6216,6780,7346,7910, kvrockskvrockskvrockskvrockskvrocksnode2']}
+b'OK\n'
+b'OK\n'
+12:31:16.1688758276
+Migration Finished

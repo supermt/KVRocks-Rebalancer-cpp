@@ -1,0 +1,94 @@
+Log file created at: 2023/07/07 12:41:16
+Running on machine: en4217754l
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20230707 12:41:16.216012 74928 main.cc:328] kvrocks unstable (commit 4a10c89)
+I20230707 12:41:16.613751 74928 storage.cc:322] [storage] Success to load the data from disk: 83 ms
+I20230707 12:41:16.614179 74928 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230707 12:41:16.614199 74928 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230707 12:41:16.614370 74928 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230707 12:41:16.614387 74928 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230707 12:41:16.614518 74928 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230707 12:41:16.614534 74928 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230707 12:41:16.614655 74928 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230707 12:41:16.614670 74928 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230707 12:41:16.614794 74928 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230707 12:41:16.614807 74928 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230707 12:41:16.614921 74928 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230707 12:41:16.614935 74928 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230707 12:41:16.615047 74928 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230707 12:41:16.615061 74928 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+I20230707 12:41:16.615172 74928 worker.cc:72] [worker] Listening on: 10.218.109.65:40002
+I20230707 12:41:16.615187 74928 worker.cc:72] [worker] Listening on: 127.0.0.1:40002
+W20230707 12:41:16.615288 74928 server.cc:1650] [server] Increased maximum number of open files to 14224 (it's originally set to 1024)
+I20230707 12:41:16.615453 74928 cluster.cc:643] The cluster nodes file /nvme/jinghuan/node_40002/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230707 12:41:16.615464 74928 cluster.cc:643] The cluster nodes file /nvme/jinghuan/node_40002/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230707 12:41:16.618119 74928 worker.cc:519] [worker] Thread #140517824255744 started
+I20230707 12:41:16.618153 74928 worker.cc:519] [worker] Thread #140517832648448 started
+I20230707 12:41:16.618201 74928 worker.cc:519] [worker] Thread #140518205130496 started
+I20230707 12:41:16.618245 74928 worker.cc:519] [worker] Thread #140518196737792 started
+I20230707 12:41:16.618286 74928 worker.cc:519] [worker] Thread #140518188345088 started
+I20230707 12:41:16.618336 74928 worker.cc:519] [worker] Thread #140518101083904 started
+I20230707 12:41:16.618376 74928 worker.cc:519] [worker] Thread #140518092691200 started
+I20230707 12:41:16.618419 74928 worker.cc:519] [worker] Thread #140518084298496 started
+I20230707 12:41:16.618559 74928 server.cc:211] [server] Ready to accept connections
+I20230707 12:41:17.257129 75167 cluster.cc:286] MASTER MODE enabled by cluster topology setting
+I20230707 12:43:33.813403 75170 cluster.cc:387] [import] Start importing slot 0
+I20230707 12:43:33.813589 75170 cluster.cc:387] [import] Start importing slot 566
+I20230707 12:43:33.813724 75170 cluster.cc:387] [import] Start importing slot 1130
+I20230707 12:43:33.813845 75170 cluster.cc:387] [import] Start importing slot 1696
+I20230707 12:43:33.813974 75170 cluster.cc:387] [import] Start importing slot 2260
+I20230707 12:43:33.814123 75170 cluster.cc:387] [import] Start importing slot 2826
+I20230707 12:43:33.814273 75170 cluster.cc:387] [import] Start importing slot 3390
+I20230707 12:43:33.814396 75170 cluster.cc:387] [import] Start importing slot 3956
+I20230707 12:43:33.814529 75170 cluster.cc:387] [import] Start importing slot 4520
+I20230707 12:43:33.814652 75170 cluster.cc:387] [import] Start importing slot 5086
+I20230707 12:43:33.814767 75170 cluster.cc:387] [import] Start importing slot 5650
+I20230707 12:43:33.814884 75170 cluster.cc:387] [import] Start importing slot 6216
+I20230707 12:43:33.814998 75170 cluster.cc:387] [import] Start importing slot 6780
+I20230707 12:43:33.815114 75170 cluster.cc:387] [import] Start importing slot 7346
+I20230707 12:43:33.815227 75170 cluster.cc:387] [import] Start importing slot 7910
+I20230707 12:43:33.817433 75167 cmd_cluster.cc:350] Receive Ingest command:/nvme/jinghuan/node_40001/db/000119.sst,/nvme/jinghuan/node_40001/db/000102.sst
+I20230707 12:43:33.817487 75167 cmd_cluster.cc:354] Ingesting files from: local
+I20230707 12:43:33.817505 75167 cmd_cluster.cc:368] Ingesting files: /nvme/jinghuan/node_40001/db/000119.sst,/nvme/jinghuan/node_40001/db/000102.sst
+I20230707 12:43:33.884404 75167 cluster.cc:897] Ingestion completed, Time taken(us): 66873
+I20230707 12:43:33.890172 75165 cmd_cluster.cc:350] Receive Ingest command:/nvme/jinghuan/node_40001/db/000088.sst
+I20230707 12:43:33.890236 75165 cmd_cluster.cc:354] Ingesting files from: local
+I20230707 12:43:33.890265 75165 cmd_cluster.cc:368] Ingesting files: /nvme/jinghuan/node_40001/db/000088.sst
+I20230707 12:43:33.992183 75165 cluster.cc:897] Ingestion completed, Time taken(us): 101883
+I20230707 12:43:33.997725 75171 cmd_cluster.cc:350] Receive Ingest command:/nvme/jinghuan/node_40001/db/000132.sst,/nvme/jinghuan/node_40001/db/000129.sst,/nvme/jinghuan/node_40001/db/000126.sst,/nvme/jinghuan/node_40001/db/000122.sst,/nvme/jinghuan/node_40001/db/000117.sst,/nvme/jinghuan/node_40001/db/000114.sst,/nvme/jinghuan/node_40001/db/000111.sst,/nvme/jinghuan/node_40001/db/000108.sst,/nvme/jinghuan/node_40001/db/000106.sst,/nvme/jinghuan/node_40001/db/000091.sst,/nvme/jinghuan/node_40001/db/000075.sst,/nvme/jinghuan/node_40001/db/000060.sst,/nvme/jinghuan/node_40001/db/000044.sst
+I20230707 12:43:33.997769 75171 cmd_cluster.cc:354] Ingesting files from: local
+I20230707 12:43:33.997788 75171 cmd_cluster.cc:368] Ingesting files: /nvme/jinghuan/node_40001/db/000132.sst,/nvme/jinghuan/node_40001/db/000129.sst,/nvme/jinghuan/node_40001/db/000126.sst,/nvme/jinghuan/node_40001/db/000122.sst,/nvme/jinghuan/node_40001/db/000117.sst,/nvme/jinghuan/node_40001/db/000114.sst,/nvme/jinghuan/node_40001/db/000111.sst,/nvme/jinghuan/node_40001/db/000108.sst,/nvme/jinghuan/node_40001/db/000106.sst,/nvme/jinghuan/node_40001/db/000091.sst,/nvme/jinghuan/node_40001/db/000075.sst,/nvme/jinghuan/node_40001/db/000060.sst,/nvme/jinghuan/node_40001/db/000044.sst
+I20230707 12:43:36.114892 75171 cluster.cc:897] Ingestion completed, Time taken(us): 2117084
+I20230707 12:43:36.121228 75166 cmd_cluster.cc:350] Receive Ingest command:/nvme/jinghuan/node_40001/db/000042.sst
+I20230707 12:43:36.121281 75166 cmd_cluster.cc:354] Ingesting files from: local
+I20230707 12:43:36.121294 75166 cmd_cluster.cc:368] Ingesting files: /nvme/jinghuan/node_40001/db/000042.sst
+I20230707 12:43:36.292629 75166 cluster.cc:897] Ingestion completed, Time taken(us): 171304
+I20230707 12:43:36.297726 75171 cmd_cluster.cc:350] Receive Ingest command:/nvme/jinghuan/node_40001/db/000031.sst
+I20230707 12:43:36.297780 75171 cmd_cluster.cc:354] Ingesting files from: local
+I20230707 12:43:36.297801 75171 cmd_cluster.cc:368] Ingesting files: /nvme/jinghuan/node_40001/db/000031.sst
+I20230707 12:43:36.466061 75171 cluster.cc:897] Ingestion completed, Time taken(us): 168229
+I20230707 12:43:36.467511 75170 cluster.cc:397] [import] Succeed to import slot 0
+I20230707 12:43:36.467754 75170 cluster.cc:397] [import] Succeed to import slot 566
+I20230707 12:43:36.467886 75170 cluster.cc:397] [import] Succeed to import slot 1130
+I20230707 12:43:36.468000 75170 cluster.cc:397] [import] Succeed to import slot 1696
+I20230707 12:43:36.468094 75170 cluster.cc:397] [import] Succeed to import slot 2260
+I20230707 12:43:36.468183 75170 cluster.cc:397] [import] Succeed to import slot 2826
+I20230707 12:43:36.468272 75170 cluster.cc:397] [import] Succeed to import slot 3390
+I20230707 12:43:36.468361 75170 cluster.cc:397] [import] Succeed to import slot 3956
+I20230707 12:43:36.468453 75170 cluster.cc:397] [import] Succeed to import slot 4520
+I20230707 12:43:36.468544 75170 cluster.cc:397] [import] Succeed to import slot 5086
+I20230707 12:43:36.468664 75170 cluster.cc:397] [import] Succeed to import slot 5650
+I20230707 12:43:36.468752 75170 cluster.cc:397] [import] Succeed to import slot 6216
+I20230707 12:43:36.468845 75170 cluster.cc:397] [import] Succeed to import slot 6780
+I20230707 12:43:36.468933 75170 cluster.cc:397] [import] Succeed to import slot 7346
+I20230707 12:43:36.469018 75170 cluster.cc:397] [import] Succeed to import slot 7910
+I20230707 12:44:44.316859 74935 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 74935, job_id: 3, reason: 6
+I20230707 12:44:46.942582 74935 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000034.sst, file size: 70244854, job id: 3, reason: flush, status: OK
+I20230707 12:44:46.956082 74935 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 74935, job_id: 3, file: /nvme/jinghuan/node_40002/db/000034.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 707999, smallest seqno: 1
+I20230707 12:44:49.638393 74933 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000035.sst, file size: 70244850, job id: 4, reason: compaction, status: OK
+I20230707 12:44:49.646399 74933 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 11, output compression type: no, base input level(files): 0(1), output level(files): 0(1), input bytes: 70244854, output bytes:70244850, is_manual_compaction:no, elapsed(micro): 2682052
+I20230707 12:44:49.651798 74933 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40002/db, sst file: /nvme/jinghuan/node_40002/db/000034.sst, status: OK
+I20230707 12:46:14.960481 74936 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 74936, job_id: 5, reason: 6
+I20230707 12:46:17.598743 74936 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40002/db/000038.sst, file size: 70184517, job id: 5, reason: flush, status: OK
+I20230707 12:46:17.605369 74936 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 74936, job_id: 5, file: /nvme/jinghuan/node_40002/db/000038.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 1404981, smallest seqno: 708001

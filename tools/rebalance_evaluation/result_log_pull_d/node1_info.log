@@ -1,0 +1,631 @@
+Log file created at: 2023/07/07 10:16:00
+Running on machine: en4217754l
+Running duration (h:mm:ss): 0:00:00
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20230707 10:16:00.721565 59864 main.cc:328] kvrocks unstable (commit 4a10c89)
+I20230707 10:16:01.141778 59864 storage.cc:322] [storage] Success to load the data from disk: 100 ms
+I20230707 10:16:01.142750 59864 worker.cc:72] [worker] Listening on: 10.218.109.65:40001
+I20230707 10:16:01.142794 59864 worker.cc:72] [worker] Listening on: 127.0.0.1:40001
+I20230707 10:16:01.143289 59864 worker.cc:72] [worker] Listening on: 10.218.109.65:40001
+I20230707 10:16:01.143330 59864 worker.cc:72] [worker] Listening on: 127.0.0.1:40001
+I20230707 10:16:01.143656 59864 worker.cc:72] [worker] Listening on: 10.218.109.65:40001
+I20230707 10:16:01.143697 59864 worker.cc:72] [worker] Listening on: 127.0.0.1:40001
+I20230707 10:16:01.143885 59864 worker.cc:72] [worker] Listening on: 10.218.109.65:40001
+I20230707 10:16:01.143908 59864 worker.cc:72] [worker] Listening on: 127.0.0.1:40001
+I20230707 10:16:01.144075 59864 worker.cc:72] [worker] Listening on: 10.218.109.65:40001
+I20230707 10:16:01.144097 59864 worker.cc:72] [worker] Listening on: 127.0.0.1:40001
+I20230707 10:16:01.144261 59864 worker.cc:72] [worker] Listening on: 10.218.109.65:40001
+I20230707 10:16:01.144282 59864 worker.cc:72] [worker] Listening on: 127.0.0.1:40001
+I20230707 10:16:01.144449 59864 worker.cc:72] [worker] Listening on: 10.218.109.65:40001
+I20230707 10:16:01.144470 59864 worker.cc:72] [worker] Listening on: 127.0.0.1:40001
+I20230707 10:16:01.144629 59864 worker.cc:72] [worker] Listening on: 10.218.109.65:40001
+I20230707 10:16:01.144650 59864 worker.cc:72] [worker] Listening on: 127.0.0.1:40001
+W20230707 10:16:01.144785 59864 server.cc:1650] [server] Increased maximum number of open files to 14224 (it's originally set to 1024)
+I20230707 10:16:01.145020 59864 cluster.cc:643] The cluster nodes file /nvme/jinghuan/node_40001/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230707 10:16:01.145045 59864 cluster.cc:643] The cluster nodes file /nvme/jinghuan/node_40001/nodes.conf is not found. Use CLUSTERX subcommands to specify it.
+I20230707 10:16:01.149013 59864 worker.cc:519] [worker] Thread #140436253415168 started
+I20230707 10:16:01.149061 59864 worker.cc:519] [worker] Thread #140436261807872 started
+I20230707 10:16:01.149128 59864 worker.cc:519] [worker] Thread #140436630923008 started
+I20230707 10:16:01.149189 59864 worker.cc:519] [worker] Thread #140436622530304 started
+I20230707 10:16:01.149250 59864 worker.cc:519] [worker] Thread #140436614137600 started
+I20230707 10:16:01.149310 59864 worker.cc:519] [worker] Thread #140436605744896 started
+I20230707 10:16:01.149367 59864 worker.cc:519] [worker] Thread #140436597352192 started
+I20230707 10:16:01.149430 59864 worker.cc:519] [worker] Thread #140436588959488 started
+I20230707 10:16:01.149626 59864 server.cc:211] [server] Ready to accept connections
+I20230707 10:16:01.753885 60105 cluster.cc:286] MASTER MODE enabled by cluster topology setting
+I20230707 10:16:04.101996 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 3, reason: 6
+I20230707 10:16:04.512706 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000016.sst, file size: 78583092, job id: 3, reason: flush, status: OK
+I20230707 10:16:04.519305 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 3, file: /nvme/jinghuan/node_40001/db/000016.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 677984, smallest seqno: 1
+I20230707 10:16:05.177853 59878 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000017.sst, file size: 78583088, job id: 4, reason: compaction, status: OK
+I20230707 10:16:05.196640 59878 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 11, output compression type: no, base input level(files): 0(1), output level(files): 0(1), input bytes: 78583092, output bytes:78583088, is_manual_compaction:no, elapsed(micro): 658586
+I20230707 10:16:05.206614 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000016.sst, status: OK
+I20230707 10:16:06.389936 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 5, reason: 6
+I20230707 10:16:06.783054 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000020.sst, file size: 76812180, job id: 5, reason: flush, status: OK
+I20230707 10:16:06.794086 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 5, file: /nvme/jinghuan/node_40001/db/000020.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 1340690, smallest seqno: 677986
+I20230707 10:16:08.600428 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 6, reason: 6
+I20230707 10:16:08.988448 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000023.sst, file size: 76850338, job id: 6, reason: flush, status: OK
+I20230707 10:16:08.994875 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 6, file: /nvme/jinghuan/node_40001/db/000023.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 2003671, smallest seqno: 1340692
+I20230707 10:16:10.848263 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 7, reason: 6
+W20230707 10:16:11.888336 60106 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:16:12.456085 59880 event_listener.cc:84] [event_listener/flush_begin] column family: metadata, thread_id: 59880, job_id: 8, reason: 13
+I20230707 10:16:13.694618 59880 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40001/db/000029.sst, file size: 19243637, job id: 8, reason: flush, status: OK
+I20230707 10:16:13.703775 59880 event_listener.cc:91] [event_listener/flush_completed] column family: metadata, thread_id: 59880, job_id: 8, file: /nvme/jinghuan/node_40001/db/000029.sst, reason: 13, is_write_slowdown: no, is_write_stall: no, largest seqno: 3147551, smallest seqno: 11
+I20230707 10:16:13.719624 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 9, reason: 6
+I20230707 10:16:15.199328 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000026.sst, file size: 76730072, job id: 7, reason: flush, status: OK
+I20230707 10:16:15.211743 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 7, file: /nvme/jinghuan/node_40001/db/000026.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 2665640, smallest seqno: 2003673
+W20230707 10:16:15.212132 59881 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:16:15.212329 60106 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:16:16.323607 60107 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:16:17.478025 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 12, reason: 6
+I20230707 10:16:18.789969 59878 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40001/db/000034.sst, file size: 19243633, job id: 11, reason: compaction, status: OK
+I20230707 10:16:18.798452 59878 event_listener.cc:71] [event_listener/compaction_completed] column family: metadata, compaction reason: 11, output compression type: no, base input level(files): 0(1), output level(files): 0(1), input bytes: 19243637, output bytes:19243633, is_manual_compaction:no, elapsed(micro): 2466502
+I20230707 10:16:18.801515 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000029.sst, status: OK
+I20230707 10:16:20.002606 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000031.sst, file size: 75293212, job id: 9, reason: flush, status: OK
+I20230707 10:16:20.018831 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 9, file: /nvme/jinghuan/node_40001/db/000031.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 3315201, smallest seqno: 2665642
+W20230707 10:16:20.019023 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:16:20.019400 60107 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:16:21.372733 60102 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:16:22.788048 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 13, reason: 6
+I20230707 10:16:23.404412 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000036.sst, file size: 75645704, job id: 12, reason: flush, status: OK
+I20230707 10:16:23.416839 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 12, file: /nvme/jinghuan/node_40001/db/000036.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 3967820, smallest seqno: 3315203
+W20230707 10:16:23.416921 59881 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:16:23.417282 60102 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:16:24.571142 60106 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:16:25.837113 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 14, reason: 6
+I20230707 10:16:29.209244 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000039.sst, file size: 83092855, job id: 13, reason: flush, status: OK
+I20230707 10:16:29.223712 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 13, file: /nvme/jinghuan/node_40001/db/000039.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 4684745, smallest seqno: 3967822
+W20230707 10:16:29.223765 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:16:29.224052 60109 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:16:30.367060 60109 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:16:31.105226 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000032.sst, file size: 138728726, job id: 10, reason: compaction, status: OK
+I20230707 10:16:31.558470 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 15, reason: 6
+I20230707 10:16:32.415799 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000042.sst, file size: 77440304, job id: 14, reason: flush, status: OK
+I20230707 10:16:32.431896 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 14, file: /nvme/jinghuan/node_40001/db/000042.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 5352852, smallest seqno: 4684747
+W20230707 10:16:32.432015 59881 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:16:32.432850 60109 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+I20230707 10:16:33.531625 59881 event_listener.cc:84] [event_listener/flush_begin] column family: metadata, thread_id: 59881, job_id: 17, reason: 13
+W20230707 10:16:33.803109 60109 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:16:37.002015 59881 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40001/db/000049.sst, file size: 19237731, job id: 17, reason: flush, status: OK
+I20230707 10:16:37.009644 59881 event_listener.cc:91] [event_listener/flush_completed] column family: metadata, thread_id: 59881, job_id: 17, file: /nvme/jinghuan/node_40001/db/000049.sst, reason: 13, is_write_slowdown: no, is_write_stall: no, largest seqno: 6295113, smallest seqno: 3147562
+I20230707 10:16:37.055227 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 18, reason: 6
+I20230707 10:16:38.813599 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000046.sst, file size: 75886206, job id: 15, reason: flush, status: OK
+I20230707 10:16:38.826874 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 15, file: /nvme/jinghuan/node_40001/db/000046.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 6007539, smallest seqno: 5352854
+W20230707 10:16:38.827299 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:16:38.827497 60109 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:16:40.025949 60102 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:16:41.240371 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 19, reason: 6
+I20230707 10:16:45.321197 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000052.sst, file size: 85050450, job id: 18, reason: flush, status: OK
+I20230707 10:16:45.337236 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 18, file: /nvme/jinghuan/node_40001/db/000052.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 6741294, smallest seqno: 6007541
+W20230707 10:16:45.337577 59881 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:16:45.339258 60103 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:16:46.516077 60105 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:16:46.912763 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000044.sst, file size: 138696567, job id: 10, reason: compaction, status: OK
+I20230707 10:16:47.711194 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 20, reason: 6
+I20230707 10:16:48.621318 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000055.sst, file size: 77883155, job id: 19, reason: flush, status: OK
+I20230707 10:16:48.636747 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 19, file: /nvme/jinghuan/node_40001/db/000055.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 7413218, smallest seqno: 6741296
+W20230707 10:16:48.636822 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:16:48.637305 60106 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:16:49.922223 60105 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:16:50.218899 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000057.sst, file size: 31408948, job id: 10, reason: compaction, status: OK
+I20230707 10:16:50.236595 59879 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 1, output compression type: no, base input level(files): 0(4), output level(files): 1(3), input bytes: 308975678, output bytes:308834241, is_manual_compaction:no, elapsed(micro): 35007207
+I20230707 10:16:50.253216 59879 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 2, output compression type: no, base input level(files): 1(1), output level(files): 2(1), input bytes: 0, output bytes:0, is_manual_compaction:no, elapsed(micro): 0
+I20230707 10:16:51.264073 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 22, reason: 6
+I20230707 10:16:54.024333 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000059.sst, file size: 76581339, job id: 20, reason: flush, status: OK
+I20230707 10:16:54.036955 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 20, file: /nvme/jinghuan/node_40001/db/000059.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 8073911, smallest seqno: 7413220
+W20230707 10:16:54.037045 59881 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:16:54.037451 60108 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:16:55.428930 60109 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:16:56.514915 59881 event_listener.cc:84] [event_listener/flush_begin] column family: metadata, thread_id: 59881, job_id: 24, reason: 13
+I20230707 10:16:58.415995 59881 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40001/db/000066.sst, file size: 19219183, job id: 24, reason: flush, status: OK
+I20230707 10:16:58.422466 59881 event_listener.cc:91] [event_listener/flush_completed] column family: metadata, thread_id: 59881, job_id: 24, file: /nvme/jinghuan/node_40001/db/000066.sst, reason: 13, is_write_slowdown: no, is_write_stall: no, largest seqno: 9442631, smallest seqno: 6295124
+I20230707 10:16:58.437608 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 25, reason: 6
+I20230707 10:16:59.422655 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000062.sst, file size: 85037493, job id: 22, reason: flush, status: OK
+I20230707 10:16:59.429276 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 22, file: /nvme/jinghuan/node_40001/db/000062.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 8807600, smallest seqno: 8073913
+W20230707 10:16:59.429450 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:16:59.429533 60109 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:17:00.610692 60104 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:17:01.825361 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 26, reason: 6
+I20230707 10:17:06.430013 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000068.sst, file size: 84808666, job id: 25, reason: flush, status: OK
+I20230707 10:17:06.445398 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 25, file: /nvme/jinghuan/node_40001/db/000068.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 9539287, smallest seqno: 8807602
+W20230707 10:17:06.445822 59881 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:17:06.446007 60106 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:17:07.743450 60107 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:17:08.832090 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000071.sst, file size: 77451242, job id: 26, reason: flush, status: OK
+I20230707 10:17:08.844841 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 26, file: /nvme/jinghuan/node_40001/db/000071.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 10207504, smallest seqno: 9539289
+W20230707 10:17:08.844925 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to normal
+I20230707 10:17:09.092046 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 27, reason: 6
+W20230707 10:17:10.348094 60108 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:17:11.714830 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 28, reason: 6
+I20230707 10:17:14.529673 59878 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000047.sst, file size: 311356761, job id: 16, reason: compaction, status: OK
+I20230707 10:17:14.546133 59878 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 1, output compression type: no, base input level(files): 0(4), output level(files): 0(1), input bytes: 311472075, output bytes:311356761, is_manual_compaction:no, elapsed(micro): 42097599
+I20230707 10:17:14.552626 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000026.sst, status: OK
+I20230707 10:17:14.559021 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000023.sst, status: OK
+I20230707 10:17:14.565168 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000020.sst, status: OK
+I20230707 10:17:14.571496 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000017.sst, status: OK
+I20230707 10:17:16.234578 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000074.sst, file size: 84904342, job id: 27, reason: flush, status: OK
+I20230707 10:17:16.241035 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 27, file: /nvme/jinghuan/node_40001/db/000074.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 10940027, smallest seqno: 10207506
+W20230707 10:17:16.241194 59881 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:17:16.241459 60107 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:17:17.552049 60109 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:17:18.918279 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 31, reason: 6
+I20230707 10:17:19.540699 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000077.sst, file size: 85045872, job id: 28, reason: flush, status: OK
+I20230707 10:17:19.553282 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 28, file: /nvme/jinghuan/node_40001/db/000077.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 11673771, smallest seqno: 10940029
+W20230707 10:17:19.553354 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:17:19.553748 60109 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+I20230707 10:17:20.227605 59880 event_listener.cc:84] [event_listener/flush_begin] column family: metadata, thread_id: 59880, job_id: 32, reason: 13
+W20230707 10:17:20.835096 60104 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:17:22.133206 59880 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40001/db/000083.sst, file size: 19220817, job id: 32, reason: flush, status: OK
+I20230707 10:17:22.148344 59880 event_listener.cc:91] [event_listener/flush_completed] column family: metadata, thread_id: 59880, job_id: 32, file: /nvme/jinghuan/node_40001/db/000083.sst, reason: 13, is_write_slowdown: no, is_write_stall: no, largest seqno: 12590204, smallest seqno: 9442642
+I20230707 10:17:22.196796 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 33, reason: 6
+I20230707 10:17:26.848742 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000081.sst, file size: 84910857, job id: 31, reason: flush, status: OK
+I20230707 10:17:26.864804 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 31, file: /nvme/jinghuan/node_40001/db/000081.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 12406393, smallest seqno: 11673773
+W20230707 10:17:26.865248 59881 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:17:26.865473 60107 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:17:28.168462 60104 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:17:28.645630 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000063.sst, file size: 315267884, job id: 23, reason: compaction, status: OK
+I20230707 10:17:28.666463 59879 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 1, output compression type: no, base input level(files): 0(4), output level(files): 0(1), input bytes: 315401150, output bytes:315267884, is_manual_compaction:no, elapsed(micro): 34608465
+I20230707 10:17:28.677330 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000042.sst, status: OK
+I20230707 10:17:28.684481 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000039.sst, status: OK
+I20230707 10:17:28.689981 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000036.sst, status: OK
+I20230707 10:17:28.695662 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000031.sst, status: OK
+I20230707 10:17:29.449360 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000086.sst, file size: 85042976, job id: 33, reason: flush, status: OK
+I20230707 10:17:29.458869 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 33, file: /nvme/jinghuan/node_40001/db/000086.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 13140148, smallest seqno: 12406395
+W20230707 10:17:29.459009 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to normal
+I20230707 10:17:29.533524 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 36, reason: 6
+W20230707 10:17:30.764532 60104 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:17:32.116858 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 37, reason: 6
+I20230707 10:17:35.841997 59879 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40001/db/000088.sst, file size: 76273993, job id: 35, reason: compaction, status: OK
+I20230707 10:17:35.860301 59879 event_listener.cc:71] [event_listener/compaction_completed] column family: metadata, compaction reason: 1, output compression type: no, base input level(files): 0(4), output level(files): 1(1), input bytes: 76921364, output bytes:76273993, is_manual_compaction:no, elapsed(micro): 7146334
+I20230707 10:17:35.864115 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000066.sst, status: OK
+I20230707 10:17:35.867509 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000049.sst, status: OK
+I20230707 10:17:35.871302 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000034.sst, status: OK
+I20230707 10:17:36.145136 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000090.sst, file size: 84855871, job id: 36, reason: flush, status: OK
+I20230707 10:17:36.160656 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 36, file: /nvme/jinghuan/node_40001/db/000090.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 13872242, smallest seqno: 13140150
+W20230707 10:17:36.160794 59881 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:17:36.161782 60104 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:17:37.310986 60106 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:17:38.506244 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 40, reason: 6
+I20230707 10:17:38.657158 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000093.sst, file size: 85052211, job id: 37, reason: flush, status: OK
+I20230707 10:17:38.674180 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 37, file: /nvme/jinghuan/node_40001/db/000093.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 14606019, smallest seqno: 13872244
+W20230707 10:17:38.674285 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:17:38.674764 60105 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:17:39.958613 60103 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:17:40.419741 59880 event_listener.cc:84] [event_listener/flush_begin] column family: metadata, thread_id: 59880, job_id: 41, reason: 13
+I20230707 10:17:42.250344 59880 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40001/db/000100.sst, file size: 19250716, job id: 41, reason: flush, status: OK
+I20230707 10:17:42.261027 59880 event_listener.cc:91] [event_listener/flush_completed] column family: metadata, thread_id: 59880, job_id: 41, file: /nvme/jinghuan/node_40001/db/000100.sst, reason: 13, is_write_slowdown: no, is_write_stall: no, largest seqno: 15737788, smallest seqno: 12590215
+I20230707 10:17:42.282851 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 42, reason: 6
+I20230707 10:17:44.659018 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000097.sst, file size: 75001124, job id: 40, reason: flush, status: OK
+I20230707 10:17:44.673693 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 40, file: /nvme/jinghuan/node_40001/db/000097.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 15253105, smallest seqno: 14606021
+W20230707 10:17:44.673982 59881 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:17:44.674124 60107 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:17:45.868974 60102 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:17:47.102540 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 43, reason: 6
+I20230707 10:17:48.654188 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000102.sst, file size: 85042747, job id: 42, reason: flush, status: OK
+I20230707 10:17:48.660578 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 42, file: /nvme/jinghuan/node_40001/db/000102.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 15986838, smallest seqno: 15253107
+W20230707 10:17:48.660831 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:17:48.661042 60105 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:17:50.095760 60104 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:17:50.156138 59878 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000078.sst, file size: 332041178, job id: 30, reason: compaction, status: OK
+I20230707 10:17:50.177539 59878 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 1, output compression type: no, base input level(files): 0(4), output level(files): 0(1), input bytes: 332201743, output bytes:332041178, is_manual_compaction:no, elapsed(micro): 33914998
+I20230707 10:17:50.180869 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000083.sst, status: OK
+I20230707 10:17:50.190284 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000059.sst, status: OK
+I20230707 10:17:50.195672 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000055.sst, status: OK
+I20230707 10:17:50.201575 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000052.sst, status: OK
+I20230707 10:17:50.206801 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000046.sst, status: OK
+I20230707 10:17:51.358659 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000105.sst, file size: 77393412, job id: 43, reason: flush, status: OK
+I20230707 10:17:51.365016 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 43, file: /nvme/jinghuan/node_40001/db/000105.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 16654538, smallest seqno: 15986840
+W20230707 10:17:51.365168 59881 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to normal
+I20230707 10:17:51.577090 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 46, reason: 6
+W20230707 10:17:52.981948 60104 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:17:54.484980 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 47, reason: 6
+I20230707 10:17:56.669888 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000109.sst, file size: 84889691, job id: 46, reason: flush, status: OK
+I20230707 10:17:56.678637 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 46, file: /nvme/jinghuan/node_40001/db/000109.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 17386918, smallest seqno: 16654540
+W20230707 10:17:56.678678 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:17:56.679085 60104 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:17:57.864921 60107 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:17:59.076341 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 48, reason: 6
+I20230707 10:18:00.063820 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000112.sst, file size: 85053888, job id: 47, reason: flush, status: OK
+I20230707 10:18:00.076167 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 47, file: /nvme/jinghuan/node_40001/db/000112.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 18120728, smallest seqno: 17386920
+W20230707 10:18:00.076253 59881 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:18:00.078016 60106 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+I20230707 10:18:00.451571 59881 event_listener.cc:84] [event_listener/flush_begin] column family: metadata, thread_id: 59881, job_id: 49, reason: 13
+W20230707 10:18:01.364473 60109 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:18:02.062158 59881 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40001/db/000117.sst, file size: 19249973, job id: 49, reason: flush, status: OK
+I20230707 10:18:02.070381 59881 event_listener.cc:91] [event_listener/flush_completed] column family: metadata, thread_id: 59881, job_id: 49, file: /nvme/jinghuan/node_40001/db/000117.sst, reason: 13, is_write_slowdown: no, is_write_stall: no, largest seqno: 18885361, smallest seqno: 15737799
+I20230707 10:18:02.108240 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 50, reason: 13
+I20230707 10:18:05.467921 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000115.sst, file size: 77024042, job id: 48, reason: flush, status: OK
+I20230707 10:18:05.481945 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 48, file: /nvme/jinghuan/node_40001/db/000115.sst, reason: 13, is_write_slowdown: no, is_write_stall: no, largest seqno: 18785249, smallest seqno: 18120730
+W20230707 10:18:05.482177 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:18:05.482388 60107 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:18:06.794445 60107 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:18:06.863571 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000094.sst, file size: 339741421, job id: 39, reason: compaction, status: OK
+I20230707 10:18:06.879631 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000120.sst, file size: 66074336, job id: 50, reason: flush, status: OK
+I20230707 10:18:06.888078 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 50, file: /nvme/jinghuan/node_40001/db/000120.sst, reason: 13, is_write_slowdown: no, is_write_stall: no, largest seqno: 19355247, smallest seqno: 18785251
+W20230707 10:18:06.888196 59881 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to normal
+I20230707 10:18:06.901754 59879 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 1, output compression type: no, base input level(files): 0(4), output level(files): 0(1), input bytes: 339855576, output bytes:339741421, is_manual_compaction:no, elapsed(micro): 30702947
+I20230707 10:18:06.912668 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000074.sst, status: OK
+I20230707 10:18:06.919025 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000071.sst, status: OK
+I20230707 10:18:06.924829 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000068.sst, status: OK
+I20230707 10:18:06.930543 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000062.sst, status: OK
+I20230707 10:18:08.159711 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 52, reason: 6
+W20230707 10:18:09.440877 60107 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:18:10.840050 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 53, reason: 6
+I20230707 10:18:12.370430 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000124.sst, file size: 85026004, job id: 52, reason: flush, status: OK
+I20230707 10:18:12.386066 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 52, file: /nvme/jinghuan/node_40001/db/000124.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 20088804, smallest seqno: 19355249
+W20230707 10:18:12.386111 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:18:12.386461 60107 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:18:13.746847 60103 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:18:15.176090 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 54, reason: 6
+I20230707 10:18:15.776635 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000127.sst, file size: 85053137, job id: 53, reason: flush, status: OK
+I20230707 10:18:15.792237 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 53, file: /nvme/jinghuan/node_40001/db/000127.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 20822603, smallest seqno: 20088806
+W20230707 10:18:15.792340 59881 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:18:15.792857 60104 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+W20230707 10:18:17.253374 60109 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:18:17.711199 60106 cluster.cc:923] function: Migrate compact-and-merge
+I20230707 10:18:17.711241 60106 slot_migrate_parallel.cc:32] [migrate] Start migrating slots, from slot: 0 to slot: 7910. Slots are moving to 0.0.0.0:40002
+I20230707 10:18:17.711256 60106 cluster.cc:935] [cluster migration] Finished slot migration cmds sending, start to set nodes
+I20230707 10:18:17.711280 60101 slot_migrate.cc:165] [migrate] Migrating slot: -1, dst_ip: 0.0.0.0, dst_port: 40002, max_speed: 0, max_pipeline_size: 16
+I20230707 10:18:17.713510 60101 slot_migrate.cc:305] [migrate] Start migrating slot 7910, connect destination fd 97
+I20230707 10:18:17.713538 60101 slot_migrate.cc:195] [migrate] Succeed to start migrating slot 7910
+I20230707 10:18:17.713549 60101 slot_migrate_compact_and_merge.cc:25] [compact-and-merge] Start migrating snapshot of slot 
+I20230707 10:18:18.069805 59881 event_listener.cc:84] [event_listener/flush_begin] column family: metadata, thread_id: 59881, job_id: 55, reason: 13
+I20230707 10:18:19.470055 59878 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000107.sst, file size: 322376239, job id: 45, reason: compaction, status: OK
+I20230707 10:18:19.488478 59878 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 1, output compression type: no, base input level(files): 0(4), output level(files): 0(1), input bytes: 322489494, output bytes:322376239, is_manual_compaction:no, elapsed(micro): 28104965
+I20230707 10:18:19.494591 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000090.sst, status: OK
+I20230707 10:18:19.501080 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000086.sst, status: OK
+I20230707 10:18:19.507679 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000081.sst, status: OK
+I20230707 10:18:19.514022 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000077.sst, status: OK
+I20230707 10:18:19.582094 59881 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40001/db/000133.sst, file size: 19158526, job id: 55, reason: flush, status: OK
+I20230707 10:18:19.593088 59881 event_listener.cc:91] [event_listener/flush_completed] column family: metadata, thread_id: 59881, job_id: 55, file: /nvme/jinghuan/node_40001/db/000133.sst, reason: 13, is_write_slowdown: no, is_write_stall: no, largest seqno: 22036480, smallest seqno: 18885372
+I20230707 10:18:19.786191 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000130.sst, file size: 84843194, job id: 54, reason: flush, status: OK
+I20230707 10:18:19.792696 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 54, file: /nvme/jinghuan/node_40001/db/000130.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 21554598, smallest seqno: 20822605
+W20230707 10:18:19.792820 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to normal
+I20230707 10:18:21.284093 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 56, reason: 6
+I20230707 10:18:23.291500 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000135.sst, file size: 76832183, job id: 56, reason: flush, status: OK
+I20230707 10:18:23.299329 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 56, file: /nvme/jinghuan/node_40001/db/000135.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 22267756, smallest seqno: 21554600
+I20230707 10:18:24.382673 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000122.sst, file size: 312916983, job id: 51, reason: compaction, status: OK
+I20230707 10:18:24.403472 59879 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 1, output compression type: no, base input level(files): 0(4), output level(files): 0(1), input bytes: 313041957, output bytes:312916983, is_manual_compaction:no, elapsed(micro): 17452134
+I20230707 10:18:24.413457 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000120.sst, status: OK
+I20230707 10:18:24.418417 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000115.sst, status: OK
+I20230707 10:18:24.423772 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000112.sst, status: OK
+I20230707 10:18:24.429342 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000109.sst, status: OK
+I20230707 10:18:24.434572 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000105.sst, status: OK
+I20230707 10:18:24.439906 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000102.sst, status: OK
+I20230707 10:18:24.444645 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000097.sst, status: OK
+I20230707 10:18:24.450484 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000093.sst, status: OK
+I20230707 10:18:24.450528 60101 slot_migrate_compact_and_merge.cc:28] [compact-and-merge] db pause finished
+I20230707 10:18:24.450659 60101 slot_migrate_compact_and_merge.cc:40] Prefix extracted, time taken (us): 87
+I20230707 10:18:24.450784 60101 slot_migrate_compact_and_merge.cc:59] Meta file located, time taken(us): 4
+I20230707 10:18:24.450803 60101 slot_migrate_compact_and_merge.cc:70] Subkey file located, time taken(us): 5
+I20230707 10:18:24.450811 60101 slot_migrate_compact_and_merge.cc:81] Meta file list: [000133.sst,000117.sst,000100.sst,000088.sst]
+I20230707 10:18:24.450820 60101 slot_migrate_compact_and_merge.cc:90] Subkey file list: [000135.sst,000130.sst,000127.sst,000124.sst,000122.sst,000107.sst,000094.sst,000078.sst,000063.sst,000047.sst,000044.sst,000032.sst]
+I20230707 10:18:26.614251 60101 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40001/db/000136.sst, file size: 72752457, job id: 57, reason: compaction, status: OK
+I20230707 10:18:26.626405 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000133.sst, status: OK
+I20230707 10:18:26.628430 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000117.sst, status: OK
+I20230707 10:18:26.630656 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000100.sst, status: OK
+I20230707 10:18:26.637980 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000088.sst, status: OK
+I20230707 10:18:26.638007 60101 slot_migrate_compact_and_merge.cc:97] Meta file compacted, time taken(us): 2187197
+W20230707 10:18:42.524873 60107 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from normal to delay
+I20230707 10:19:14.422811 60101 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000137.sst, file size: 2544912140, job id: 58, reason: compaction, status: OK
+I20230707 10:19:14.585754 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000135.sst, status: OK
+I20230707 10:19:14.591884 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000130.sst, status: OK
+I20230707 10:19:14.597896 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000127.sst, status: OK
+I20230707 10:19:14.604204 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000124.sst, status: OK
+I20230707 10:19:14.624576 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000122.sst, status: OK
+I20230707 10:19:14.644624 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000107.sst, status: OK
+I20230707 10:19:14.665452 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000094.sst, status: OK
+I20230707 10:19:14.686992 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000078.sst, status: OK
+I20230707 10:19:14.707826 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000063.sst, status: OK
+I20230707 10:19:14.709969 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000057.sst, status: OK
+I20230707 10:19:14.730019 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000047.sst, status: OK
+I20230707 10:19:14.739102 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000044.sst, status: OK
+I20230707 10:19:14.748991 60101 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000032.sst, status: OK
+I20230707 10:19:14.749035 60101 slot_migrate_compact_and_merge.cc:108] Subkey file compacted, time taken(us): 48111022
+I20230707 10:19:15.263785 60101 slot_migrate_compact_and_merge.cc:120] Meta file filtered, time taken(us): 514738
+I20230707 10:19:21.687503 60101 slot_migrate_compact_and_merge.cc:130] Subkey file filtered, time taken(us): 6423662
+I20230707 10:19:21.687561 60101 slot_migrate_compact_and_merge.cc:139] Meta filtered file list: [/nvme/jinghuan/node_40001/db/000136.sst.out]
+I20230707 10:19:21.687574 60101 slot_migrate_compact_and_merge.cc:148] Subkey filtered file list: [/nvme/jinghuan/node_40001/db/000137.sst.out]
+I20230707 10:19:21.687592 60101 slot_migrate_compact_and_merge.cc:290] CF metadata SST(s) waiting for ingestion: /nvme/jinghuan/node_40001/db/nvme/jinghuan/node_40001/db/000136.sst.out
+I20230707 10:19:21.687613 60101 slot_migrate_compact_and_merge.cc:360] redis-cli -h 0.0.0.0 -p 40002 sst_ingest local metadata /nvme/jinghuan/node_40001/db/000136.sst.out kvrockskvrockskvrockskvrockskvrocksnode2 slow 0
+I20230707 10:19:21.890120 60101 slot_migrate_compact_and_merge.cc:367] File ingestion on column family [metadata] finished, time taken(us): 202510
+I20230707 10:19:21.890154 60101 slot_migrate_compact_and_merge.cc:333] File ingested into target server, time taken(us): 202551
+I20230707 10:19:21.890167 60101 slot_migrate_compact_and_merge.cc:156] Meta file copy and ingested
+I20230707 10:19:21.890185 60101 slot_migrate_compact_and_merge.cc:290] CF default SST(s) waiting for ingestion: /nvme/jinghuan/node_40001/db/nvme/jinghuan/node_40001/db/000137.sst.out
+I20230707 10:19:21.890205 60101 slot_migrate_compact_and_merge.cc:360] redis-cli -h 0.0.0.0 -p 40002 sst_ingest local default /nvme/jinghuan/node_40001/db/000137.sst.out kvrockskvrockskvrockskvrockskvrocksnode2 slow 0
+I20230707 10:19:24.908360 60101 slot_migrate_compact_and_merge.cc:367] File ingestion on column family [default] finished, time taken(us): 3018154
+I20230707 10:19:24.908411 60101 slot_migrate_compact_and_merge.cc:333] File ingested into target server, time taken(us): 3018214
+I20230707 10:19:24.908425 60101 slot_migrate_compact_and_merge.cc:163] Subkey file copy and ingested
+I20230707 10:19:24.908460 60101 slot_migrate.cc:209] Finished sending snapshot, time taken(us): 67194912, seek time taken(us): 0, network response time taken(us): 0
+I20230707 10:19:24.922266 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 59, reason: 6
+I20230707 10:19:25.195263 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 22010326, to 23535519
+I20230707 10:19:25.195297 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:25.195309 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 0, less than limit: 10000, go to set forbidden slot
+I20230707 10:19:25.195314 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 1
+I20230707 10:19:25.195319 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 0
+I20230707 10:19:26.072772 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000142.sst, file size: 68706272, job id: 59, reason: flush, status: OK
+I20230707 10:19:26.088903 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 59, file: /nvme/jinghuan/node_40001/db/000142.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 23535519, smallest seqno: 22267758
+W20230707 10:19:26.088992 59880 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from stop to normal
+W20230707 10:19:26.090241 60107 event_listener.cc:132] [event_listener/stall_cond_changed] column family: default write stall condition was changed, from delay to stop
+I20230707 10:19:26.090636 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 895310us
+I20230707 10:19:26.123584 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+I20230707 10:19:26.123605 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.123621 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 51, less than limit: 10000, go to set forbidden slot
+I20230707 10:19:26.123632 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 0
+I20230707 10:19:26.123642 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 566
+I20230707 10:19:26.123653 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 1us
+I20230707 10:19:26.124020 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+I20230707 10:19:26.124033 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.124058 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 51, less than limit: 10000, go to set forbidden slot
+I20230707 10:19:26.124069 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 0
+I20230707 10:19:26.124079 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 1130
+I20230707 10:19:26.124090 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 1us
+I20230707 10:19:26.155557 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+I20230707 10:19:26.155577 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.155591 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 51, less than limit: 10000, go to set forbidden slot
+I20230707 10:19:26.155602 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 0
+I20230707 10:19:26.155612 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 1696
+I20230707 10:19:26.155623 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 0us
+I20230707 10:19:26.155977 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+I20230707 10:19:26.155989 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.156002 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 51, less than limit: 10000, go to set forbidden slot
+I20230707 10:19:26.156013 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 0
+I20230707 10:19:26.156023 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 2260
+I20230707 10:19:26.156034 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 1us
+I20230707 10:19:26.156381 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+I20230707 10:19:26.156394 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.156409 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 51, less than limit: 10000, go to set forbidden slot
+I20230707 10:19:26.156419 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 0
+I20230707 10:19:26.156430 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 2826
+I20230707 10:19:26.156440 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 0us
+I20230707 10:19:26.156785 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+I20230707 10:19:26.156798 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.156812 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 51, less than limit: 10000, go to set forbidden slot
+I20230707 10:19:26.156823 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 0
+I20230707 10:19:26.156833 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 3390
+I20230707 10:19:26.156844 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 1us
+I20230707 10:19:26.179646 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+I20230707 10:19:26.179687 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.179711 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 51, less than limit: 10000, go to set forbidden slot
+I20230707 10:19:26.179724 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 0
+I20230707 10:19:26.179736 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 3956
+I20230707 10:19:26.179749 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 0us
+I20230707 10:19:26.180225 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+I20230707 10:19:26.180248 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.180264 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 51, less than limit: 10000, go to set forbidden slot
+I20230707 10:19:26.180277 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 0
+I20230707 10:19:26.180289 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 4520
+I20230707 10:19:26.180301 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 0us
+I20230707 10:19:26.180701 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+I20230707 10:19:26.180716 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.180730 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 51, less than limit: 10000, go to set forbidden slot
+I20230707 10:19:26.180742 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 0
+I20230707 10:19:26.180753 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 5086
+I20230707 10:19:26.180765 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 1us
+I20230707 10:19:26.181154 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+I20230707 10:19:26.181169 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.181185 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 51, less than limit: 10000, go to set forbidden slot
+I20230707 10:19:26.181196 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 0
+I20230707 10:19:26.181207 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 5650
+I20230707 10:19:26.181219 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 0us
+I20230707 10:19:26.181604 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+I20230707 10:19:26.181618 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.181634 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 51, less than limit: 10000, go to set forbidden slot
+I20230707 10:19:26.181646 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 0
+I20230707 10:19:26.181658 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 6216
+I20230707 10:19:26.181669 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 0us
+I20230707 10:19:26.182049 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+I20230707 10:19:26.182065 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.182080 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 51, less than limit: 10000, go to set forbidden slot
+I20230707 10:19:26.182091 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 0
+I20230707 10:19:26.182102 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 6780
+I20230707 10:19:26.182132 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 18us
+E20230707 10:19:26.188616 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+I20230707 10:19:26.203586 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+I20230707 10:19:26.203755 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.203775 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 51, less than limit: 10000, go to set forbidden slot
+E20230707 10:19:26.203752 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+I20230707 10:19:26.203788 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 0
+I20230707 10:19:26.203838 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 7346
+I20230707 10:19:26.203850 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 0us
+E20230707 10:19:26.203856 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.203886 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.203946 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.203974 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.204013 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.204038 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.204066 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.204090 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.204118 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.204149 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.204176 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+I20230707 10:19:26.204195 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+E20230707 10:19:26.204201 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+I20230707 10:19:26.204209 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.204241 60101 slot_migrate.cc:1050] [migrate] Incremental data sequence: 51, less than limit: 10000, go to set forbidden slot
+I20230707 10:19:26.204252 60101 slot_migrate.cc:1074] [migrate] Succeed to migrate incremental data before setting forbidden slot, end epoch: 0
+I20230707 10:19:26.204262 60101 slot_migrate.cc:932] [migrate] Setting forbidden slot 7910
+I20230707 10:19:26.204273 60101 slot_migrate.cc:940] [migrate] To set forbidden slot, server was blocked for 0us
+I20230707 10:19:26.204604 60101 slot_migrate.cc:1022] [migrate] Migrate incremental data an epoch OK, seq from 23535519, to 23535570
+I20230707 10:19:26.204617 60101 slot_migrate.cc:903] [migrate] No commands to send
+I20230707 10:19:26.204632 60101 slot_migrate.cc:225] [migrate] Succeed to sync from WAL for a slot 7910
+E20230707 10:19:26.206468 60107 redis_connection.cc:103] [connection] Going to remove the client: 127.0.0.1:53732, while encounter error: Broken pipe
+E20230707 10:19:26.208621 60106 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.211604 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.211697 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.211762 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.211789 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.211813 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.211791 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.211910 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.211854 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.211920 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.211959 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.211961 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.211988 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212016 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212000 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212045 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212065 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212128 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212141 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212157 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212175 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212188 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212095 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212201 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212236 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212256 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212270 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212285 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212235 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212291 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212298 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212308 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212327 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212339 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212350 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212352 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212360 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212369 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212380 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212396 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212399 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212409 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212426 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212435 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212443 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212460 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212476 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212484 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212621 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212697 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212728 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212752 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212770 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212802 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212843 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212844 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212910 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212894 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212936 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212950 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212960 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212971 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.212992 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213001 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213037 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213045 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213057 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213066 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213083 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213104 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213101 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213138 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213160 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213179 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213213 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213233 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213251 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213268 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.213281 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.214253 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.214277 60104 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.214538 60109 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.214608 60103 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.215224 60108 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.215301 60108 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.215330 60108 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.215373 60108 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.215410 60108 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.215440 60108 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.215464 60108 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.215548 60108 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.215586 60108 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.215618 60108 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.215667 60108 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.215695 60108 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.215942 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.215975 60107 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.216171 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.216197 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.216212 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.216233 60105 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.217947 60108 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.217967 60108 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+I20230707 10:19:26.219684 60101 slot_migrate.cc:237] [migrate] Succeed to migrate slot 7910
+I20230707 10:19:26.219713 60101 slot_migrate.cc:438] [migrate] Clean resources of migrating slot 7910
+E20230707 10:19:26.222612 60102 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.222640 60102 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.222672 60102 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.222692 60102 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.222707 60102 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.222718 60102 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.222726 60102 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.222734 60102 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.222743 60102 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.222760 60102 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.222770 60102 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.222781 60102 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.222790 60102 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+E20230707 10:19:26.224763 60102 redis_connection.cc:103] [connection] Going to remove the client: , while encounter error: Broken pipe
+I20230707 10:19:28.668735 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000143.sst, file size: 138656083, job id: 61, reason: compaction, status: OK
+I20230707 10:19:31.071952 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000144.sst, file size: 138701417, job id: 61, reason: compaction, status: OK
+I20230707 10:19:33.479893 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000145.sst, file size: 138701362, job id: 61, reason: compaction, status: OK
+I20230707 10:19:35.877899 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000146.sst, file size: 138701299, job id: 61, reason: compaction, status: OK
+I20230707 10:19:38.178296 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000148.sst, file size: 138702582, job id: 61, reason: compaction, status: OK
+I20230707 10:19:40.484660 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000149.sst, file size: 138797573, job id: 61, reason: compaction, status: OK
+I20230707 10:19:42.792732 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000150.sst, file size: 138797458, job id: 61, reason: compaction, status: OK
+I20230707 10:19:45.093428 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000151.sst, file size: 138797431, job id: 61, reason: compaction, status: OK
+I20230707 10:19:45.217789 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 62, reason: 6
+I20230707 10:19:46.487970 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000154.sst, file size: 50028290, job id: 62, reason: flush, status: OK
+I20230707 10:19:46.503538 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 62, file: /nvme/jinghuan/node_40001/db/000154.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 24184650, smallest seqno: 23535520
+I20230707 10:19:48.083835 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000152.sst, file size: 138797582, job id: 61, reason: compaction, status: OK
+I20230707 10:19:50.284780 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000155.sst, file size: 138650972, job id: 61, reason: compaction, status: OK
+I20230707 10:19:52.485874 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000156.sst, file size: 138680185, job id: 61, reason: compaction, status: OK
+I20230707 10:19:54.690313 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000157.sst, file size: 138680220, job id: 61, reason: compaction, status: OK
+I20230707 10:19:56.799424 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000158.sst, file size: 138680176, job id: 61, reason: compaction, status: OK
+I20230707 10:19:58.890849 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000160.sst, file size: 138680191, job id: 61, reason: compaction, status: OK
+I20230707 10:20:01.002187 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000161.sst, file size: 138724132, job id: 61, reason: compaction, status: OK
+I20230707 10:20:03.094736 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000162.sst, file size: 138730228, job id: 61, reason: compaction, status: OK
+I20230707 10:20:05.199373 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000163.sst, file size: 138730166, job id: 61, reason: compaction, status: OK
+I20230707 10:20:06.035918 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 63, reason: 6
+I20230707 10:20:07.106822 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000166.sst, file size: 49391648, job id: 63, reason: flush, status: OK
+I20230707 10:20:07.113142 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 63, file: /nvme/jinghuan/node_40001/db/000166.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 24818394, smallest seqno: 24184681
+I20230707 10:20:07.894127 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000164.sst, file size: 138730183, job id: 61, reason: compaction, status: OK
+I20230707 10:20:08.997896 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000167.sst, file size: 74915047, job id: 61, reason: compaction, status: OK
+I20230707 10:20:09.101882 59879 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 11, output compression type: no, base input level(files): 6(1), output level(files): 6(19), input bytes: 2544912140, output bytes:2571854287, is_manual_compaction:no, elapsed(micro): 42777719
+I20230707 10:20:09.284359 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000137.sst, status: OK
+I20230707 10:20:11.190382 59879 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40001/db/000168.sst, file size: 133079083, job id: 64, reason: compaction, status: OK
+I20230707 10:20:11.210568 59879 event_listener.cc:71] [event_listener/compaction_completed] column family: metadata, compaction reason: 11, output compression type: no, base input level(files): 6(1), output level(files): 6(1), input bytes: 72752457, output bytes:133079083, is_manual_compaction:no, elapsed(micro): 1906009
+I20230707 10:20:11.222420 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000136.sst, status: OK
+I20230707 10:20:25.600225 59881 event_listener.cc:84] [event_listener/flush_begin] column family: metadata, thread_id: 59881, job_id: 65, reason: 13
+I20230707 10:20:25.647083 59881 event_listener.cc:138] [event_listener/table_file_created] column family: metadata, file path: /nvme/jinghuan/node_40001/db/000171.sst, file size: 2857024, job id: 65, reason: flush, status: OK
+I20230707 10:20:25.656095 59881 event_listener.cc:91] [event_listener/flush_completed] column family: metadata, thread_id: 59881, job_id: 65, file: /nvme/jinghuan/node_40001/db/000171.sst, reason: 13, is_write_slowdown: no, is_write_stall: no, largest seqno: 25358718, smallest seqno: 22036491
+I20230707 10:20:29.030886 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 66, reason: 6
+I20230707 10:20:29.772217 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000173.sst, file size: 49411814, job id: 66, reason: flush, status: OK
+I20230707 10:20:29.780788 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 66, file: /nvme/jinghuan/node_40001/db/000173.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 25450004, smallest seqno: 24818465
+I20230707 10:20:31.033733 59878 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000174.sst, file size: 82406179, job id: 67, reason: compaction, status: OK
+I20230707 10:20:31.042762 59878 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 1, output compression type: no, base input level(files): 0(4), output level(files): 1(1), input bytes: 217538024, output bytes:82406179, is_manual_compaction:no, elapsed(micro): 1252643
+I20230707 10:20:31.048352 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000173.sst, status: OK
+I20230707 10:20:31.052985 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000166.sst, status: OK
+I20230707 10:20:31.056603 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000154.sst, status: OK
+I20230707 10:20:31.061820 59878 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000142.sst, status: OK
+I20230707 10:20:51.224159 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 68, reason: 6
+I20230707 10:20:51.966207 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000177.sst, file size: 49830730, job id: 68, reason: flush, status: OK
+I20230707 10:20:51.983367 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 68, file: /nvme/jinghuan/node_40001/db/000177.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 26090441, smallest seqno: 25450065
+I20230707 10:21:14.353314 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 69, reason: 6
+I20230707 10:21:15.105485 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000180.sst, file size: 49793265, job id: 69, reason: flush, status: OK
+I20230707 10:21:15.111814 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 69, file: /nvme/jinghuan/node_40001/db/000180.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 26731291, smallest seqno: 26090502
+I20230707 10:21:38.746423 59881 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59881, job_id: 70, reason: 6
+I20230707 10:21:39.585036 59881 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000183.sst, file size: 49005629, job id: 70, reason: flush, status: OK
+I20230707 10:21:39.598481 59881 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59881, job_id: 70, file: /nvme/jinghuan/node_40001/db/000183.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 27356262, smallest seqno: 26731302
+I20230707 10:22:05.636365 59880 event_listener.cc:84] [event_listener/flush_begin] column family: default, thread_id: 59880, job_id: 71, reason: 6
+I20230707 10:22:06.486258 59880 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000186.sst, file size: 49888362, job id: 71, reason: flush, status: OK
+I20230707 10:22:06.498947 59880 event_listener.cc:91] [event_listener/flush_completed] column family: default, thread_id: 59880, job_id: 71, file: /nvme/jinghuan/node_40001/db/000186.sst, reason: 6, is_write_slowdown: no, is_write_stall: no, largest seqno: 27997282, smallest seqno: 27356273
+I20230707 10:22:08.004221 59879 event_listener.cc:138] [event_listener/table_file_created] column family: default, file path: /nvme/jinghuan/node_40001/db/000187.sst, file size: 83389050, job id: 72, reason: compaction, status: OK
+I20230707 10:22:08.013255 59879 event_listener.cc:71] [event_listener/compaction_completed] column family: default, compaction reason: 1, output compression type: no, base input level(files): 0(5), output level(files): 1(1), input bytes: 280924165, output bytes:83389050, is_manual_compaction:no, elapsed(micro): 1504895
+I20230707 10:22:08.017050 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000186.sst, status: OK
+I20230707 10:22:08.020632 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000183.sst, status: OK
+I20230707 10:22:08.024294 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000180.sst, status: OK
+I20230707 10:22:08.028131 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000177.sst, status: OK
+I20230707 10:22:08.034197 59879 event_listener.cc:127] [event_listener/table_file_deleted] db: /nvme/jinghuan/node_40001/db, sst file: /nvme/jinghuan/node_40001/db/000174.sst, status: OK
