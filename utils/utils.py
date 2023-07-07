@@ -163,9 +163,8 @@ def apply_migration_cmd_with_slots(migrate_cmd_map, cluster_link, server_links):
             for slot in slots:
                 if slot != "":
                     slot_str+=(slot+",")
+                                
             slot_str = slot_str[:-1]
-            print(slot_str[-50:])
-            # CLUSTERX SETSLOT $SLOT_ID NODE $NODE_ID $VERSION
             version+=1
             set_slot_cmd = "CLUSTERX SETSLOT " + slot_str + " NODE " + target_server + " " + str(version)
             for server_id in server_link_map:
@@ -174,6 +173,9 @@ def apply_migration_cmd_with_slots(migrate_cmd_map, cluster_link, server_links):
                 system_command += set_slot_cmd
                 output = subprocess.check_output(system_command.split())
                 print(output)
+            slot_str = ""
+            slot_count = 0 
+
 
 def broadcast_topo(migration_candidates, cluster_link):
     node_info = cluster_link.cluster_nodes()

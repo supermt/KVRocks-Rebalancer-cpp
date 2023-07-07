@@ -43,7 +43,7 @@ def get_qps_from_file(file_name):
         except:
             pass
 
-    result = pd.DataFrame(result[5:250], columns=[
+    result = pd.DataFrame(result[5:310], columns=[
                           "timestamp", "elapsed time", "qps", "finished_ops"])
 
     return result
@@ -54,22 +54,22 @@ plt.rcParams['font.size'] = 20  # 8 inches wide by 6 inches tall
 plt.rcParams['font.family'] = 'Arial'
 
 
-baseline_single_qps = get_qps_from_file("temp_single")
-baseline_double_qps = get_qps_from_file("temp_double")
-motivation_scale_qps = get_qps_from_file("temp_migrate")
-motivation_scale_qps_slow = get_qps_from_file("temp_single_4_clients")
+baseline_single_qps = get_qps_from_file("temp_1k_single")
+baseline_double_qps = get_qps_from_file("temp_1k_double")
+motivation_scale_qps = get_qps_from_file("temp_1k_migration_test")
+# motivation_scale_qps = get_qps_from_file("temp_1k_level")
 
 # plt.plot(qps,label="during scaling up")
 plt.plot(baseline_single_qps["elapsed time"],
-         baseline_single_qps["qps"], label="Single server baseline")
+         baseline_single_qps["qps"], label="Baseline (Single server)")
+
+plt.plot(baseline_double_qps["elapsed time"],
+         baseline_double_qps["qps"], label="Baseline (Double Server)")
 
 plt.plot(motivation_scale_qps["elapsed time"],
          motivation_scale_qps["qps"], linestyle='dashed', label="Double server with migration")
 
-plt.plot(baseline_double_qps["elapsed time"],
-         baseline_double_qps["qps"], label="Double server baseline")
-
-important_lines = [20, 163, 238]
+important_lines = [20, 223, 298]
 
 for important_x in important_lines:
     plt.axvline(important_x, ls=":", color="r", linewidth=4)
@@ -78,10 +78,9 @@ for important_x in important_lines:
 #          motivation_scale_qps_slow["qps"],linestyle='dotted', label="scaling up with limited speed")
 plt.annotate('Migration start', xy=(20, 71000), xytext=(50, 71000),
              arrowprops=dict(facecolor='#FFFFFF', edgecolor='red', shrink=0.01, linewidth=1), color='r')
-plt.annotate('End of send snapshot', xy=(163, 71000), xytext=(75, 77000),
+plt.annotate('End of send snapshot', xy=(223, 71000), xytext=(75, 77000),
              arrowprops=dict(facecolor='#FFFFFF', edgecolor='red', shrink=0.01, linewidth=1), color='r')
-
-plt.annotate('End of migration', xy=(238, 71000), xytext=(170, 76000),
+plt.annotate('End of migration', xy=(298, 71000), xytext=(225, 76000),
              arrowprops=dict(facecolor='#FFFFFF', edgecolor='red', shrink=0.01, linewidth=1), color='r')
 
 plt.ylim((0, 83000))

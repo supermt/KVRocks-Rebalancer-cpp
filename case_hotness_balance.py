@@ -13,6 +13,7 @@ if __name__ == '__main__':
     migration_candidates = allocate_slots_for_servers(node_info)
     print(migration_candidates[0],migration_candidates[-1])
     migrate_cmd_list = calculate_migration_plan(migration_candidates, rc, server_links, int(sys.argv[1]))
+    print(migrate_cmd_list)
     apply_migration_cmd_with_slots(migrate_cmd_list, rc, server_links)
 
 #    imported = False
